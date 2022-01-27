@@ -1,7 +1,7 @@
 # D3.js in action, 3rd Edition
 ## Chapter 2, listing 2.1
 
-This folder contains the starter files for the coding exercise of chapter 2. In this exercise, you will start building a bar graph while learning how to manipulate the DOM with D3.
+This folder contains the completed files for the coding exercise of chapter 2. In this exercise, you start building a bar graph while learning how to manipulate the DOM with D3.
 
 
 ## Techniques learned in this exercise
