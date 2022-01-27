@@ -1,4 +1,4 @@
-# D3.js in action, 3rd Edition
+# D3.js in Action, 3rd Edition
 ## Chapter 2, listing 2.1
 
 This folder contains the completed files for the coding exercise of chapter 2. In this exercise, you start building a bar graph while learning how to manipulate the DOM with D3.
@@ -18,4 +18,4 @@ To run D3 projects, you'll need a web server. In this chapter, we explain how to
 
 If you use this setuo, you can start the project by clicking on the "Go Live" option in the status bar, located at the bottom of your VS Code window.
 
-Happy D3 coding!
+Happy D3 coding! 🤓
