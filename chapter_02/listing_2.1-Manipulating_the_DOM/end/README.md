@@ -1,5 +1,4 @@
-# D3.js in Action, 3rd Edition
-## Chapter 2, listing 2.1
+# Manipulating the DOM
 
 This folder contains the completed files for the coding exercise of chapter 2. In this exercise, you start building a bar graph while learning how to manipulate the DOM with D3.
 
