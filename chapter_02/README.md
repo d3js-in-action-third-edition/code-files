@@ -1,6 +1,6 @@
 # Manipulating the DOM
 
-This folder contains the starter files for the coding exercise of chapter 2. In this exercise, you will start building a bar graph while learning how to manipulate the DOM with D3.
+This folder contains the files for the coding exercise of chapter 2. In this exercise, you will start building a bar graph while learning how to manipulate the DOM with D3.
 
 
 ## Techniques learned in this exercise

@@ -1,6 +1,6 @@
 # Working with data
 
-This folder contains the completed files for the coding exercise of chapter 3. In this exercise, you finish building the bar graph started in chapter 2 while learning how to work with data in D3 projects.
+This folder contains the files for the coding exercise of chapter 3. In this exercise, you will finish building the bar graph started in chapter 2 while learning how to work with data in D3 projects.
 
 
 ## Techniques learned in this exercise
