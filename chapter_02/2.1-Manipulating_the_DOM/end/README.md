@@ -13,8 +13,8 @@ This folder contains the completed files for the coding exercise of chapter 2. I
 
 ## Development environment
 
-To run D3 projects, you'll need a web server. In this chapter, we explain how to set up a local development environment using [VS Code](https://code.visualstudio.com/) and its [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+To run D3 projects, you'll need a web server. In chapter 1, we explained how to set up a local development environment using [VS Code](https://code.visualstudio.com/) and its [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
 
-If you use this setuo, you can start the project by clicking on the "Go Live" option in the status bar, located at the bottom of your VS Code window.
+If you use this setup, you can start the project by clicking on the "Go Live" option in the status bar, located at the bottom of your VS Code window.
 
 Happy D3 coding! 🤓
