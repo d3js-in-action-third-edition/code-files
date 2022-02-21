@@ -1,0 +1,19 @@
+/* Responsive container of the svg element */
+.responsive-svg-container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 800px;
+}
+.responsive-svg-container.half-width {
+  max-width: 400px;
+}
+
+/* Axis and ticks */
+.tick line {
+  opacity: 0.2;
+}
+.tick text {
+  font-family: "Helvetica", "Arial", "sans-serif";
+  font-size: 12px;
+}
