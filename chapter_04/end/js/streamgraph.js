@@ -22,9 +22,9 @@ const drawStreamGraph = (data, regimes) => {
   // Color scale
   colorScale = d3.scaleOrdinal()
     .domain(regimes)
-    .range(colors);
+    .range(regimesInfo.map(regime => regime.color));
 
-  const svg = d3.select("#streamgraph") // Shouldn't we use an id instead? Fix chapt 2-3
+  const svg = d3.select("#streamgraph") // Shouldn"t we use an id instead? Fix chapt 2-3
     .append("svg")
       .attr("viewBox", [0, 0, width, height]) // How cool, viewbox can also be passed as an array!
       // .style("border", "1px solid black");
@@ -65,7 +65,7 @@ const drawStreamGraph = (data, regimes) => {
 
   // Call the stack generator to produce a stack for the data
   let series = stack(data);
-  console.log('series', series);
+  console.log("series", series);
 
   // Initialize the area generator
   const area = d3.area()
@@ -76,11 +76,38 @@ const drawStreamGraph = (data, regimes) => {
 
   // Append paths
   chart
-    .append('g')
-      .attr('class', 'stream-paths')
-    .selectAll('path')
+    .append("g")
+      .attr("class", "stream-paths")
+    .selectAll("path")
     .data(series)
-    .join('path')
-      .attr('d', area)
-      .attr('fill', d => colorScale(d.key));
+    .join("path")
+      .attr("d", area)
+      .attr("fill", d => colorScale(d.key));
+
+  // Append labels
+  const labels = svg
+    .append("g")
+      .attr("transform", `translate(${margin.left + innerWidth}, ${margin.top})`)
+    .selectAll(".streamgraph-legend-label")
+    .data(regimesInfo)
+    .join("text")
+      .attr("class", "streamgraph-legend-label")
+      .text(d => d.label)
+      .attr("x", 10)
+      .attr("y", d => {
+        switch (d.id) {
+          case "liberal_democracies":
+            return 400;
+          case "electoral_democracies":
+            return 330;
+          case "electoral_autocracies":
+            return 180;
+          case "closed_autocracies":
+            return 70;
+          case "no_regime_data":
+            return 15;
+        };
+      })
+      .attr("fill", d => colorScale(d.color))
+      .style("font-size", "14px");
 };

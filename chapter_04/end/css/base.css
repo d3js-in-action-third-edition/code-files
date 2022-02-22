@@ -62,20 +62,20 @@ li .label {
   padding: 1px 5px;
   color: #f6fafc;
 }
-.label-no-data {
-  box-shadow: inset 0 -20px 0 0 rgb(191, 191, 191);
-}
 .label-closed-autocracy {
-  box-shadow: inset 0 -20px 0 0 rgb(208, 74, 6);
+  box-shadow: inset 0 -20px 0 0 #d04a06;
 }
 .label-electoral-autocracy {
-  box-shadow: inset 0 -20px 0 0 rgb(249, 140, 64);
+  box-shadow: inset 0 -20px 0 0 #f98c40;
 }
 .label-electoral-democracy {
-  box-shadow: inset 0 -20px 0 0 rgb(90, 165, 205);
+  box-shadow: inset 0 -20px 0 0 #5aa5cd;
 }
 .label-liberal-democracy {
-  box-shadow: inset 0 -20px 0 0 rgb(38, 69, 110);
+  box-shadow: inset 0 -20px 0 0 #26456e;
+}
+.label-no-data {
+  box-shadow: inset 0 -20px 0 0 #555555;
 }
 
 /* Sources */

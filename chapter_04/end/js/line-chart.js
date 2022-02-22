@@ -26,9 +26,9 @@ const drawLineChart = (data, regimes) => {
   // Color scale
   colorScale = d3.scaleOrdinal()
     .domain(regimes)
-    .range(colors);
+    .range(regimesInfo.map(regime => regime.color));
 
-  const svg = d3.select("#line-chart") // Shouldn't we use an id instead? Fix chapt 2-3
+  const svg = d3.select("#line-chart") // Shouldn"t we use an id instead? Fix chapt 2-3
     .append("svg")
       // .attr("viewBox", `0 0 ${width} ${height}`)
       .attr("viewBox", [0, 0, width, height]) // How cool, viewbox can also be passed as an array!
@@ -59,20 +59,69 @@ const drawLineChart = (data, regimes) => {
   d3.selectAll(".axis-y text")
     .attr("dx", "-5px");
 
+
+  // Tooltip
+  const tooltipWidth = 50;
+  const tooltipHeight = 25;
+  const tooltip = svg
+    .append("g")
+      .attr("class", "tooltip")
+      .style("opacity", 0);
+  const tooltipBackground = tooltip
+    .append("rect")
+      .attr("width", tooltipWidth)
+      .attr("height", tooltipHeight)
+      .attr("rx", 3)
+      .attr("ry", 3)
+      .attr("fill", "white")
+      .attr("stroke-width", 2);
+  const tooltipText = tooltip
+    .append("text")
+      .text("2.5G")
+      .attr("x", tooltipWidth/2)
+      .attr("y", tooltipHeight/2)
+      .attr("text-anchor", "middle")
+      .attr("alignment-baseline", "middle")
+      .style("font-size", "12px")
+      .style("font-weight", 500);
+
+
   // Show first without loop
-  // We could do it in a loop, but a bit overkill... It's getting complicated
-  const datapointRadius = 3;
+  // We could do it in a loop, but a bit overkill... It"s getting complicated
+  const datapointRadius = 4;
   regimes.forEach(regime => {
+    const regimeData = data.map(d => {
+      return {year: d.year, num_people: d[regime]}
+    });
+    console.log("regimeData", regimeData);
+
     // Show data points on graph
-    chart
+    const dataPoints = chart
       .selectAll(`circle.${regime}`) // explain why use class name here
-      .data(data)
+      .data(regimeData)
       .join("circle")
         .attr("class", `datapoint ${regime}`)
         .attr("r", datapointRadius)
         .attr("cx", d => xScale(d.year))
-        .attr("cy", d => yScale(d[regime]))
-        .style("fill", colorScale(regime));
+        .attr("cy", d => yScale(d.num_people))
+        .style("fill", colorScale(regime))
+        .on("mouseenter", (event, datapoint) => {
+          console.log("event", event);
+          console.log("datapoint", datapoint);
+
+          tooltipText
+            .text(d3.format("0.3s")(datapoint.num_people))
+            .attr("fill", colorScale(regime));
+          tooltipBackground
+            .attr("stroke", colorScale(regime));
+          tooltip
+            // offset gives inconsistent results...
+            .attr("transform", `translate(${event.offsetX}, ${event.offsetY - 1.1*tooltipHeight})`)
+            .style("opacity", 1)
+        })
+        .on("mouseleave", (event, datapoint) => {
+          tooltip.style("opacity", 0);
+        });
 
     // Draw line between points
 
@@ -91,7 +140,7 @@ const drawLineChart = (data, regimes) => {
     //     .attr("stroke", colorScale(regime));
 
     // Draw curves
-    // Show the result of different interpolations but don't necesserily make the reader do it?
+    // Show the result of different interpolations but don"t necesserily make the reader do it?
     const curveGenerator1 = d3.line().x(d => xScale(d.year)).y(d => yScale(d[regime])).curve(d3.curveBasis);
     const curveGenerator2 = d3.line().x(d => xScale(d.year)).y(d => yScale(d[regime])).curve(d3.curveCardinal);
     const curveGenerator3 = d3.line().x(d => xScale(d.year)).y(d => yScale(d[regime])).curve(d3.curveBumpX);
@@ -115,10 +164,49 @@ const drawLineChart = (data, regimes) => {
         .attr("fill", "none")
         .attr("stroke", colorScale(regime));
 
+
+    // const tooltip = chart
+      // .selectAll(`.tooltip-label-${regime}`)
+      // .data(data)
+      // .join("text")
+      //   .attr("class", `tooltip-label-${regime}`)
+      //   .text(d => d3.format("~s")(d[regime]))
+      //   .attr("x", d => xScale(d.year))
+      //   .attr("y", d => yScale(d[regime]) - 10)
+      //   .attr("text-anchor", "middle")
+      //   .style("fill", colorScale(regime))
+      //   .style("font-size", "12px");
+
   });
 
-  // Add legend
-  // Add tooltip
+  // Append labels
+  const labels = svg
+    .append("g")
+      .attr("transform", `translate(${margin.left + innerWidth}, ${margin.top})`)
+    .selectAll(".streamgraph-legend-label")
+    .data(regimesInfo)
+    .join("text")
+      .attr("class", "streamgraph-legend-label")
+      .text(d => d.label)
+      .attr("x", 10)
+      .attr("y", d => {
+        return yScale(data[data.length - 1][d.id]);
+        // switch (d.id) {
+        //   case "liberal_democracies":
+        //     return 297;
+        //   case "electoral_democracies":
+        //     return 252;
+        //   case "electoral_autocracies":
+        //     return 20;
+        //   case "closed_autocracies":
+        //     return 195;
+        //   case "no_regime_data":
+        //     return 420;
+        // };
+      })
+      .attr("alignment-baseline", "middle")
+      .attr("fill", d => colorScale(d.color))
+      .style("font-size", "14px");
 
   // Turning a curve into an area
   // const areaGenerator = d3.area()
@@ -131,5 +219,6 @@ const drawLineChart = (data, regimes) => {
   //     .attr("d", d => areaGenerator(data))
   //     .attr("fill", colorScale("liberal_democracies"))
   //     .attr("stroke", colorScale("liberal_democracies"));
+
 
 };
