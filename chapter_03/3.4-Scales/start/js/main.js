@@ -41,7 +41,7 @@ const createViz = (data) => {
     .join("rect")
       .attr("class", d => {
         console.log(d);
-        return "bar";
+        return `bar bar-${d.technology}`;
       })
       .attr("width", d => d.count)
       .attr("height", barHeight)
