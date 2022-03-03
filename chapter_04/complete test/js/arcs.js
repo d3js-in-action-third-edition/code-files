@@ -41,7 +41,7 @@ const drawArcs = (data, regimes) => {
   // Initialize arc generator
   const arcGenerator = d3.arc()
     .innerRadius(70)  // Show that if zero we get a pie chart
-    .outerRadius(100)
+    .outerRadius(110)
     .padAngle(0.015)
     .cornerRadius(3);
   
@@ -69,20 +69,18 @@ const drawArcs = (data, regimes) => {
     .data(arcs)
     .join("text")
       .attr("class", "arc-label")
-      .text(d => `${regimesInfo.find(regime => regime.id === d.data.regime).label} ${d3.format(".0%")(d.data.numPeople/totalPeople)}`)
-      // calculate position with centroid, as pro tip
+      .text(d => d3.format(".0%")(d.data.numPeople/totalPeople))
       .attr("x", d => {
+        // Pro tip: position on centroid of each arc
         switch (d.data.regime) {
           case "electoral_autocracies":
-            return 510;
+            return 477;
           case "closed_autocracies":
-            return 350;
+            return 358;
           case "electoral_democracies":
-            return 115;
+            return 298;
           case "liberal_democracies":
-            return 185;
-          // case "no_regime_data":
-          //   return 320;
+            return 350;
         }
       })
       .attr("y", d => {
@@ -90,16 +88,61 @@ const drawArcs = (data, regimes) => {
           case "electoral_autocracies":
             return 150;
           case "closed_autocracies":
-            return 270;
+            return 239;
           case "electoral_democracies":
             return 140;
           case "liberal_democracies":
-            return 55;
-          // case "no_regime_data":
-          //   return 50;
+            return 74;
         }
       })
-      .attr("fill", d => colorScale(d.data.regime))
-      .style("font-size", "15px");
+      .attr("fill", "white")
+      .style("font-size", "14px")
+      .style("font-weight", 500);
+      // .text(d => `${regimesInfo.find(regime => regime.id === d.data.regime).label} ${d3.format(".0%")(d.data.numPeople/totalPeople)}`)
+      // // calculate position with centroid, as pro tip
+      // .attr("x", d => {
+      //   switch (d.data.regime) {
+      //     case "electoral_autocracies":
+      //       return 515;
+      //     case "closed_autocracies":
+      //       return 350;
+      //     case "electoral_democracies":
+      //       return 115;
+      //     case "liberal_democracies":
+      //       return 185;
+      //   }
+      // })
+      // .attr("y", d => {
+      //   switch (d.data.regime) {
+      //     case "electoral_autocracies":
+      //       return 150;
+      //     case "closed_autocracies":
+      //       return 280;
+      //     case "electoral_democracies":
+      //       return 140;
+      //     case "liberal_democracies":
+      //       return 55;
+      //   }
+      // })
+      // .attr("fill", d => colorScale(d.data.regime))
+      // .style("font-size", "14px");
+
+
+  // Append color legend
+  const legendItems = d3.select("#pie-chart")
+    .append("ul")
+      .attr("class", "color-legend")
+    .selectAll(".color-legend-item")
+    .data(arcs)
+    .join("li")
+      .attr("class", "color-legend-item");
+  legendItems
+    .append("span")
+      .attr("class", "color-legend-item-color")
+      .style("background-color", d => regimesInfo.find(regime => regime.id === d.data.regime).color);
+  legendItems
+    .append("span")
+      .attr("class", "color-legend-item-label")
+      .text(d => regimesInfo.find(regime => regime.id === d.data.regime).label);
 
 };
