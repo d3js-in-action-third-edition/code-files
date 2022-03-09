@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>4.3.1 Line chart | D3.js in Action</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/visualization.css">
+</head>
+<body>
+	<div class="container">
+
+		<h1>An evolution of democratic rights</h1>
+		<div class="intro">
+			<p>Democratic rights have come a long way since 1800. Today, most of the world's population has access to multi-party elections. But not all electoral regimes are created equal and give access to the same rights.</p>
+			<p>This project visualizes the evolution of the four main political systems and how many people lived under these regimes over the last two centuries.</p>
+		</div>
+		<div class="legend">
+			<p>The data and classification for this project come from the article "<a href="https://ourworldindata.org/democratic-rights">200 years ago, everyone lacked democratic rights. Now, billions of people have them</a>" published by <a href="https://ourworldindata.org/">Our World in Data</a> in December 2021. The classification of political regimes is the following:</p>
+			<ul class="top-legend">
+				<li><span class="em label label-closed-autocracy">Closed autocracy</span>Citizens don't have access to multi-party elections and cannot choose the head of their government.</li>
+				<li><span class="em label label-electoral-autocracy">Electoral autocracy</span>Citizens have access to multi-party elections and can choose the head of their government, but they lack some of the freedoms that make an election meaningful, free, and fair.</li>
+				<li><span class="em label label-electoral-democracy">Electoral democracy</span>Citizens have access to multi-party, meaningful, free, and fair elections.</li>
+				<li><span class="em label label-liberal-democracy">Liberal democracy</span>Citizens have access to multi-party, meaningful, free, and fair elections, in addition to further rights. All citizens are equal before the law, and the legislative and court systems constrain the actions that the elected government can take.</li>
+				<li><span class="em label label-no-data">No data is available</span></li>
+			</ul>
+		</div>
+
+		<h2>A historical overview</h2>
+		<p>Two centuries ago, only a handful of the world's population had access to democratic political rights. Closed autocracies were the norm in the 19th century, but a different picture appeared in the 20th century. Today, the vast majority of people can vote for the head of their government through multi-party elections.</p>
+		<div id="streamgraph" class="responsive-svg-container"></div>
+		
+		<h2>A recent shift</h2>
+		<p>The number of people living in liberal democracies and closed autocracies remained relatively stable in the past 20 years. But we observed a critical drop in electoral democracies in 2019 when multiple regimes became electoral autocracies. In one year, the number of people living under electoral autocracies increased from 1.92 to 3.37 billion. Electoral democracies decreased from 2.74 to 1.37 billion people during the same period. A demonstration that democracy is fragile.</p>
+		<div id="line-chart" class="responsive-svg-container"></div>
+		
+		<h2>The current distribution of political regimes</h2>
+		<p>Today, 43% of the world population lives in electoral autocracies, followed by 25% in closed autocracies. Electoral and liberal democracies come last, experienced respectively by 18% and 14% of the population.</p>
+		<div id="pie-chart" class="responsive-svg-container"></div>
+		
+		<div class="source">Source: <a href="https://ourworldindata.org/democratic-rights">ourworldindata.org/democratic-rights</a></div>	
+	</div>
+
+	<!-- Load your scripts here -->
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="js/shared-constants.js"></script>
+	<script src="js/line-chart.js"></script>
+	<script src="js/streamgraph.js"></script>
+	<script src="js/arcs.js"></script>
+	<script src="js/load-data.js"></script>
+</body>
+</html>
