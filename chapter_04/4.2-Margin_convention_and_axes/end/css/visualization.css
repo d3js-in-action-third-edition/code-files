@@ -5,3 +5,10 @@
 }
 
 /* Axis and ticks styles */
+.tick line {
+  opacity: 0.2;
+}
+.tick text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
