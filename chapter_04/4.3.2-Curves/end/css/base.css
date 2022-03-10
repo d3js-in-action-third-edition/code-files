@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&family=Roboto:wght@400;500&display=swap');
 
 html {
+  font-size: 62.5%;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
