@@ -78,18 +78,19 @@ const drawLineChart = (partialData) => {
       .attr("cy", d => yScale(d.electoral_democracies));
 
   
-  /***************************/
-  /*        Draw line        */
-  /***************************/
-  // Initialize the line generator
-  const lineGenerator = d3.line()
+  /**************************/
+  /*       Draw curve       */
+  /**************************/
+  // Initialize the curve generator
+  const curveGenerator = d3.line()
     .x(d => xScale(d.year)) // x accessor function
-    .y(d => yScale(d.electoral_democracies)); // y accessor function
+    .y(d => yScale(d.electoral_democracies)) // y accessor function
+    .curve(d3.curveMonotoneX);
 
   // Append the path that will constitute the line
   innerChart
     .append("path")
-      .attr("d", lineGenerator(partialData))
+      .attr("d", curveGenerator(partialData))
       .attr("fill", "none")
       .attr("stroke", "black");
 
