@@ -8,7 +8,7 @@ const regimesInfo = [
 const colors = ["#26456e", "#5aa5cd", "#f98c40", "#d04a06", "#555555"];
 
 // Add other shared contants here
-const margin = {top: 15, right: 150, bottom: 25, left: 40};
+const margin = {top: 25, right: 150, bottom: 25, left: 40};
 const width = 800;
 const height = 500;
 const innerWidth = width - margin.left - margin.right;
