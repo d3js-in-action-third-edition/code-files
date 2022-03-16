@@ -52,7 +52,7 @@ const drawStreamGraph = (data) => {
   const bottomAxis = d3.axisBottom(xScale)
     .tickFormat(d3.format("d"))
     .tickSize(innerHeight * -1);
-  const axis = innerChart
+  innerChart
     .append("g")
       .attr("class", "axis-x")
       .attr("transform", `translate(0, ${innerHeight})`)

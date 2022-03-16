@@ -92,17 +92,54 @@ const drawStreamGraph = (data) => {
   /************************************/
   /*    Draw the stacked bar chart    */
   /************************************/
-  stackedData.forEach(regime => {
-    innerChart
-      .selectAll(`.bar-${regime.key}`)
-      .data(regime)
-      .join("rect")
-        .attr("class", d => `bar-${regime.key} bar-${d.data.year}`)
-        .attr("x", d => bandScale(d.data.year))
-        .attr("y", d => yScale(d[1]))
-        .attr("width", bandScale.bandwidth())
-        .attr("height", d => Math.abs(yScale(d[1]) - yScale(d[0])))
-        .attr("fill", colorScale(regime.key));
-  });
+  // stackedData.forEach(regime => {
+  //   innerChart
+  //     .selectAll(`.bar-${regime.key}`)
+  //     .data(regime)
+  //     .join("rect")
+  //       .attr("class", d => `bar-${regime.key} bar-${d.data.year}`)
+  //       .attr("x", d => bandScale(d.data.year))
+  //       .attr("y", d => yScale(d[1]))
+  //       .attr("width", bandScale.bandwidth())
+  //       .attr("height", d => Math.abs(yScale(d[1]) - yScale(d[0])))
+  //       .attr("fill", colorScale(regime.key));
+  // });
+
+  
+  /******************************/
+  /*    Draw the streamgraph    */
+  /******************************/
+  // Initialize the area generator
+  const areaGenerator = d3.area()
+    .x(d => xScale(d.data.year))
+    .y0(d => yScale(d[0]))
+    .y1(d => yScale(d[1]))
+    .curve(d3.curveMonotoneX);
+
+  // Append paths
+  innerChart
+    .selectAll(".streamgraph-path")
+    .data(stackedData)
+    .join("path")
+      .attr("class", "streamgraph-path")
+      .attr("d", areaGenerator)
+      .attr("fill", d => colorScale(d.key));
+
+  // Append labels
+  innerChart
+    .selectAll(".streamgraph-label")
+    .data(regimesInfo)
+    .join("text")
+      .attr("class", "chart-label streamgraph-label")
+      .text(d => d.label)
+      .attr("x", innerWidth + 10)
+      .attr("y", d => {
+        const currentStack = stackedData.find(stack => stack.key === d.id);
+        const lowerBoudary = currentStack[currentStack.length - 1][0];
+        const upperBoudary = currentStack[currentStack.length - 1][1];
+        return yScale(lowerBoudary + (upperBoudary - lowerBoudary) / 2);
+      })
+      .attr("alignment-baseline", "middle")
+      .attr("fill", d => colorScale(d.id));
 
 };
