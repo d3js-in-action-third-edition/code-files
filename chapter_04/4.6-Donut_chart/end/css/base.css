@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&family=Roboto:wght@400;500&display=swap');
+
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  background-color: #f6fafc;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #222323;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Type */
+h1, h2, h3, h4 {
+  font-family: 'EB Garamond', serif;
+  font-weight: 600;
+}
+h1 {
+  margin: 6rem 0 1.2rem;
+  font-size: 4.8rem;
+}
+h2 {
+  margin: 3rem 0 1.2rem;
+  font-size: 3rem;
+}
+p {
+  margin: 1.2rem 0;
+}
+a {
+  color: #222323;
+  text-decoration: none;
+  box-shadow: inset 0 -5px 0 0 rgba(193, 83, 33, 0.3);
+  transition: box-shadow 0.2s ease-out;
+}
+a:hover, a:focus {
+  box-shadow: inset 0 -18px 0 0 rgba(193, 83, 33, 0.3);
+  transition-timing-function: ease-in;
+}
+.em {
+  font-weight: 500;
+}
+
+li {
+  list-style: none;
+}
+
+/* Top legend */
+.top-legend {
+  margin: 0;
+  padding-left: 5px;
+}
+.top-legend li {
+  margin: 2rem 0;
+}
+li .label {
+  margin-right: 4px;
+  padding: 1px 5px 2px;
+  color: #f6fafc;
+  border-radius: 2px;
+}
+.label-closed-autocracy {
+  background-color: #d04a06;
+}
+.label-electoral-autocracy {
+  background-color: #f98c40;
+}
+.label-electoral-democracy {
+  background-color: #5aa5cd;
+}
+.label-liberal-democracy {
+  background-color: #26456e;
+}
+.label-no-data {
+  background-color: #555555;
+}
+
+/* Color legend */
+.color-legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-left: 0;
+}
+.color-legend-item {
+  margin: 5px 12px;
+  font-size: 1.4rem;
+}
+.color-legend span {
+  display: inline-block;
+}
+.color-legend-item-color {
+  position: relative;
+  top: 2px;
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+@media screen and (max-width: 576px) {
+  .color-legend {
+    flex-direction: column;
+  }
+}
+
+/* Sources */
+.source {
+  padding: 50px 0 30px;
+  font-size: 1.2rem;
+}
