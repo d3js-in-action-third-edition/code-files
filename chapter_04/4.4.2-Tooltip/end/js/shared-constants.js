@@ -13,3 +13,8 @@ const width = 800;
 const height = 500;
 const innerWidth = width - margin.left - margin.right;
 const innerHeight = height - margin.top - margin.bottom;
+
+// Color scale
+const colorScale = d3.scaleOrdinal()
+  .domain(regimesInfo.map(regime => regime.id))
+  .range(colors);

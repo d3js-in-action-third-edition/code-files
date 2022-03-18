@@ -113,6 +113,11 @@ li .label {
   margin-right: 5px;
   border-radius: 3px;
 }
+@media screen and (max-width: 576px) {
+  .color-legend {
+    flex-direction: column;
+  }
+}
 
 /* Sources */
 .source {

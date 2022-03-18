@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>4.3.2 Curve generator | D3.js in Action</title>
+	<title>4.6 Donut chart | D3.js in Action</title>
 	<link rel="stylesheet" type="text/css" href="css/base.css">
 	<link rel="stylesheet" type="text/css" href="css/visualization.css">
 </head>
@@ -26,18 +26,24 @@
 			</ul>
 		</div>
 
-		<h2>A historical overview</h2>
-		<p>Two centuries ago, only a handful of the world's population had access to democratic political rights. Closed autocracies were the norm in the 19th century, but a different picture appeared in the 20th century. Today, the vast majority of people can vote for the head of their government through multi-party elections.</p>
-		<div id="streamgraph" class="responsive-svg-container"></div>
+		<section id="overview">
+			<h2>A historical overview</h2>
+			<p>Two centuries ago, only a handful of the world's population had access to democratic political rights. Closed autocracies were the norm in the 19th century, but a different picture appeared in the 20th century. Today, the vast majority of people can vote for the head of their government through multi-party elections.</p>
+			<div id="streamgraph" class="responsive-svg-container"></div>
+		</section>
 		
-		<h2>A recent shift</h2>
-		<p>The number of people living in liberal democracies and closed autocracies remained relatively stable in the past 20 years. But we observed a critical drop in electoral democracies in 2019 when multiple regimes became electoral autocracies. In one year, the number of people living under electoral autocracies increased from 1.92 to 3.37 billion. Electoral democracies decreased from 2.74 to 1.37 billion people during the same period. A demonstration that democracy is fragile.</p>
-		<div id="line-chart" class="responsive-svg-container"></div>
+		<section id="recent-shift">
+			<h2>A recent shift</h2>
+			<p>The number of people living in liberal democracies and closed autocracies remained relatively stable in the past 20 years. But we observed a critical drop in electoral democracies in 2019 when multiple regimes became electoral autocracies. In one year, the number of people living under electoral autocracies increased from 1.92 to 3.37 billion. Electoral democracies decreased from 2.74 to 1.37 billion people during the same period. A demonstration that democracy is fragile.</p>
+			<div id="line-chart" class="responsive-svg-container"></div>
+		</section>
 		
-		<h2>The current distribution of political regimes</h2>
-		<p>Today, 43% of the world population lives in electoral autocracies, followed by 25% in closed autocracies. Electoral and liberal democracies come last, experienced respectively by 18% and 14% of the population.</p>
-		<div id="pie-chart" class="responsive-svg-container"></div>
-		
+		<section id="current-distribution">
+			<h2>The current distribution of political regimes</h2>
+			<p>In 2020, 43% of the world population lived in electoral autocracies, followed by 25% in closed autocracies. Electoral and liberal democracies came last, experienced respectively by 18% and 14% of the population. In the following chart, we have omitted the people for which no regime data is available since they represent only 0.2% of the total population.</p>
+			<div id="pie-chart" class="responsive-svg-container small"></div>
+		</section>
+
 		<div class="source">Source: <a href="https://ourworldindata.org/democratic-rights">ourworldindata.org/democratic-rights</a></div>	
 	</div>
 

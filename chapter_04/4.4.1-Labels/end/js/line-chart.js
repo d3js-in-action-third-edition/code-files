@@ -37,11 +37,6 @@ const drawLineChart = (partialData) => {
     .range([innerHeight, 0])
     .nice();
 
-  // Color scale
-  const colorScale = d3.scaleOrdinal()
-    .domain(regimesInfo.map(regime => regime.id))
-    .range(colors);
-
   
   /***************************/
   /*     Append the axes     */
