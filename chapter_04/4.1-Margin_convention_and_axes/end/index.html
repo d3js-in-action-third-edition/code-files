@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>4.1 Creating axes - New York City 2021 Weather | D3.js in Action</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/visualization.css">
+</head>
+<body>
+	<div class="container">
+
+		<h1>New York City 2021 Weather</h1>
+		<div class="row">
+			<div class="col col-9">
+				<h2>Weelky average temperature</h2>
+				<div class="responsive-svg-container">
+					<div id="line-chart"></div>
+				</div>
+			</div>
+			<div class="col col-3">
+				<h2>Days with precipitations</h2>
+				<div class="responsive-svg-container small">
+					<div id="arc"></div>
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="source">Data source: <a href="https://www.wunderground.com/history/weekly/us/ny/new-york-city/KLGA/date/2021-1-29">Weather Underground</a></div>	
+	</div>
+
+	<!-- Load your scripts here -->
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="js/line-chart.js"></script>
+	<script src="js/donut-chart.js"></script>
+</body>
+</html>
