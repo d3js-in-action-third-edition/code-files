@@ -88,4 +88,32 @@ const drawLineChart = (data) => {
       .text("Temperature (°F)")
       .attr("y", 20);
 
+  
+  /*********************************************/
+  /*   Line chart of the average temperature   */
+  /*********************************************/
+  // Draw the data points
+  const aubergine = "#75485E";
+  innerChart
+    .selectAll("circle")
+    .data(data)
+    .join("circle")
+      .attr("r", 4)
+      .attr("cx", d => xScale(d.date))
+      .attr("cy", d => yScale(d.avg_temp_F))
+      .attr("fill", aubergine);
+    
+  // Initialize the line/curve generator
+  const curveGenerator = d3.line()
+    .x(d => xScale(d.date))
+    .y(d => yScale(d.avg_temp_F))
+    .curve(d3.curveCatmullRom);
+    
+  // Draw the line/curve
+  innerChart
+    .append("path")
+      .attr("d", curveGenerator(data))
+      .attr("fill", "none")
+      .attr("stroke", aubergine);
+
 };
