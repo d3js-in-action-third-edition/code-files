@@ -8,8 +8,7 @@ When changing to the next section, you can choose to keep coding in the same fil
 * [4.1-Margin_convention_and_axes](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_04/4.1-Margin_convention_and_axes)
 * [4.2-Drawing_a_line_chart](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_04/4.2-Drawing_a_line_chart)
 * [4.3-Drawing_an_area](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_04/4.3-Drawing_an_area)
-* [4.4-Adding_labels](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_04/4.4-Adding_labels)
-* [4.5-Creating_a_donut_chart](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_04/4.5-Creating_a_donut_chart)
+* [4.4-Drawing_arcs](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_04/4.4-Drawing_arcs)
 
 ## How to run the project
 To run this project, you'll need a local webserver. We recommend using [VS Code](https://code.visualstudio.com/)'s Live Server extension. You can find instructions on installing this extension in Appendix A of the book.
@@ -32,5 +31,5 @@ To run this project, you'll need a local webserver. We recommend using [VS Code]
     * `visualization.css` is where we will add styles for our visualizations. It already contains the style properties applied to responsive SVG containers, following the strategy described in chapter 1.
 * The `/js` folder contains two JavaScript files. Since we will work on two different charts, separating our code into multiple files will make it easier to understand, write and maintain.
     * `line-chart.js` is where you'll create the line chart.
-    * `donut-chart.js` is where you'll create the donut chart.
+    * `arcs.js` is where you'll draw the arcs of a donut chart.
 * `index.html` contains the markup and text that composes the project. The D3 library, the CSS files, and the JavaScript files are already loaded in this file.
