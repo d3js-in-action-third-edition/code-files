@@ -74,7 +74,7 @@ const drawLineChart = (data) => {
       .attr("class", "axis-y")
       .call(leftAxis);
   d3.selectAll(".axis-y text")
-    .attr("dx", "-5px");
+    .attr("x", "-5px");
 
   // Set the font-family and font-size property of axis labels
   // This could also be handled from a CSS file
