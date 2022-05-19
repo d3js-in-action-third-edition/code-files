@@ -1,0 +1,7 @@
+/* Responsive container of the svg element */
+.responsive-svg-container {
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Axis and ticks */
