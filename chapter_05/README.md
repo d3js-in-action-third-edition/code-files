@@ -5,10 +5,9 @@ The folder is separated into subfolders corresponding to each section of the cha
 When changing to the next section, you can choose to keep coding in the same files or use the *start* folder for that section.
 
 ## Sections in this chapter
-<!-- * [4.1-Margin_convention_and_axes](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_04/4.1-Margin_convention_and_axes)
-* [4.2-Drawing_a_line_chart](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_04/4.2-Drawing_a_line_chart)
-* [4.3-Drawing_an_area](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_04/4.3-Drawing_an_area)
-* [4.4-Drawing_arcs](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_04/4.4-Drawing_arcs) -->
+* [5.1-Pie_layout](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_05/5.1-Pie_layout)
+* [5.2-Stack_layout](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_05/5.2-Stack_layout)
+* [5.3-Legend](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_05/5.3-Legend)
 
 ## How to run the project
 To run this project, you'll need a local webserver. We recommend using [VS Code](https://code.visualstudio.com/)'s Live Server extension. You can find instructions on installing this extension in Appendix A of the book.
