@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>5.3 Legend | Visualizing 40 Years of Music Industry Sales | D3.js in Action</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/visualization.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Visualizing 40 Years of Music Industry Sales</h1>
+		<div class="intro">This project visualizes the music sales in the United States by format between 1973 and 2019. These formats range from physical supports like <span class="support support-vinyl">vinyl</span>, <span class="support support-eigth-track">8-track</span>, <span class="support support-cassette">cassette</span>, and <span class="support support-cd">cd</span>, to music consumed digitally, with <span class="support support-download">downloads</span> and <span class="support support-streaming">streaming services</span>. The category <span class="support support-other">other</span> includes less prominent sources of revenue like music videos (physical), synchronization, and royalties.</div>
+		<div id="donut"></div>
+		<div id="streamgraph"></div>
+		<div id="bars"></div>
+		<div class="legend-container"></div>
+		<div class="source">
+			<p>Data Source: <a href="https://data.world/makeovermonday/2020w21-visualizing-40-years-of-music-industry-sales">MakeoverMonday 2020/W21</a></p>
+			<p>Inspiration for the dataviz layout: <a href="https://www.makeovermonday.co.uk/week-21-2020/">Submission of Laura Elliot</a></p>
+		</div>
+	</div>
+
+	<!-- Load your scripts here -->
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="js/shared-constants.js"></script>
+	<script src="js/scales.js"></script>
+	<script src="js/donut-charts.js"></script>
+	<script src="js/stacked-bars.js"></script>
+	<script src="js/streamgraph.js"></script>
+	<script src="js/legend.js"></script>
+	<script src="js/load-data.js"></script>
+</body>
+</html>
