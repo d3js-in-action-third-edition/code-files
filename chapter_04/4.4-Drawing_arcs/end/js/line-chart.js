@@ -36,10 +36,10 @@ const drawLineChart = (data) => {
   /*    Declare the scales    */
   /****************************/
   // X scale
-  const firstDate = d3.min(data, d => d.date);
+  const firstDate = new Date(2021, 00, 01, 0, 0, 0);
   const lastDate = d3.max(data, d => d.date);
   const xScale = d3.scaleTime()
-    .domain([d3.timeMonth.floor(firstDate), lastDate])
+    .domain([firstDate, lastDate])
     .range([0, innerWidth]);
 
   // Y scale
