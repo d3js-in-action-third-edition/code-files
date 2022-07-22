@@ -1,4 +1,4 @@
-const addLengend = () => {
+const addLegend = () => {
       
   const legendItems = d3.select(".legend-container")
     .append("ul")

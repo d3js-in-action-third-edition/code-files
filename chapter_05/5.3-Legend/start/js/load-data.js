@@ -4,5 +4,5 @@ d3.csv("../data/data.csv", d3.autoType).then(data => {
   drawDonutCharts(data);
   drawStackedBars(data);
   drawStreamGraph(data);
-  addLengend();
+  addLegend();
 });
