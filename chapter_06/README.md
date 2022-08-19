@@ -7,7 +7,7 @@ When changing to the next section, you can choose to keep coding in the same fil
 ## Sections in this chapter
 * [6.1-Binning_data](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_06/6.1-Binning_data)
 * [6.2-Histogram](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_06/6.2-Histogram)
-* [6.3-Boxplot](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_06/6.3-Boxplot)
+* [6.3-Box_plots](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_06/6.3-Box_plots)
 * [6.4-Pyramid](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_06/6.4-Pyramid)
 * [6.6-Small_multiples](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_06/6.6-Small_multiples)
 
