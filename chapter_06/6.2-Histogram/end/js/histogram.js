@@ -27,9 +27,9 @@ const drawHistogram = (data) => {
   /***************************/
   /*    Generate the bins    */
   /***************************/
-  const binsGenerator = d3.bin()
+  const binGenerator = d3.bin()
     .value(d => d.salary);
-  const bins = binsGenerator(data);
+  const bins = binGenerator(data);
   console.log("bins", bins);
 
   
