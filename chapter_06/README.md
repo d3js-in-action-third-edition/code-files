@@ -9,7 +9,7 @@ When changing to the next section, you can choose to keep coding in the same fil
 * [6.2-Histogram](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_06/6.2-Histogram)
 * [6.3-Box_plots](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_06/6.3-Box_plots)
 * [6.4-Pyramid](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_06/6.4-Pyramid)
-* [6.6-Small_multiples](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_06/6.6-Small_multiples)
+* [6.5-Small_multiples](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_06/6.5-Small_multiples)
 
 ## How to run the project
 To run this project, you'll need a local webserver. We recommend using [VS Code](https://code.visualstudio.com/)'s Live Server extension. You can find instructions on installing this extension in Appendix A of the book.
