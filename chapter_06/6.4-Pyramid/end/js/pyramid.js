@@ -27,66 +27,81 @@ const drawPyramid = (data) => {
   /***************************/
   /*    Generate the bins    */
   /***************************/
-  const bins = d3.bin()
-    .value(d => d.salary)(data);
+  const dataWomen = data.filter(d => d.gender === "Female");
+  const binsWomen = d3.bin()
+    .value(d => d.salary)(dataWomen);
 
-  const femalesData = data.filter(d => d.gender === "Female");
-  const femalesTotal = femalesData.length;
+  const dataMen = data.filter(d => d.gender === "Male");
+  const binsMen = d3.bin()
+    .value(d => d.salary)(dataMen);
 
-  const malesData = data.filter(d => d.gender === "Male");
-  const malesTotal = malesData.length;
-
-  // Add females and males data points directly inside the original bins
-  // This will make drawing the dumbell plot easier
-  bins.forEach(bin => {
-    const femaleBins = [];
-    const maleBins = [];
-    bin.forEach(respondent => {
-      if (respondent.gender === "Female") {
-        femaleBins.push(respondent);
-      } else {
-        maleBins.push(respondent);
-      }
-    });
-
-    bin["females"] = femaleBins;
-    bin["males"] = maleBins;
-  });
-  console.log("bins per gender", bins);
+  console.log("binsWomen", binsWomen);
+  console.log("binsMen", binsMen);
 
   
   /****************************/
   /*    Declare the scales    */
   /****************************/
   // X scale
-  const xScaleFemales = d3.scaleLinear()
-    .domain([30, 0])
+  const xScaleWomen = d3.scaleLinear()
+    .domain([15, 0])
     .range([0, innerWidth/2]);
-  const xScaleMales = d3.scaleLinear()
-    .domain([0, 30])
+  const xScaleMen = d3.scaleLinear()
+    .domain([0, 15])
     .range([innerWidth/2, innerWidth]);
 
 
-  const minSalary = bins[0].x0;
-  const maxSalary = bins[bins.length - 1].x1;
-  const yScale = d3.scaleLinear()  // We could also use a band scale
+  const minSalary = binsWomen[0].x0;
+  const maxSalary = binsWomen[binsWomen.length - 1].x1;
+  const yScale = d3.scaleLinear()
     .domain([minSalary, maxSalary])
     .range([innerHeight, 0]);
+  
+
+  /****************************/
+  /*      Append the bars     */
+  /****************************/
+  const pyramidContainer = innerChart
+    .append("g")
+      .attr("stroke", "#faffff")
+      .attr("stroke-width", 2);
+
+  pyramidContainer
+    .selectAll(".bar-women")
+    .data(binsWomen)
+    .join("rect")
+      .attr("class", "bar-women")
+      .attr("x", d => xScaleWomen(d.length / data.length * 100))
+      .attr("y", d => yScale(d.x1))
+      .attr("width", d => innerWidth/2 - xScaleWomen(d.length / data.length * 100))
+      .attr("height", d => yScale(d.x0) - yScale(d.x1))
+      .attr("fill", womenColor);
+
+  pyramidContainer
+    .selectAll("bar-men")
+    .data(binsMen)
+    .join("rect")
+      .attr("class", "bar-men")
+      .attr("x", innerWidth/2)
+      .attr("y", d => yScale(d.x1))
+      .attr("width", d => xScaleMen(d.length / data.length * 100) - innerWidth/2)
+      .attr("height", d => yScale(d.x0) - yScale(d.x1))
+      .attr("fill", menColor);
   
 
   /**************************/
   /*      Add the axes      */
   /**************************/
-  const bottomAxisFemales = d3.axisBottom(xScaleFemales)
-    .tickValues([30, 20, 10, 0])
+  const bottomAxisFemales = d3.axisBottom(xScaleWomen)
+    .tickValues([15, 10, 5, 0])
     .tickSizeOuter(0);
   innerChart
     .append("g")
       .attr("transform", `translate(0, ${innerHeight})`)
       .call(bottomAxisFemales);
-      
-  const bottomAxisMales = d3.axisBottom(xScaleMales)
-    .tickValues([10, 20, 30])
+
+  const bottomAxisMales = d3.axisBottom(xScaleMen)
+    .tickValues([5, 10, 15])
     .tickSizeOuter(0);
   innerChart
     .append("g")
@@ -108,41 +123,6 @@ const drawPyramid = (data) => {
       .text("Yearly salary (USD)")
       .attr("x", 0)
       .attr("y", 20);
-  
-
-  /******************************/
-  /*      Add the dumbbells      */
-  /******************************/
-  const dumbbellContainers = innerChart
-    .selectAll(".dumbbell-container")
-    .data(bins)
-    .join("g")
-      .attr("class", "dumbbell-container")
-      .attr("stroke", slateGray)
-      .attr("stroke-width", 2);
-
-  dumbbellContainers
-    .append("line")
-      .attr("x1", d => xScaleFemales(d.females.length / femalesTotal * 100))
-      .attr("x2", d => xScaleMales(d.males.length / malesTotal * 100))
-      .attr("y1", d => yScale(d.x0 + (d.x1-d.x0)/2))
-      .attr("y2", d => yScale(d.x0 + (d.x1-d.x0)/2));
-
-  const circlesRadius = 5;
-  dumbbellContainers
-    .append("circle")
-      .attr("class", "circle-female")
-      .attr("cx", d => xScaleFemales(d.females.length / femalesTotal * 100))
-      .attr("cy", d => yScale(d.x0 + (d.x1-d.x0)/2))
-      .attr("r", circlesRadius)
-      .attr("fill", womenColor);
-  dumbbellContainers
-    .append("circle")
-      .attr("class", "circle-male")
-      .attr("cx", d => xScaleMales(d.males.length / malesTotal * 100))
-      .attr("cy", d => yScale(d.x0 + (d.x1-d.x0)/2))
-      .attr("r", circlesRadius)
-      .attr("fill", menColor);
 
   
 };
