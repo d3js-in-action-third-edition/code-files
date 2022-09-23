@@ -6,7 +6,7 @@ const getRandomSalary = (salary) => {
 }
 
 // Load data
-d3.csv("./data/data.csv", d => {
+d3.csv("./data/earnings_per_role.csv", d => {
   if (d.pay_annual_USD !== "$240,000 or more") {
     return {
       role: d.role,
@@ -18,7 +18,7 @@ d3.csv("./data/data.csv", d => {
   console.log("data", data);
 
   drawHistogram(data);
-  drawBoxplot(data);
   drawPyramid(data);
-  drawSmallMultiples(data);
+  drawBoxplot(data);
+  drawViolinCharts(data);
 });

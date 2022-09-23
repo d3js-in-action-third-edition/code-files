@@ -21,23 +21,23 @@
 		<div class="intro">We observe that <span class="text-legend women">women</span>'s salary is slightly lower than <span class="text-legend men">men</span>'s, with medians being respectively $90,000 and $110,000. 50% of the <span class="text-legend women">women</span> earn between $70,000 and $110,000 per year, while 50% of the <span class="text-legend men">men</span> earn between $90,000 and $150,000.</div>
 		<div class="row">
 			<div class="col col-6">
-				<div id="boxplot" class="responsive-svg-container"></div>
+				<div id="pyramid" class="responsive-svg-container"></div>
 			</div>
 			<div class="col col-6">
-				<div id="pyramid" class="responsive-svg-container"></div>
+				<div id="boxplot" class="responsive-svg-container"></div>
 			</div>
 		</div>
 		
 		<h2>Comparison between roles</h2>
-		<div class="intro">The curves on the charts below represent the probability distribution for the salary reported by each role. We observe that analysts, who are the most represented in the survey (250 respondents), have an almost normal salary distribution. For positions with a smaller representation, like teachers (8 respondents) and cartographers (2 respondents), their distribution cannot be considered statistically relevant.</div>
-		<div id="small-multiples" class="responsive-svg-container"></div>
+		<div class="intro">The violin charts below represent the salary distribution for five leading data visualization roles: analyst, developer, designer, scientist, and leadership. We observe that analysts have the lowest average salary, while respondents with a leadership position have the highest. The thicker a violin is, the more respondents it contains for a specific salary bracket. On the contrary, thinner plots have a lower number of responses.</div>
+		<div id="violin" class="responsive-svg-container"></div>
 
 		<div class="source">
 			<h3>Data source</h3>
 			<p><a href="https://www.datavisualizationsociety.org/survey">State of the industry survey 2021 - Data Visualization Society</a></p>
 			<h3>Methodology</h3>
 			<p>For comparison purposes, this project visualizes only the answers provided by salaried professionals living in the United States (788 respondents). Thirty-three respondents declared earning $240,000 or more annually and are not represented in the visualizations.</p>
-			<p>The boxplot and the pyramid chart present only the data from respondents identifying as women or men (735 respondents).</p>
+			<p>The pyramid chart and the boxplot present only the data from respondents identifying as women or men (735 respondents).</p>
 		</div>
 	</div>
 
@@ -47,7 +47,7 @@
 	<script src="js/histogram.js"></script>
 	<script src="js/box-plot.js"></script>
 	<script src="js/pyramid.js"></script>
-	<script src="js/small-multiples.js"></script>
+	<script src="js/violins.js"></script>
 	<script src="js/load-data.js"></script>
 </body>
 </html>

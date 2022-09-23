@@ -7,9 +7,9 @@ When changing to the next section, you can choose to keep coding in the same fil
 ## Sections in this chapter
 * [6.1-Binning_data](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_06/6.1-Binning_data)
 * [6.2-Histogram](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_06/6.2-Histogram)
-* [6.3-Box_plots](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_06/6.3-Box_plots)
-* [6.4-Pyramid](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_06/6.4-Pyramid)
-* [6.5-Small_multiples](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_06/6.5-Small_multiples)
+* [6.3-Pyramid](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_06/6.4-Pyramid)
+* [6.4-Box_plots](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_06/6.3-Box_plots)
+* [6.5-Violins](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_06/6.5-Violins)
 
 ## How to run the project
 To run this project, you'll need a local webserver. We recommend using [VS Code](https://code.visualstudio.com/)'s Live Server extension. You can find instructions on installing this extension in Appendix A of the book.
@@ -31,7 +31,7 @@ To run this project, you'll need a local webserver. We recommend using [VS Code]
     * `histogram.js` is where you'll generate the histogram.
     * `box-plot.js` is where you'll generate the box plots.
     * `pyramid.js` is where you'll generate the pyramid chart.
-    * `small-multiples.js` is where you'll create the small multiples layout.
+    * `violins.js` is where you'll create the violin plots layout.
     * `load-data.js` is where the data is loaded and passed to the different functions that generate the visualizations. Is also contains the function `getRandomSalary` that randomly returns a salary within the bracket selected by the respondent.
 * `index.html` contains the markup and text that composes the project. The D3 library, the CSS files, and the JavaScript files are already loaded in `index.html`.
 
