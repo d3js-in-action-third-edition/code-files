@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Earnings of Data Visualization practitioners | D3.js in Action</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/visualization.css">
+</head>
+<body>
+	<div class="container">
+			
+		<h1>Earnings of Data Visualization practitioners</h1>
+		<div class="intro">In their <a href="https://www.datavisualizationsociety.org/survey">2021 State of the Industry Survey</a>, the <a href="https://www.datavisualizationsociety.org">Data Visualization Society</a> asked data visualization practitioners for their pre-tax yearly pay in US dollars. This project visualizes the answers to this question for respondents living in the United States.</div>
+		
+		<h2>Distribution of annual salaries</h2>
+		<div class="intro">The annual salaries vary between $0 and $240,000, with most professionals earning between $60,000 and $140,000. They almost form a normal distribution, slightly skewed to the right.</div>
+		<div id="histogram" class="responsive-svg-container"></div>
+		
+		<h2>Comparison between women and men</h2>
+		<div class="intro">We observe that <span class="text-legend women">women</span>'s salary is slightly lower than <span class="text-legend men">men</span>'s, with medians being respectively $90,000 and $110,000. 50% of the <span class="text-legend women">women</span> earn between $70,000 and $110,000 per year, while 50% of the <span class="text-legend men">men</span> earn between $90,000 and $150,000.</div>
+		<div class="row">
+			<div class="col col-6">
+				<div id="pyramid" class="responsive-svg-container"></div>
+			</div>
+			<div class="col col-6">
+				<div id="boxplot" class="responsive-svg-container"></div>
+			</div>
+		</div>
+		
+		<h2>Comparison between roles</h2>
+		<div class="intro">The violin charts below represent the salary distribution for five leading data visualization roles: analyst, developer, designer, scientist, and leadership. We observe that analysts have the lowest average salary, while respondents with a leadership position have the highest. The thicker a violin is, the more respondents it contains for a specific salary bracket. On the contrary, thinner plots have a lower number of responses.</div>
+		<div id="violin" class="responsive-svg-container"></div>
+
+		<div class="source">
+			<h3>Data source</h3>
+			<p><a href="https://www.datavisualizationsociety.org/survey">State of the industry survey 2021 - Data Visualization Society</a></p>
+			<h3>Methodology</h3>
+			<p>For comparison purposes, this project visualizes only the answers provided by salaried professionals living in the United States (788 respondents). Thirty-three respondents declared earning $240,000 or more annually and are not represented in the visualizations.</p>
+			<p>The pyramid chart and the boxplot present only the data from respondents identifying as women or men (735 respondents).</p>
+		</div>
+	</div>
+
+	<!-- Load your scripts here -->
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="js/shared-constants.js"></script>
+	<script src="js/histogram.js"></script>
+	<script src="js/box-plot.js"></script>
+	<script src="js/pyramid.js"></script>
+	<script src="js/violins.js"></script>
+	<script src="js/load-data.js"></script>
+</body>
+</html>
