@@ -1,0 +1,39 @@
+/* Responsive container of the svg element */
+.responsive-svg-container {
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Axis and labels styles */
+.tick text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+/* Filters */
+#filters {
+  margin: 10px 0px 5px;
+}
+.filter {
+  min-width: 80px;
+  margin: 0 5px;
+  padding: 8px 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  color: #faffff;
+  font-weight: 500;
+  background-color: rgba(48, 82, 82, 0.5);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3ms ease-in;
+}
+.filter:hover,
+.filter.active {
+  background-color: rgba(48, 82, 82, 1);
+  transition-timing-function: ease-out;
+}
+.filter.active {
+  cursor: default;
+}
