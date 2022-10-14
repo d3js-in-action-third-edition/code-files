@@ -8,11 +8,11 @@ const populateFilters = (data) => {
 };
 
 
-/********************************/
-/*   Handle clicks on filters   */
-/********************************/
-const filterHistogram = (selectedOption, data) => {
+/****************************/
+/*   Update the histogram   */
+/****************************/
+const updateHistogram = (selectedFilter, data) => {
   
-  // Handle clicks on filters here
+  // Update the histogram here
 
 };

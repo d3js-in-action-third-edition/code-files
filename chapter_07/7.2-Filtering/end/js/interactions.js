@@ -7,25 +7,27 @@ const populateFilters = (data) => {
     .selectAll(".filter")
     .data(filters)
     .join("button")
-      .attr("class", d => `filter filter-${d.id} ${d.isActive ? "active" : ""}`)
+      .attr("class", d => `filter ${d.isActive ? "active" : ""}`)
       .text(d => d.label)
       .on("click", (e, d) => {
+        console.log("DOM event", e);
+        console.log("Attached datum", d);
 
-        // Handle buttons active state
-        d3.selectAll(".filter")
-          .classed("active", option => option.id === d.id ? true : false);
-
-        // If user clicked on a button that is not yet active
+        // If the user clicked on a button that is not yet active
         if (!d.isActive) {
-
-          // Call the function to filter the histogram
-          filterHistogram(d.id, data);
 
           // Update isActive states in the filters array
           filters.forEach(filter => {
             filter.isActive = d.id === filter.id ? true : false;
-
           });
+
+          // Handle the buttons active class name
+          d3.selectAll(".filter")
+          .classed("active", filter => filter.id === d.id ? true : false);
+
+          // Call the function to filter the histogram
+          updateHistogram(d.id, data);
+
         }
 
       });
@@ -33,27 +35,25 @@ const populateFilters = (data) => {
 };
 
 
-/********************************/
-/*   Handle clicks on filters   */
-/********************************/
-const filterHistogram = (selectedOption, data) => {
+/****************************/
+/*   Update the histogram   */
+/****************************/
+const updateHistogram = (filterId, data) => {
   
   // Filter the original data based on the selected option
-  let updatedData = selectedOption === "all"
+  let updatedData = filterId === "all"
     ? data
-    : data.filter(item => item.gender === selectedOption);
+    : data.filter(respondent => respondent.gender === filterId);
 
   // Update the bins
-  const binGenerator = d3.bin()
-    .value(d => d.salary);
   const updatedBins = binGenerator(updatedData);
 
   // Update the histogram
   d3.selectAll("#histogram rect")
     .data(updatedBins)
-    .transition()
-      .duration(500)
-      .ease(d3.easeCubicOut)
+  //   .transition()
+  //     .duration(500)
+  //     .ease(d3.easeCubicOut)
       .attr("y", d => yScale(d.length))
       .attr("height", d => innerHeight - yScale(d.length));
 

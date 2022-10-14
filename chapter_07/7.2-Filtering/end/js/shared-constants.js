@@ -25,6 +25,13 @@ const xScale = d3.scaleLinear();
 const yScale = d3.scaleLinear();
 
 
+/*************************************************/
+/*  Make the bins generator accessible globally  */
+/*************************************************/
+const binGenerator = d3.bin()
+  .value(d => d.salary);
+
+
 /***********************/
 /*       Filters       */
 /***********************/

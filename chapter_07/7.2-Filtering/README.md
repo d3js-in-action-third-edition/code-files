@@ -19,7 +19,7 @@ To run this project, you'll need a local webserver. We recommend using [VS Code]
     * `base.css` consists of the generic styles applied to the project page, like the font, spacings, and colors. Although you won’t need to edit this file, feel free to personalize it!
     * `visualization.css` is where we add styles for our visualizations. It already contains the style properties applied to responsive SVG containers, following the strategy described in chapter 1.
 * The `/js` folder contains multiple JavaScript files.
-    * `shared-constants.js` contains a list of constants that are reused in the project's different files, like the dimensions, colors, and scales. It also includes an array of the filters we will add to the interface.
+    * `shared-constants.js` contains a list of constants that are reused in the project's different files, like the dimensions, colors, scales and the bin generator. It also includes an array of the filters we will add to the interface.
     * `histogram.js` is where the histogram is already generated.
     * `interactions.js` is where you'll create the filters and handle the interactions.
     * `load-data.js` is where the data is loaded and passed to the different functions that generate the visualizations. It also contains the function `getRandomSalary` that randomly returns a salary within the bracket selected by the respondent.
