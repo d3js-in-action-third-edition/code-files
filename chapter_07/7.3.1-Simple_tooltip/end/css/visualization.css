@@ -1,0 +1,18 @@
+/* Responsive container of the svg element */
+.responsive-svg-container {
+  width: 100%;
+  max-width: 800px;
+}
+.responsive-svg-container.small {
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+/* Axis and labels styles */
+.tick text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4rem;
+}
+.chart-label {
+  font-size: 1.6rem;
+}
