@@ -6,9 +6,10 @@ The folder is separated into subfolders corresponding to each section of the cha
 ## Sections in this chapter
 * [7.2-Filtering](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_07/7.2-Filtering)
 * [7.3.1-Simple_tooltip](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_07/7.3.1-Simple_tooltip)
-* [7.4-Composite_tooltip](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_07/7.4-Composite_tooltip)
-* [7.5-Brushing](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_07/7.5-Brushing)
-* [7.6-Enter_update_exit](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_07/7.6-Enter_update_exit)
+* [7.3.3-Compound_tooltip](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_07/7.3.3-Compound_tooltip)
+* [7.4.1-Enter_update_exit](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_07/7.4.1-Enter_update_exit)
+* [7.4.2-Brushing](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_07/7.4.2-Brushing)
+* [7.4.3-Zooming](https://github.com/d3js-in-action-third-edition/code-files/tree/main/chapter_07/7.4.3-Zooming)
 
 ## How to run the projects
 To run this project, you'll need a local webserver. We recommend using [VS Code](https://code.visualstudio.com/)'s Live Server extension. You can find instructions on installing this extension in Appendix A of the book.

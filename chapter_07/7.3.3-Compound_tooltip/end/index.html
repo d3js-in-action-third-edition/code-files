@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Composite tooltip - Visualizing 40 Years of Music Industry Sales | D3.js in Action</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/visualization.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Visualizing 40 Years of Music Industry Sales</h1>
+		<div class="intro">
+			<div>This project visualizes the music sales in the United States by format between 1973 and 2019. These formats range from physical supports like <span class="support support-vinyl">vinyl</span>, <span class="support support-eigth-track">8-track</span>, <span class="support support-cassette">cassette</span>, and <span class="support support-cd">cd</span>, to music consumed digitally, with <span class="support support-download">downloads</span> and <span class="support support-streaming">streaming services</span>. The category <span class="support support-other">other</span> includes less prominent sources of revenue like music videos (physical), synchronization, and royalties.</div>
+			<div class="tip">
+				<svg width="16" height="16" fill="currentColor" class="bi bi-lightbulb" viewBox="0 0 16 16">
+					<path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"/>
+				</svg>
+				<span>Move your mouse over the graph to see the breakdown of sales for each year.</span>
+			</div>
+		</div>
+		<div id="streamgraph"></div>
+		<div class="source">
+			<p>Data Source: <a href="https://data.world/makeovermonday/2020w21-visualizing-40-years-of-music-industry-sales">MakeoverMonday 2020/W21</a></p>
+		</div>
+	</div>
+
+	<!-- Load your scripts here -->
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="js/shared-constants.js"></script>
+	<script src="js/scales.js"></script>
+	<script src="js/streamgraph.js"></script>
+	<script src="js/interactions.js"></script>
+	<script src="js/load-data.js"></script>
+</body>
+</html>

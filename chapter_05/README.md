@@ -17,7 +17,7 @@ To run this project, you'll need a local webserver. We recommend using [VS Code]
 
 ## Structure of the project
 * The `/data` folder contains the CSV file `data.csv`, listing the sales revenue from different music formats between 1973 and 2019. The revenues are in million USD and adjusted for inflation (2017).
-    * The music formats are vinyl, 8-track, cassette, cd, download, and streaming.
+    * The music formats are `vinyl`, `8-track`, `cassette`, `cd`, `download`, and `streaming`.
     * The category `other` includes revenues from music videos (physical), synchronization, and royalties.
 * The `/css` folder contains two CSS files:
     * `base.css` consists of the generic styles applied to the project page, like the font, spacings, and colors. Although you won’t need to edit this file, feel free to personalize it!
