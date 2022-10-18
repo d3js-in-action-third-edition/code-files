@@ -86,7 +86,7 @@ const handleMouseEvents = (data) => {
 
       formatsInfo.forEach(format => {
         d3.select(`.sales-${format.id}`)
-          .text(`${format.label}: ${d3.format(",.2r")(yearData[format.id])}M$`);
+          .text(`${format.label}: ${d3.format(",.1r")(yearData[format.id])}M$`);
       });
 
     });
