@@ -4,7 +4,7 @@ const createTooltip = () => {
     .append("g")
       .attr("class", "tooltip")
       .style("opacity", 0);
-  const tooltipBackground = tooltip
+  tooltip
     .append("rect")
       .attr("width", tooltipWidth)
       .attr("height", tooltipHeight)
@@ -12,15 +12,15 @@ const createTooltip = () => {
       .attr("ry", 3)
       .attr("fill", aubergine)
       .attr("fill-opacity", 0.75);
-  const tooltipText = tooltip
+  tooltip
     .append("text")
       .text("00.0°F")
       .attr("x", tooltipWidth/2)
       .attr("y", tooltipHeight/2 + 1)
       .attr("text-anchor", "middle")
       .attr("alignment-baseline", "middle")
-      .style("font-weight", 900)
-      .style("fill", "white");
+      .attr("fill", "white")
+      .style("font-weight", 900);
 
 }
 
@@ -28,9 +28,8 @@ const handleMouseEvents = () => {
 
   innerChart.selectAll("circle")
     .on("mouseenter", (e, d) => {
-
-      console.log("event", e);
-      console.log("attached data", d);
+      console.log("DOM event", e);
+      console.log("Attached datum", d);
 
       // Update the text in the tooltip
       d3.select(".tooltip text")
