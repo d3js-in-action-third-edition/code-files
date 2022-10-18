@@ -1,4 +1,4 @@
-const margin = {top: 220, right: 90, bottom: 50, left: 90};
+const margin = {top: 200, right: 90, bottom: 50, left: 90};
 const width = 860;
 const height = 450;
 const innerWidth = width - margin.left - margin.right;
