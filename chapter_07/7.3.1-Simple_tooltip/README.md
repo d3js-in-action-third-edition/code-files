@@ -21,7 +21,7 @@ To run this project, you'll need a local webserver. We recommend using [VS Code]
 * The `/js` folder contains multiple JavaScript files.
     * `shared-constants.js` contains a list of constants that are reused in the project's different files.
     * `line-chart.js` is where the line chart is already generated.
-    * `interactions.js` is where you'll create the filters and handle the interactions.
+    * `interactions.js` is where you'll create the tooltip and handle the mouse events.
     * `load-data.js` is where the data is loaded and passed to the different functions that generate the visualizations.
 * `index.html` contains the markup and text that composes the project. The D3 library, the CSS files, and the JavaScript files are already loaded in `index.html`.
 
