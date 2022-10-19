@@ -14,7 +14,10 @@ To run this project, you'll need a local webserver. We recommend using [VS Code]
     * The music formats are `vinyl`, `8-track`, `cassette`, `cd`, `download`, and `streaming`.
     * The category `other` includes revenues from music videos (physical), synchronization, and royalties.
 * The `/css` folder contains two CSS files:
-     * `shared-constants.js` contains each chart's margins, width, and height, as per the strategy discussed in chapter 4. It also includes an array named `formatsInfo` that lists the id, label, and color associated with each format.
+    * `base.css` consists of the generic styles applied to the project page, like the font, spacings, and colors. Although you won’t need to edit this file, feel free to personalize it!
+    * `visualization.css` is where we add styles for our visualizations. It already contains the style properties applied to responsive SVG containers, following the strategy described in chapter 1.
+* The `/js` folder contains multiple JavaScript files.
+     * `shared-constants.js` contains the chart's margins, width, and height, as per the strategy discussed in chapter 4. It also includes an array named `formatsInfo` that lists the id, label, and color associated with each format.
     * `scales.js` is where we initialized the D3 scales used to build the streamgraph.
     * `streamgraph.js` is where the streamgraph is already generated.
     * `interactions.js` is where you'll create the tooltip and handle the mouse events.
