@@ -22,7 +22,7 @@ const handleClickOnFilter = (data) => {
 
   d3.selectAll(".filter")
     .on("click", (e, datum) => {
-      console.log(datum)
+      
       if (!datum.isActive) {
 
         // Update filters
@@ -32,52 +32,44 @@ const handleClickOnFilter = (data) => {
         d3.selectAll(".filter")
           .classed("active", d => d.id === datum.id ? true : false);
 
-        // Reusable transition
-        const t = d3.transition()
-          .duration(1500);
-
         // Update scatterplot
         const updatedData = datum.id === "all"
           ? data
           : data.filter(d => d.hemisphere === datum.id);
 
-        innerChart
+        // Reusable transition
+        const t = d3.transition()
+          .duration(800)
+          .ease(d3.easeExpOut);
+
+          innerChart
           .selectAll("circle")
-          // Do it first without the key function
-          // "... this thing called a key function. And what a key function is that is, we tell D3 what to access in the bound data to control which data, so which of these new data is assigned to which elements in the selection."
-          // https://frontendmasters.com/courses/d3/enter-update-exit-pattern/
           .data(updatedData, d => d.uid)
           .join(
-            function(enter) {
-              return enter
-                .append("circle")
-                  .attr("class", "cetacean")
-                  .attr("cx", d => xScale(d.global_population_estimate) - innerWidth)
-                  .attr("cy", d => yScale(d.max_size_m))
-                  .attr("r", 0)
-                  .attr("fill", d => colorScale(d.status))
-                  .attr('fill-opacity', 0.6)
-                  .attr("stroke", d => colorScale(d.status))
-                  .attr("stroke-width", 2)
-                  .style('opacity', 0)
-                  .on("mouseenter", showTooltip)
-                  .on("mouseleave", hideTooltip)
-                  .transition(t)
-                    .attr("cx", d => xScale(d.global_population_estimate))
-                    .attr("r", d => rScale(d.max_weight_t))
-                    .style('opacity', 1);
-            },
-            function(update) {
-              return update;
-            },
-            function(exit) {
-              return exit
-                .transition(t)
-                .attr("cy", d => yScale(d.max_size_m) + innerHeight)
+            enter => enter
+              .append("circle")
+                .attr("class", "cetacean")
+                .attr("cx", d => xScale(d.global_population_estimate))
+                .attr("cy", d => -50)
+                .attr("r", 0)
+                .attr("fill", d => colorScale(d.status))
+                .attr('fill-opacity', 0.6)
+                .attr("stroke", d => colorScale(d.status))
+                .attr("stroke-width", 2)
+                .style('opacity', 0)
+                .on("mouseenter", showTooltip)
+                .on("mouseleave", hideTooltip)
+              .call(enter => enter.transition(t)
+                .attr("cy", d => yScale(d.max_size_m))
+                .attr("r", d => rScale(d.max_weight_t))
+                .style('opacity', 1)),
+            update => update,
+            exit => exit
+              .call(exit => exit.transition(t)
+                .attr("cy", d => innerHeight)
                 .attr("r", 0)
                 .style('opacity', 0)
-                .remove();
-            }
+                .remove())
           )
 
       }
@@ -90,7 +82,8 @@ const appendTooltip = () => {
     .append("text")
       .attr("class", "tooltip")
       .attr("text-anchor", "middle")
-      .attr("fill", "#192e4d");
+      .attr("fill", "#192e4d")
+      .style("opacity", 0);
 };
 
 const showTooltip = (e, d) => {

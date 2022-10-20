@@ -17,23 +17,28 @@ const drawScatterplot = (data) => {
   /****************************/
   /*    Declare the scales    */
   /****************************/
-  // X scale
-  const maxPopulation = d3.max(data, d => d.global_population_estimate);
-  xScale
-    .domain([1, maxPopulation])
-    .range([0, innerWidth])
-    .nice();
-
   // Y scale
   const maxSize = d3.max(data, d => d.max_size_m);
-  yScale
+  yScale = d3.scaleLinear()
     .domain([0, maxSize])
     .range([innerHeight, 0])
     .nice();
 
+  // Color scale
+  colorScale = d3.scaleOrdinal()
+    .domain(conservationStatuses.map(s => s.id))
+    .range(conservationStatuses.map(s => s.color));
+
+  // X scale
+  const maxPopulation = d3.max(data, d => d.global_population_estimate);
+  xScale = d3.scaleLog()
+    .domain([1, maxPopulation])
+    .range([0, innerWidth])
+    .nice();
+
   // Radius scale
   const maxWeigth = d3.max(data, d => d.max_weight_t);
-  rScale
+  rScale = d3.scaleRadial()
     .domain([0, maxWeigth])
     .range([0, 45]);
   
@@ -48,8 +53,6 @@ const drawScatterplot = (data) => {
       .attr("class", "axis-x")
       .attr("transform", `translate(0, ${innerHeight})`)
       .call(bottomAxisGenerator);
-  d3.selectAll(".axis-x text")
-    .attr("y", "10px");
 
   // Left axis
   const leftAxisGenerator = d3.axisLeft(yScale);

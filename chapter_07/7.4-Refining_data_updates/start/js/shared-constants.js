@@ -24,12 +24,7 @@ const conservationStatuses = [
 ];
 
 // Scales
-let xScale = d3.scaleLog();
-
-let yScale = d3.scaleLinear();
-
-let rScale = d3.scaleRadial();
-
-const colorScale = d3.scaleOrdinal()
-  .domain(conservationStatuses.map(s => s.id))
-  .range(conservationStatuses.map(s => s.color));
+let yScale;
+let colorScale;
+let xScale;
+let rScale;
