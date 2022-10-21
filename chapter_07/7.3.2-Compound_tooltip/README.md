@@ -1,4 +1,4 @@
-# Building a simple tooltip
+# Building a compound tooltip
 This folder contains the exercise files for chapter 7 section 7.3.2 of [D3.js in Action, 3rd edition](https://www.manning.com/books/d3js-in-action-third-edition).
 </br>
 In this folder, you’ll find a *start* and an *end* folder. To follow along with the book’s instructions, write your code in the *start* folder. If you ever get stuck, you’ll find the solution in the *end* folder.
