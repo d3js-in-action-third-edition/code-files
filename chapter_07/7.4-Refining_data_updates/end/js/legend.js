@@ -30,12 +30,12 @@ const populateLegend = (data) => {
   const sizes = d3.select(".legend-weight")
     .append("svg")
       .attr("width", 180)
-      .attr("height", 100)
+      .attr("height", 120)
     .append("g")
       .attr("transform", "translate(0, 10)");
 
-  const maxWeight = d3.max(data, d => d.max_weight_t);
-  const mediumWeight = 80;
+  const maxWeight = 180;
+  const mediumWeight = 90;
   const lowWeight = 10;
   const circles = sizes 
     .append("g")
