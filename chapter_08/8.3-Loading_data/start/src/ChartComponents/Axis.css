@@ -1,0 +1,12 @@
+.axis line,
+.axis path,
+.axis-line {
+  stroke: #888b8d;
+}
+
+.axis text,
+.axis-tick,
+.axis-label {
+  font-size: 14px;
+  fill: #374f5e;
+}
