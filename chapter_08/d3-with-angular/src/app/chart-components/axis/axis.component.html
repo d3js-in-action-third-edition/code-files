@@ -8,7 +8,7 @@
     [attr.y1]="0"
     [attr.x2]="innerWidth" 
     [attr.y2]="0"
-  ></svg:line>
+  />
   <svg:text
     *ngFor="let tick of ticks; index as i; trackBy: trackByFn"
     class="axis-tick"
@@ -37,7 +37,7 @@
     [attr.y1]="innerHeight"
     [attr.x2]="0" 
     [attr.y2]="0"
-  ></svg:line>
+  />
   <svg:text
     *ngFor="let tick of ticks; index as i; trackBy: trackByFn"
     class="axis-tick"
