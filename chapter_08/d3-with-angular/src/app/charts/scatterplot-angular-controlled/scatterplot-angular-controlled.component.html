@@ -5,6 +5,15 @@
       [height]="height"
       [margin]="margin"
     >
-      
+      <svg:g appCircles
+        [data]="data"
+        [xScale]="xScale"
+        [yScale]="yScale"
+        [colorScale]="colorScale"
+        [xAccessor]="'user_count'"
+        [yAccessor]="'retention_percentage'"
+        [colorAccessor]="'id'"
+        [radius]="6"
+      ></svg:g>
     </app-chart-container>
   </app-card>

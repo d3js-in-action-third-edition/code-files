@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CircleComponent } from './circle.component';
+import { CircleComponent } from './circles.component';
 
 describe('CircleComponent', () => {
   let component: CircleComponent;

@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import * as d3 from 'd3';
 
+import { DataType } from './utils/types';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  data:any;
+  data!: DataType;
 
   constructor() {}
 
@@ -20,7 +22,7 @@ export class AppComponent {
     
     d3.json(dataURL).then(data => {
       console.log("data", data);
-      this.data = data;
+      this.data = data as DataType;
     });
   }
 }

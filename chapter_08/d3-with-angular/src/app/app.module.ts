@@ -8,7 +8,7 @@ import { CardComponent } from './ui/card/card.component';
 import { ChartContainerComponent } from './chart-components/chart-container/chart-container.component';
 import { ScatterplotAngularControlledComponent } from './charts/scatterplot-angular-controlled/scatterplot-angular-controlled.component';
 import { AxisComponent } from './chart-components/axis/axis.component';
-import { CircleComponent } from './chart-components/circle/circle.component';
+import { CirclesComponent } from './chart-components/circles/circles.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { CircleComponent } from './chart-components/circle/circle.component';
     ChartContainerComponent,
     ScatterplotAngularControlledComponent,
     AxisComponent,
-    CircleComponent
+    CirclesComponent
   ],
   imports: [
     BrowserModule

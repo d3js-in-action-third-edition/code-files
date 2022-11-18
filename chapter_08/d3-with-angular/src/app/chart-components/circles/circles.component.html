@@ -1,0 +1,7 @@
+<svg:circle 
+  *ngFor="let d of data"
+  [attr.cx]="xScale(d[xAccessor])"
+  [attr.cy]="yScale(d[yAccessor])"
+  [attr.r]="radius"
+  [attr.fill]="colorScale(d[colorAccessor])"
+></svg:circle>

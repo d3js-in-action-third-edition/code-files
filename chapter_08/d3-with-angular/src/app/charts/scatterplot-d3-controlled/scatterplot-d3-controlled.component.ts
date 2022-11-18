@@ -1,15 +1,17 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import * as d3 from 'd3';
 
+import { MarginType } from 'src/app/utils/types';
+
 @Component({
   selector: 'app-scatterplot-d3-controlled',
   templateUrl: './scatterplot-d3-controlled.component.html',
   styleUrls: ['./scatterplot-d3-controlled.component.css']
 })
 export class ScatterplotD3ControlledComponent {
-  @Input() data:any;
-  @Input() margin:any;
-  @Input() colorScale:any;
+  @Input() data: any;
+  @Input() margin!: MarginType;
+  @Input() colorScale: any;
   @ViewChild('scatterplot') scatterplotRef!: ElementRef<SVGElement>;
 
   width = 300;
