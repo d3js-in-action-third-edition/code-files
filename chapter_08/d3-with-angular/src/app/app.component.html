@@ -1,0 +1,6 @@
+<div class="container">
+  <div *ngIf="data === undefined; else elseBlock">Loading...</div>
+  <ng-template #elseBlock>
+    <app-charts [data]="data"></app-charts>
+  </ng-template>
+</div>

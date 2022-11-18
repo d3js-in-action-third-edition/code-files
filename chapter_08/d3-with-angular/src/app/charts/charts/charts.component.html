@@ -1,0 +1,28 @@
+<ng-container>
+  <h1>Front-end Frameworks</h1>
+  <div class='row'>
+    <div class='col-9'>
+      <!-- <Rankings margin={margin} /> -->
+    </div>
+    <div class='col-3'>
+      <div class='row'>
+        <div class='col-12'>
+          <!-- <app-scatterplot-d3-controlled
+            [data]="data.experience"
+            [margin]="margin"
+            [colorScale]="colorScale"
+          ></app-scatterplot-d3-controlled> -->
+          <app-scatterplot-angular-controlled
+            [data]="data.experience"
+            [margin]="margin"
+            [colorScale]="colorScale"
+          ></app-scatterplot-angular-controlled>
+        </div>
+        <div class='col-12'>
+          <!-- <BarChart margin={margin} /> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="source">Data source and inspiration: <a href="https://2021.stateofjs.com/en-US/libraries/front-end-frameworks">The State of JS 2021: Front-end Frameworks</a></div>
+</ng-container>
