@@ -5,6 +5,20 @@
       [height]="height"
       [margin]="margin"
     >
+      <svg:g appAxis
+        [type]="'bottom'"
+        [scale]="xScale"
+        [innerWidth]="innerWidth"
+        [innerHeight]="innerHeight"
+        label="{{'User Count'}}"
+      ></svg:g>
+      <svg:g appAxis
+        [type]="'left'"
+        [scale]="yScale"
+        [innerWidth]="innerWidth"
+        [innerHeight]="innerHeight"
+        label="{{'Retention %'}}"
+      ></svg:g>
       <svg:g appCircles
         [data]="data"
         [xScale]="xScale"

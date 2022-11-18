@@ -15,6 +15,8 @@ export class ScatterplotAngularControlledComponent {
 
   width = 300;
   height = 245;
+  innerWidth = 0;
+  innerHeight = 0;
 
   xScale = d3.scaleLinear();
   yScale = d3.scaleLinear();
@@ -24,17 +26,17 @@ export class ScatterplotAngularControlledComponent {
   }
 
   initializeScales() {
-    const innerWidth = this.width - this.margin.left - this.margin.right;
-    const innerHeight = this.height - this.margin.top - this.margin.bottom;
+    this.innerWidth = this.width - this.margin.left - this.margin.right;
+    this.innerHeight = this.height - this.margin.top - this.margin.bottom;
 
     const maxUsers:any = d3.max(this.data, (d:any) => d.user_count);
     this.xScale
       .domain([0, maxUsers])
-      .range([0, innerWidth])
+      .range([0, this.innerWidth])
       .nice();
     this.yScale
       .domain([0, 100])
-      .range([innerHeight, 0]);
+      .range([this.innerHeight, 0]);
   }
 
 }

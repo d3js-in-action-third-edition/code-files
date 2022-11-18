@@ -15,4 +15,8 @@ export class CirclesComponent {
   @Input() colorAccessor: string = '';
   @Input() radius: number = 10;
 
+  trackByFn(index: number, d: any) {
+    return `scatterplot-circle-${d.id}`;
+  }
+
 }

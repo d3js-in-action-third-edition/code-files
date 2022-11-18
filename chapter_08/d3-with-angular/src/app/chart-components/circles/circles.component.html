@@ -1,5 +1,5 @@
 <svg:circle 
-  *ngFor="let d of data"
+  *ngFor="let d of data; index as i; trackBy: trackByFn"
   [attr.cx]="xScale(d[xAccessor])"
   [attr.cy]="yScale(d[yAccessor])"
   [attr.r]="radius"

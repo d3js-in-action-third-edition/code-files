@@ -1,1 +1,59 @@
-<p>axis works!</p>
+<svg:g 
+  *ngIf="type === 'bottom'"
+  [attr.transform]="axisTranslation"
+>
+  <svg:line
+    class="axis-line" 
+    [attr.x1]="0" 
+    [attr.y1]="0"
+    [attr.x2]="innerWidth" 
+    [attr.y2]="0"
+  ></svg:line>
+  <svg:text
+    *ngFor="let tick of ticks; index as i; trackBy: trackByFn"
+    class="axis-tick"
+    [attr.x]="scale(tick)"
+    [attr.y]="20"
+    [attr.text-anchor]="'middle'"
+  >
+    {{tick}}
+  </svg:text>
+  <text
+    *ngIf="label"
+    class="axis-label"
+    [attr.text-anchor]="'middle'"
+    [attr.transform]="labelTransform"
+  >
+    {{label}}
+  </text>
+</svg:g>
+<svg:g 
+  *ngIf="type === 'left'"
+  [attr.transform]="axisTranslation"
+>
+  <svg:line
+    class="axis-line" 
+    [attr.x1]="0" 
+    [attr.y1]="innerHeight"
+    [attr.x2]="0" 
+    [attr.y2]="0"
+  ></svg:line>
+  <svg:text
+    *ngFor="let tick of ticks; index as i; trackBy: trackByFn"
+    class="axis-tick"
+    [attr.x]="-10"
+    [attr.y]="scale(tick)"
+    [attr.text-anchor]="'end'"
+    [attr.alignment-baseline]="'middle'"
+  >
+    {{tick}}
+  </svg:text>
+  <text
+    *ngIf="label"
+    class="axis-label"
+    [attr.text-anchor]="'middle'"
+    [attr.transform]="labelTransform"
+  >
+    {{label}}
+  </text>
+</svg:g>
