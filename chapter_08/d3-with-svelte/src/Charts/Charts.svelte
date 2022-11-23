@@ -3,11 +3,12 @@
   import * as d3 from "d3";
 
   import ScatterplotD3Controlled from "./ScatterplotD3Controlled.svelte";
+  import ScatterplotSvelteControlled from "./ScatterplotSvelteControlled.svelte";
 
   export let data;
 
   const margin = {top: 30, right: 10, bottom: 50, left: 60};
-  const colorScale = d3.scaleOrdinal();
+  let colorScale;
 
   onMount(() => {
     if (data) {
@@ -16,7 +17,7 @@
   });
 
   const setColorScale = () => {
-    colorScale
+    colorScale = d3.scaleOrdinal()
       .domain(data.ids)
       .range(d3.schemeTableau10);
   };
@@ -31,11 +32,18 @@
     <div class="col-3">
       <div class="row">
         <div class="col-12">
-          <ScatterplotD3Controlled
-            margin={margin} 
-            data={data.experience}
-            colorScale={colorScale}
-          />
+          {#if colorScale && data}
+            <!-- <ScatterplotD3Controlled
+              margin={margin} 
+              data={data.experience}
+              colorScale={colorScale}
+            /> -->
+            <ScatterplotSvelteControlled
+              margin={margin} 
+              data={data.experience}
+              colorScale={colorScale}
+            />
+          {/if}
         </div>
         <div class="col-12">
           <!-- <BarChart margin={margin} /> -->

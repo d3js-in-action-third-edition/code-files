@@ -14,15 +14,13 @@
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
-  let ref;
+  let scatterplotRef;
   onMount(() => {
-    if (data && ref) {
-      createScatterplot();
-    }
+    createScatterplot();
   });
 
   const createScatterplot = () => {
-    const scatterplotContainer = d3.select(ref);
+    const scatterplotContainer = d3.select(scatterplotRef);
 
     // Declare scales
     const maxUsers = d3.max(data, d => d.user_count);
@@ -50,7 +48,7 @@
       .append("g")
         .attr("class", "axis")
         .call(leftAxis);
-
+    
     // Append circles
     scatterplotContainer
       .selectAll(".scatterplot-circle")
@@ -71,6 +69,6 @@
     height={height}
     margin={margin}
   >
-    <g bind:this={ref}></g>
+    <g bind:this={scatterplotRef}></g>
   </ChartContainer>
 </Card>
