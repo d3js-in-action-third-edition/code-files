@@ -66,12 +66,3 @@ a:hover, a:focus {
 .source {
   margin: 4rem 0 2rem;
 }
-
-/* axis */
-.axis line {
-  stroke: #888b8d;
-}
-.axis text {
-  font-size: 14px;
-  fill: #374f5e;
-}

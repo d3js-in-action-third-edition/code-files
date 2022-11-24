@@ -22,17 +22,6 @@
   }
 </script>
 
-<style>
-  .axis line {
-    stroke: #888b8d;
-  }
-
-  .axis text {
-    font-size: 14px;
-    fill: #374f5e;
-  }
-</style>
-
 {#if type === "bottom"}
   <g class="axis" transform={`translate(0, ${innerHeight})`} > 
     <line x1={0} y1={0} x2={innerWidth} y2={0} />

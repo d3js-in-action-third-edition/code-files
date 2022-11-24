@@ -5,6 +5,7 @@
   import ScatterplotD3Controlled from "./ScatterplotD3Controlled.svelte";
   import ScatterplotSvelteControlled from "./ScatterplotSvelteControlled.svelte";
   import BarChart from "./BarChart.svelte";
+  import Rankings from "./Rankings.svelte";
 
   export let data;
 
@@ -28,7 +29,11 @@
   <h1>Front-end Frameworks</h1>
   <div class="row">
     <div class="col-9">
-      <!-- <Rankings margin={margin} /> -->
+      <Rankings 
+        margin={margin} 
+        data={data}
+        colorScale={colorScale}
+      />
     </div>
     <div class="col-3">
       <div class="row">
