@@ -20,33 +20,29 @@
 </script>
 
 <style>
-  .axis-line {
+  .axis line {
     stroke: #888b8d;
   }
 
-  .axis-tick,
-  .axis-label {
+  .axis text {
     font-size: 14px;
     fill: #374f5e;
   }
 </style>
 
 {#if type === "bottom"}
-  <g transform={`translate(0, ${innerHeight})`} > 
-    <line class="axis-line" x1={0} y1={0} x2={innerWidth} y2={0} />
-    {#each ticks as tick, i (`tick-bottom-${i}`)}
-      <text
-        class="axis-tick"
-        x={scale(tick)}
-        y={20}
-        text-anchor="middle"
-      >
-        {tick}
-      </text>
+  <g class="axis" transform={`translate(0, ${innerHeight})`} > 
+    <line x1={0} y1={0} x2={innerWidth} y2={0} />
+    {#each ticks as tick, i (`tick-bottom-${tick}`)}
+      <g transform={`translate(${scale(tick)}, 0)`}>
+        <line x1={0} y1={0} x2={0} y2={5} />
+        <text x={0} y={20} text-anchor="middle">
+          {tick}
+        </text>
+      </g>
     {/each}
     {#if label !== ""}
       <text
-        class="axis-label"
         text-anchor="middle"
         transform={`translate(${innerWidth / 2}, 45)`}
       >
@@ -55,22 +51,18 @@
     {/if}
   </g>
 {:else if type === "left"}
-  <g>
-    <line class="axis-line" x1={0} y1={innerHeight} x2={0} y2={0} />
-    {#each ticks as tick, i (`tick-left-${i}`)}
-      <text
-        class="axis-tick"
-        x={-10}
-        y={scale(tick)}
-        text-anchor="end"
-        alignment-baseline="middle"
-      >
-        {tick}
-      </text>
+  <g class="axis">
+    <line x1={0} y1={innerHeight} x2={0} y2={0} />
+    {#each ticks as tick, i (`tick-left-${tick}`)}
+      <g transform={`translate(0, ${scale(tick)})`}>
+        <line x1={-5} y1={0} x2={0} y2={0} />
+        <text x={-10} y={0} text-anchor="end" alignment-baseline="middle">
+          {tick}
+        </text>
+      </g>
     {/each}
     {#if label !== ""}
       <text
-        class="axis-label"
         text-anchor="middle"
         transform={`translate(-42, ${innerHeight / 2}) rotate(-90)`}
       >
