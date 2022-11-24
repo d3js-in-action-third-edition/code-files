@@ -1,6 +1,5 @@
 <script>
-  import { filter } from "d3";
-import Button from "../UI/Button.svelte";
+  import Button from "../UI/Button.svelte";
 
   export let filters;
   export let activeFilter;

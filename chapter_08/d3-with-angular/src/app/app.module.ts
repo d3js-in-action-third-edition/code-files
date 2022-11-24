@@ -10,6 +10,10 @@ import { ScatterplotAngularControlledComponent } from './charts/scatterplot-angu
 import { AxisComponent } from './chart-components/axis/axis.component';
 import { CircleComponent } from './chart-components/circle/circle.component';
 import { BarChartComponent } from './charts/bar-chart/bar-chart.component';
+import { ButtonComponent } from './ui/button/button.component';
+import { RankingFiltersComponent } from './interactions/ranking-filters/ranking-filters.component';
+import { RankingsComponent } from './charts/rankings/rankings.component';
+import { LabelComponent } from './chart-components/label/label.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { BarChartComponent } from './charts/bar-chart/bar-chart.component';
     ScatterplotAngularControlledComponent,
     AxisComponent,
     CircleComponent,
-    BarChartComponent
+    BarChartComponent,
+    ButtonComponent,
+    RankingFiltersComponent,
+    RankingsComponent,
+    LabelComponent,
   ],
   imports: [
     BrowserModule

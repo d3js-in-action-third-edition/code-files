@@ -1,0 +1,58 @@
+<app-card>
+  <h2>Retention vs Usage</h2>
+  <app-ranking-filters 
+    [filters]="rankingFilters"
+    [activeFilter]="activeFilter"
+  ></app-ranking-filters>
+  <app-chart-container
+    [width]="width"
+    [height]="height"
+    [margin]="{top: margin.top, right: marginRight, bottom: margin.bottom, left: marginLeft}"
+  >
+    <svg:g 
+      *ngFor="let year of data.years" 
+      class="axis" 
+      [attr.transform]="translateTick(year)"
+    >
+      <svg:line 
+        [attr.x1]="0"
+        [attr.y1]="innerHeight"
+        [attr.x2]="0"
+        [attr.y2]="0"
+        [attr.stroke-dasharray]="'6 4'"
+      />
+      <svg:text
+        [attr.x]="0"
+        [attr.y]="innerHeight + 30"
+        [attr.text-anchor]="'middle'"
+      >
+        {{year}}
+      </svg:text>
+    </svg:g>
+    <svg:g *ngFor="let framework of data.experience">
+      <svg:path
+        [attr.d]="lineGenerator(framework[activeFilter])"
+        [attr.fill]="'none'" 
+        [attr.stroke]="colorScale(framework.id)" 
+        [attr.stroke-width]="5"
+      />
+      <svg:text
+        *ngIf="framework[activeFilter][0].rank !== null"
+        [attr.x]="-25"
+        [attr.y]="labelVerticalPosition(framework[activeFilter], 'left')"
+        [attr.fill]="colorScale(framework.id)"
+        [attr.text-anchor]="'end'"
+        [attr.alignment-baseline]="'middle'"
+        style="font-weight: bold"
+      >{{framework.name}}</svg:text>
+      <svg:text
+        [attr.x]="innerWidth + 25"
+        [attr.y]="labelVerticalPosition(framework[activeFilter], 'right')"
+        [attr.fill]="colorScale(framework.id)"
+        [attr.text-anchor]="'start'"
+        [attr.alignment-baseline]="'middle'"
+        style="font-weight: bold"
+      >{{framework.name}}</svg:text>
+    </svg:g>
+  </app-chart-container>
+</app-card>

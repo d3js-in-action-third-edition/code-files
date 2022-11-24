@@ -1,0 +1,7 @@
+<div class="ranking-filters">
+  <app-button *ngFor="let filter of filters, index as i; trackBy: trackByFn"
+    [index]="i"
+    [label]="filter.label"
+    [isActive]="filter.id === activeFilter ? true : false"
+  ></app-button>
+</div>
