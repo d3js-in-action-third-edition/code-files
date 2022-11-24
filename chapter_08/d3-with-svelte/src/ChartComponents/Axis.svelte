@@ -1,12 +1,12 @@
 <script>
   import * as d3 from "d3";
-    import { tick } from "svelte";
 
   export let type;
   export let scale;
   export let innerWidth;
   export let innerHeight;
   export let label = "";
+  export let ticksArray = [];
 
   let divider;
 
@@ -16,7 +16,10 @@
     divider = 50;
   }
   const numberOfTicks = innerWidth / divider;
-  const ticks = scale.ticks(numberOfTicks);
+  let ticks;
+  if (type !== "band") {
+    ticks = scale.ticks(numberOfTicks);
+  }
 </script>
 
 <style>
@@ -69,5 +72,18 @@
         {label}
       </text>
     {/if}
+  </g>
+{:else if type === "band"}
+  <g class="axis" transform={`translate(0, ${innerHeight})`} >
+    <line x1={0} y1={0} x2={innerWidth} y2={0} />
+    {#each ticksArray as tick (`tick-band-${tick}`)}
+      <text
+        text-anchor="end"
+        alignment-baseline="middle"
+        transform={`translate(${scale(tick) + scale.bandwidth() / 2}, 8) rotate(-90)`}
+      >
+        {tick}
+      </text>
+    {/each}
   </g>
 {/if}

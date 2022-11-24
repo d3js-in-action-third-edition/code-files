@@ -41,7 +41,6 @@ const BarChart = props => {
       >
         <Axis 
           type="band"
-          data={awarenessData}
           scale={xScale}
           ticks={awarenessData.map(d => d.name)}
           innerWidth={innerWidth}

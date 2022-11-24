@@ -4,6 +4,7 @@
 
   import ScatterplotD3Controlled from "./ScatterplotD3Controlled.svelte";
   import ScatterplotSvelteControlled from "./ScatterplotSvelteControlled.svelte";
+  import BarChart from "./BarChart.svelte";
 
   export let data;
 
@@ -46,7 +47,11 @@
           {/if}
         </div>
         <div class="col-12">
-          <!-- <BarChart margin={margin} /> -->
+          <BarChart 
+            margin={margin} 
+            data={data.experience}
+            colorScale={colorScale}
+          />
         </div>
       </div>
     </div>
