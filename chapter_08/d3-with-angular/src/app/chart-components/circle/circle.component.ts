@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: '[appCircles]',
-  templateUrl: './circles.component.html',
-  styleUrls: ['./circles.component.css']
+  selector: '[appCircle]',
+  templateUrl: './circle.component.html',
+  styleUrls: ['./circle.component.css']
 })
-export class CirclesComponent {
+export class CircleComponent {
   @Input() data: any;
   @Input() xScale: any;
   @Input() yScale: any;

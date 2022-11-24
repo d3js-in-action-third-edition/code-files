@@ -11,6 +11,7 @@ export class AxisComponent {
   @Input() innerWidth: number = 0;
   @Input() innerHeight: number = 0;
   @Input() label?: string;
+  @Input() ticksArray?: Array<any> = [];
 
   axisTranslation = '';
   labelTransform = '';
@@ -23,7 +24,7 @@ export class AxisComponent {
   }
 
   setTranslations() {
-    if (this.type === 'bottom') {
+    if (this.type === 'bottom' || this.type === "band") {
       this.axisTranslation = `translate(0, ${this.innerHeight})`;
       if (this.label) {
         this.labelTransform = `translate(${this.innerWidth / 2}, 45)`;
@@ -39,7 +40,13 @@ export class AxisComponent {
     } else if (this.type === 'left') {
       this.numberOfTicks = this.innerHeight / 50;
     }
-    this.ticks = this.scale.ticks(this.numberOfTicks);
+    if (this.type !== "band") {
+      this.ticks = this.scale.ticks(this.numberOfTicks);
+    }
+  }
+
+  transformBandLabel(tick: string) {
+    return `translate(${this.scale(tick) + this.scale.bandwidth() / 2}, 8) rotate(-90)`;
   }
 
   trackByFn(index:number) {

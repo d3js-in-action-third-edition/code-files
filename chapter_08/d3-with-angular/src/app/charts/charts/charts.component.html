@@ -19,7 +19,11 @@
           ></app-scatterplot-angular-controlled>
         </div>
         <div class='col-12'>
-          <!-- <BarChart margin={margin} /> -->
+          <app-bar-chart
+            [data]="data.experience"
+            [margin]="margin"
+            [colorScale]="colorScale"
+          ></app-bar-chart>
         </div>
       </div>
     </div>

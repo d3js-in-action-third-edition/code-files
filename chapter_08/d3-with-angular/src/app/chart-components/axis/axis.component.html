@@ -33,10 +33,10 @@
     {{label}}
   </text>
 </svg:g>
+
 <svg:g 
   *ngIf="type === 'left'"
   class="axis"
-  [attr.transform]="axisTranslation"
 >
   <svg:line
     [attr.x1]="0" 
@@ -67,4 +67,24 @@
   >
     {{label}}
   </text>
+</svg:g>
+
+<svg:g 
+  *ngIf="type === 'band'"
+  class="axis"
+  [attr.transform]="axisTranslation"
+>
+  <svg:line
+    [attr.x1]="0" 
+    [attr.y1]="0"
+    [attr.x2]="innerWidth" 
+    [attr.y2]="0"
+  />
+  <svg:text *ngFor="let tick of ticksArray; index as i; trackBy: trackByFn"
+    [attr.text-anchor]="'end'"
+    [attr.alignment-baseline]="'middle'"
+    [attr.transform]="transformBandLabel(tick)"
+  >
+    {{tick}}
+  </svg:text>
 </svg:g>

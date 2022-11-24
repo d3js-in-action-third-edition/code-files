@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CircleComponent } from './circles.component';
+import { BarChartComponent } from './bar-chart.component';
 
-describe('CircleComponent', () => {
-  let component: CircleComponent;
-  let fixture: ComponentFixture<CircleComponent>;
+describe('BarChartComponent', () => {
+  let component: BarChartComponent;
+  let fixture: ComponentFixture<BarChartComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CircleComponent ]
+      declarations: [ BarChartComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CircleComponent);
+    fixture = TestBed.createComponent(BarChartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
