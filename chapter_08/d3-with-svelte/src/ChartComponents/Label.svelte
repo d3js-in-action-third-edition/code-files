@@ -9,15 +9,17 @@
 <style>
   text {
     font-weight: bold;
+    transition: transform 400ms cubic-bezier(0.33, 1, 0.68, 1);
   }
 </style>
 
 <text
-  x={x}
-  y={y}
+  x={0}
+  y={0}
   fill={color}
   text-anchor={textAnchor}
   alignment-baseline="middle"
+  style="transform: {`translate(${x}px, ${y}px)`};"
 >
   {label}
 </text>

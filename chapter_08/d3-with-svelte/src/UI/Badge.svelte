@@ -7,6 +7,9 @@
 </script>
 
 <style>
+  g {
+    transition: transform 400ms cubic-bezier(0.33, 1, 0.68, 1);
+  }
   text {
     font-size: 12px;
     font-weight: bold;
