@@ -1,0 +1,18 @@
+<svg:g [attr.transform]="getTranslation()">
+  <svg:circle 
+    [attr.cx]="0"
+    [attr.cy]="0"
+    [attr.r]="18"
+    [attr.fill]="'#fff'"
+    [attr.stroke]="strokeColor"
+    [attr.stroke-width]="3"
+  ></svg:circle>
+  <svg:text
+    [attr.text-anchor]="'middle'"
+    [attr.alignment-baseline]="'middle'"
+    [attr.fill]="'#374f5e'"
+    style="font-size: 12px; font-weight: bold;"
+  >
+    {{label}}
+  </svg:text>
+</svg:g>

@@ -23,7 +23,7 @@
       />
       <svg:text
         [attr.x]="0"
-        [attr.y]="innerHeight + 30"
+        [attr.y]="innerHeight + 40"
         [attr.text-anchor]="'middle'"
       >
         {{year}}
@@ -53,6 +53,14 @@
         [attr.alignment-baseline]="'middle'"
         style="font-weight: bold"
       >{{framework.name}}</svg:text>
+      <svg:g *ngFor="let selection of framework[activeFilter]">
+        <svg:g appBadge
+          *ngIf="selection.rank !== null"
+          [translation]="getBadgeTranslation(selection)"
+          [strokeColor]="colorScale(framework.id)"
+          [label]="getPercentageLabel(selection.percentage_question)"
+        ></svg:g>
+      </svg:g>
     </svg:g>
   </app-chart-container>
 </app-card>

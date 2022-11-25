@@ -14,6 +14,7 @@ import { ButtonComponent } from './ui/button/button.component';
 import { RankingFiltersComponent } from './interactions/ranking-filters/ranking-filters.component';
 import { RankingsComponent } from './charts/rankings/rankings.component';
 import { LabelComponent } from './chart-components/label/label.component';
+import { BadgeComponent } from './ui/badge/badge.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { LabelComponent } from './chart-components/label/label.component';
     RankingFiltersComponent,
     RankingsComponent,
     LabelComponent,
+    BadgeComponent,
   ],
   imports: [
     BrowserModule

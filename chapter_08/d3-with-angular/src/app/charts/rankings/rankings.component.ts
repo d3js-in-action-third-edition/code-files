@@ -80,4 +80,15 @@ export class RankingsComponent {
   translateTick(year: number) {
     return `translate(${this.xScale(year.toString())}, 0)`;
   }
+
+  getBadgeTranslation(selection: {year: number, rank: number, percentage_question: number }) {
+    return [
+      parseFloat(this.xScale(selection.year.toString()) as unknown as string), 
+      parseFloat(this.yScale(selection.rank.toString()) as unknown as string)
+    ];
+  }
+
+  getPercentageLabel(percentage: number) {
+    return `${Math.round(percentage)}%`;
+  }
 }

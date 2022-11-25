@@ -59,7 +59,7 @@
         />
         <text
           x={0}
-          y={innerHeight + 30}
+          y={innerHeight + 40}
           text-anchor="middle"
         >
           {year}

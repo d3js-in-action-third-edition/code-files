@@ -58,7 +58,7 @@ const Rankings = props => {
             />
             <text
               x={0}
-              y={innerHeight + 30}
+              y={innerHeight + 40}
               textAnchor="middle"
             >
               {year}
