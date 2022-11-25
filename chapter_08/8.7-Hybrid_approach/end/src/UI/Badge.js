@@ -2,7 +2,10 @@ import Circle from "../ChartComponents/Circle";
 
 const Badge = props => {
   return (
-    <g transform={`translate(${props.translation[0]}, ${props.translation[1]})`}>
+    <g 
+      className="label"
+      transform={`translate(${props.translation[0]}, ${props.translation[1]})`}
+    >
       <Circle 
         cx={0}
         cy={0}

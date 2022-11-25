@@ -8,17 +8,16 @@ const Curve = props => {
     .defined(d => d[props.yAccessor] !== null)
     .curve(d3.curveMonotoneX);
 
-  const t = d3.transition()
-    .duration(400)
-    .ease(d3.easeCubicOut);
-
   const pathRef = useRef();
   useEffect(() => {
     const path = pathRef.current;
+
     d3.select(path)
-      .transition(t)
+      .transition()
+      .duration(400)
+      .ease(d3.easeCubicOut)
         .attr("d", lineGenerator(props.data));
-  }, [props.data, t, lineGenerator]);
+  }, [props.data, lineGenerator]);
 
   return (
     <path
