@@ -22,6 +22,15 @@ export class RankingsComponent {
 
   xScale = d3.scalePoint();
   yScale = d3.scalePoint();
+  xAccessor: any = (d: {year: number, rank: number, percentage_question: number}) => {
+    return this.xScale(d.year.toString());
+  }
+  yAccessor: any = (d: {year: number, rank: number, percentage_question: number}) => {
+    if (d.rank) {
+      return this.yScale(d.rank.toString());
+    }
+    return null;
+  }
 
   rankingFilters = [
     { id: "satisfaction", label: "Satisfaction" },
@@ -30,8 +39,6 @@ export class RankingsComponent {
     { id: "awareness", label: "Awareness" },
   ];
   activeFilter = "satisfaction";
-
-  lineGenerator = d3.line();
 
   ngOnInit() {
     this.initializeVariables();
@@ -49,22 +56,6 @@ export class RankingsComponent {
     this.yScale
       .domain(ranks)
       .range([0, this.innerHeight]);
-
-    const xAccessor: any = (d: {year: number, rank: number, percentage_question: number}) => {
-      return this.xScale(d.year.toString());
-    }
-    const yAccessor: any = (d: {year: number, rank: number, percentage_question: number}) => {
-      if (d.rank) {
-        return this.yScale(d.rank.toString());
-      }
-      return null;
-    }
-
-    this.lineGenerator
-      .x(d => xAccessor(d))
-      .y(d => yAccessor(d))
-      .defined(d => yAccessor(d) !== null)
-      .curve(d3.curveMonotoneX);
   }
 
   labelVerticalPosition(item: Array<any>, position: string) {
@@ -90,5 +81,9 @@ export class RankingsComponent {
 
   getPercentageLabel(percentage: number) {
     return `${Math.round(percentage)}%`;
+  }
+
+  handleClick(id: string) {
+    this.activeFilter = id;
   }
 }

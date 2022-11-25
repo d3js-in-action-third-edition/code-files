@@ -11,6 +11,6 @@ export class BadgeComponent {
   @Input() label: string = '';
 
   getTranslation() {
-    return `translate(${this.translation[0]}, ${this.translation[1]})`
+    return `translate(${this.translation[0]}px, ${this.translation[1]}px)`;
   }
 }

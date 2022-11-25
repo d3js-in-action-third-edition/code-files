@@ -1,8 +1,9 @@
 <app-card>
-  <h2>Retention vs Usage</h2>
+  <h2>Rankings</h2>
   <app-ranking-filters 
     [filters]="rankingFilters"
     [activeFilter]="activeFilter"
+    (clickDetected)="handleClick($event)"
   ></app-ranking-filters>
   <app-chart-container
     [width]="width"
@@ -30,29 +31,27 @@
       </svg:text>
     </svg:g>
     <svg:g *ngFor="let framework of data.experience">
-      <svg:path
-        [attr.d]="lineGenerator(framework[activeFilter])"
-        [attr.fill]="'none'" 
-        [attr.stroke]="colorScale(framework.id)" 
-        [attr.stroke-width]="5"
-      />
-      <svg:text
+      <svg:g appCurve
+        [data]="framework[activeFilter]"
+        [stroke]="colorScale(framework.id)" 
+        [strokeWidth]="5"
+        [xAccessor]="xAccessor"
+        [yAccessor]="yAccessor"
+      ></svg:g>
+      <svg:g appLabel
         *ngIf="framework[activeFilter][0].rank !== null"
-        [attr.x]="-25"
-        [attr.y]="labelVerticalPosition(framework[activeFilter], 'left')"
-        [attr.fill]="colorScale(framework.id)"
-        [attr.text-anchor]="'end'"
-        [attr.alignment-baseline]="'middle'"
-        style="font-weight: bold"
-      >{{framework.name}}</svg:text>
-      <svg:text
-        [attr.x]="innerWidth + 25"
-        [attr.y]="labelVerticalPosition(framework[activeFilter], 'right')"
-        [attr.fill]="colorScale(framework.id)"
-        [attr.text-anchor]="'start'"
-        [attr.alignment-baseline]="'middle'"
-        style="font-weight: bold"
-      >{{framework.name}}</svg:text>
+        [x]="-25"
+        [y]="labelVerticalPosition(framework[activeFilter], 'left')!"
+        [fill]="colorScale(framework.id)"
+        [label]="framework.name"
+        [textAnchor]="'end'"
+      ></svg:g>
+      <svg:g appLabel
+        [x]="innerWidth + 25"
+        [y]="labelVerticalPosition(framework[activeFilter], 'right')!"
+        [fill]="colorScale(framework.id)"
+        [label]="framework.name"
+      ></svg:g>
       <svg:g *ngFor="let selection of framework[activeFilter]">
         <svg:g appBadge
           *ngIf="selection.rank !== null"
