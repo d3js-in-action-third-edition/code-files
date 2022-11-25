@@ -1,3 +1,4 @@
+import { useRef, useEffect } from "react";
 import * as d3 from "d3";
 
 const Curve = props => {
@@ -7,9 +8,22 @@ const Curve = props => {
     .defined(d => d[props.yAccessor] !== null)
     .curve(d3.curveMonotoneX);
 
+  const t = d3.transition()
+    .duration(400)
+    .ease(d3.easeCubicOut);
+
+  const pathRef = useRef();
+  useEffect(() => {
+    const path = pathRef.current;
+    d3.select(path)
+      .transition(t)
+        .attr("d", lineGenerator(props.data));
+  }, [props.data, t, lineGenerator]);
+
   return (
     <path
-      d={lineGenerator(props.data)}
+      ref={pathRef} 
+      // Remove the d attribute!
       fill="none" 
       stroke={props.stroke} 
       strokeWidth={props.strokeWidth}

@@ -1,7 +1,8 @@
 <script>
   export let isActive = false;
   export let type = "button";
-  export let label = ""
+  export let label = "";
+  export let onFilterSelection;
 </script>
 
 <style>
@@ -31,6 +32,7 @@
 <button
   class={`${isActive ? "active" : ""}`}
   type={type}
+  on:click={onFilterSelection}
 >
   {label}
 </button>

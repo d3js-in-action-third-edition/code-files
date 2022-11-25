@@ -3,6 +3,7 @@
 
   export let filters;
   export let activeFilter;
+  export let onFilterSelection;
 </script>
 
 <style>
@@ -18,6 +19,7 @@
     <Button
       isActive={activeFilter === filter.id ? true : false}
       label={filter.label}
+      onFilterSelection={() => onFilterSelection(filter.id)}
     />
   {/each}
 </div>

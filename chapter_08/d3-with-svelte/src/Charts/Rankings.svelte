@@ -34,6 +34,12 @@
   const yScale = d3.scalePoint()
     .domain(ranks)
     .range([0, innerHeight]);
+
+  const filterSelectionHandler = (id) => {
+    if (activeFilter !== id) {
+      activeFilter = id;
+    }
+  };
 </script>
 
 <Card>
@@ -41,6 +47,7 @@
   <RankingFilters
     filters={rankingFilters}
     activeFilter={activeFilter}
+    onFilterSelection={filterSelectionHandler}
   />
   <ChartContainer
     width={width}
@@ -77,7 +84,7 @@
           stroke={colorScale(framework.id)}
           strokeWidth={5}
         />
-        {#if framework[activeFilter][0].rank}
+        {#if framework[activeFilter] && framework[activeFilter][0].rank}
           <Label
             x={-25}
             y={yScale(framework[activeFilter][0].rank)}
@@ -86,22 +93,24 @@
             textAnchor={"end"}
           />
         {/if}
-        <Label
-          x={innerWidth + 25}
-          y={yScale(framework[activeFilter][framework[activeFilter].length - 1].rank)}
-          color={colorScale(framework.id)}
-          label={framework.name}
-          textAnchor={"start"}
-        />
-        {#each framework[activeFilter] as selection, i (`${framework.id}-selection-${i}`)}
-          {#if selection.rank}
-             <Badge
-              translation={[xScale(selection.year), yScale(selection.rank)]}
-              strokeColor={colorScale(framework.id)}
-              label={`${Math.round(selection.percentage_question)}%`}
-            />
-          {/if}
-        {/each}
+        {#if framework[activeFilter]}
+          <Label
+            x={innerWidth + 25}
+            y={yScale(framework[activeFilter][framework[activeFilter].length - 1].rank)}
+            color={colorScale(framework.id)}
+            label={framework.name}
+            textAnchor={"start"}
+          />
+          {#each framework[activeFilter] as selection, i (`${framework.id}-selection-${i}`)}
+            {#if selection.rank}
+              <Badge
+                translation={[xScale(selection.year), yScale(selection.rank)]}
+                strokeColor={colorScale(framework.id)}
+                label={`${Math.round(selection.percentage_question)}%`}
+              />
+            {/if}
+          {/each}
+        {/if}
       </g>
     {/each}
     {/if}
