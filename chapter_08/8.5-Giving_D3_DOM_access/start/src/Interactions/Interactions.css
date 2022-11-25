@@ -1,9 +1,0 @@
-.inactive {
-  opacity: 0.1;
-  transition: opacity 150ms ease;
-}
-.badge.inactive {
-  opacity: 1;
-  stroke-opacity: 0.15;
-  transition: stroke-opacity 150ms ease;
-}
