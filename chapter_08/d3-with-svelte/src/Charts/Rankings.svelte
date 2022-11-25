@@ -6,6 +6,7 @@
   import RankingFilters from "../Interactions/RankingFilters.svelte";
   import Curve from "../ChartComponents/Curve.svelte";
   import Label from "../ChartComponents/Label.svelte";
+  import Badge from "../UI/Badge.svelte";
 
   export let margin;
   export let data;
@@ -92,6 +93,15 @@
           label={framework.name}
           textAnchor={"start"}
         />
+        {#each framework[activeFilter] as selection, i (`${framework.id}-selection-${i}`)}
+          {#if selection.rank}
+             <Badge
+              translation={[xScale(selection.year), yScale(selection.rank)]}
+              strokeColor={colorScale(framework.id)}
+              label={`${Math.round(selection.percentage_question)}%`}
+            />
+          {/if}
+        {/each}
       </g>
     {/each}
     {/if}

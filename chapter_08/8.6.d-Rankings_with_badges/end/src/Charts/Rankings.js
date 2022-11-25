@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 import * as d3 from "d3";
 
 import RankingFilters from '../Interactions/RankingFilters';
@@ -6,6 +6,7 @@ import Card from '../UI/Card';
 import ChartContainer from '../ChartComponents/ChartContainer';
 import Curve from '../ChartComponents/Curve';
 import Label from '../ChartComponents/Label';
+import Badge from '../UI/Badge';
 
 const rankingFilters = [
   { id: "satisfaction", label: "Satisfaction" },
@@ -92,6 +93,17 @@ const Rankings = props => {
               label={framework.name}
               textAnchor={"start"}
             />
+            {framework[activeFilter].map((selection, i) => (
+              <Fragment key={`${framework.id}-selection-${i}`}>
+                {selection.rank &&
+                  <Badge
+                    translation={[xScale(selection.year), yScale(selection.rank)]}
+                    strokeColor={props.colorScale(framework.id)}
+                    label={`${Math.round(selection.percentage_question)}%`}
+                  />
+                }
+              </Fragment>
+            ))}
           </g>
         ))}
       </ChartContainer> 
