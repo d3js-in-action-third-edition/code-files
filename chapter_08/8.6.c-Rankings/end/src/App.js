@@ -10,13 +10,17 @@ const App = () => {
   useEffect(() => {
     const dataURL = "https://d3js-in-action-third-edition.github.io/hosted-data/apis/front_end_frameworks.json";
     
+    let mounted = true;
     d3.json(dataURL).then(data => {
       console.log("data", data);
 
-      setData(data);
-      setLoading(false);
+      if (mounted) {
+        setData(data);
+        setLoading(false);
+      }
     });
 
+    return () => mounted = false;
   }, []);
 
   return (
