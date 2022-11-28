@@ -48,7 +48,7 @@ const Charts = props => {
           </div>
         </div>
       </div>
-      <div className="source">Data source and inspiration: <a href="https://2021.stateofjs.com/en-US/libraries/front-end-frameworks">The State of JS 2021: Front-end Frameworks</a></div>
+      <div className="source">Data source and original rankings chart: <a href="https://2021.stateofjs.com/en-US/libraries/front-end-frameworks">The State of JS 2021: Front-end Frameworks</a></div>
     </Fragment>
   )
 };
