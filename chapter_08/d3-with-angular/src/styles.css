@@ -31,18 +31,8 @@ h2 {
   font-size: 2.8rem;
   line-height: 1.2;
 }
-h3 {
-  margin: 6rem 0 1rem;
-  font-size: 2.2rem;
-}
-@media screen and (max-width: 596px) {
-  h1 {
-    font-size: 3rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-}
+
+
 p {
   margin: 1.2rem 0;
 }
