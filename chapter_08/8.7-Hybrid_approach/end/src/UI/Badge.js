@@ -4,7 +4,7 @@ const Badge = props => {
   return (
     <g 
       className="label"
-      transform={`translate(${props.translation[0]}, ${props.translation[1]})`}
+      style={{ transform: `translate(${props.translation[0]}px, ${props.translation[1]}px)` }}
     >
       <Circle 
         cx={0}
