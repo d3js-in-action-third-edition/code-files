@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>New York City 2021 Weather - tooltip | D3.js in Action</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/visualization.css">
+</head>
+<body>
+	<div class="container">
+
+		<h1>New York City 2021 Weather</h1>
+		<h2>Weekly average temperature</h2>
+		<div class="responsive-svg-container">
+			<div id="line-chart"></div>
+		</div>
+		
+		<div class="source">Data source: <a href="https://www.wunderground.com/history/weekly/us/ny/new-york-city/KLGA/date/2021-1-29">Weather Underground</a></div>	
+	</div>
+
+	<!-- Load your scripts here -->
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="js/shared-constants.js"></script>
+	<script src="js/annotations.js"></script>
+	<script src="js/line-chart.js"></script>
+	<script src="js/resize.js"></script>
+	<script src="js/interactions.js"></script>
+	<script src="js/load-data.js"></script>
+</body>
+</html>
