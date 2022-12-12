@@ -1,0 +1,41 @@
+uid,common_name,scientific_name,suborder,family,dorsal_fin,min_size_m,max_size_m,max_weight_t,hemisphere,global_population_estimate,status
+1,Antarctic minke whale,Balaenoptera bonaerensis,Mysticeti,Balaenopteridae,Yes,7.00,10.20,15.00,south,515000,NT
+2,Atlantic humpback dolphin,Sousaeuszi,Odontoceti,Delphinidae,Yes,2.00,2.50,0.15,both,1500,CR
+3,Atlantic spotted dolphin,Stenella frontalis,Odontoceti,Delphinidae,Yes,1.70,2.30,0.14,both,100000,LC
+4,Atlantic white-sided dolphin,Lagenorhynchus acutus,Odontoceti,Delphinidae,Yes,1.90,2.50,0.2,north,250000,LC
+5,Australian snubfin dolphin,Orcaella heinsohni,Odontoceti,Delphinidae,Yes,2.10,2.60,0.15,south,9500,VU
+6,Baiji,Lipotes vexillifer,Odontoceti,Lipotidae,Yes,1.40,2.50,0.16,north,7,CR
+7,Beluga,Delphinapterus leucas,Odontoceti,Monodontidae,No,3.00,5.00,1.50,north,136000,LC
+8,Blue whale,Balaenopterausculus,Mysticeti,Balaenopteridae,Yes,24.00,33.00,173.00,both,10000,EN
+9,Bowhead whale,Balaenaysticetus,Mysticeti,Balaenidae,No,14.00,16.00,70.00,north,10000,LC
+10,Bryde's whale,Balaenoptera brydei,Mysticeti,Balaenopteridae,Yes,9.00,15.50,26.00,both,95000,LC
+11,Commerson's dolphin,Cephalorhynchus commersonii,Odontoceti,Delphinidae,Yes,1.30,1.70,0.06,south,22000,LC
+12,Common bottlenose dolphin,Tursiopsruncatus,Odontoceti,Delphinidae,Yes,1.90,3.90,0.65,both,600000,LC
+13,Common minke whale,Balaenoptera acutorostrata,Mysticeti,Balaenopteridae,Yes,7.00,10.00,15.00,both,200000,LC
+14,Cuvier’s beaked whale,Ziphius cavirostris,Odontoceti,Ziphiidae,Yes,5.50,7.00,3.00,both,100000,LC
+15,Dall’s porpoise,Phocoenoides dalli,Odontoceti,Phocoenidae,Yes,1.70,2.20,0.22,north,1100000,LC
+16,Fin whale,Balaenoptera physalus,Mysticeti,Balaenopteridae,Yes,18.00,27.00,80.00,both,100000,VU
+17,Franciscana,Pontoporia blainvillei,Odontoceti,Pontoporiidae,Yes,1.30,1.70,0.053,south,4250,VU
+18,Gray whale,Eschrichtius robustus,Odontoceti,Eschrichtiidae,No,12.00,14.00,35.00,north,21000,LC
+19,Harbour porpoise,Phocoena phocoena,Odontoceti,Phocoenidae,Yes,1.40,1.90,0.065,north,700000,LC
+20,Hector’s dolphin,Cephalorhynchus hectori,Odontoceti,Delphinidae,Yes,1.20,1.50,0.060,south,7381,EN
+21,Hourglass dolphin,Lagenorhynchus cruciger,Odontoceti,Delphinidae,Yes,1.60,1.80,0.120,south,140000,LC
+22,Humpback whale,Megaptera novaeangliae,Mysticeti,Balaenopteridae,Yes,11.50,15.00,30.00,both,84000,LC
+23,Narwhal,Monodononoceros,Odontoceti,Monodontidae,No,3.80,5.00,1.60,north,123000,LC
+24,north Atlantic right whale,Eubalaena glacialis,Mysticeti,Balaenidae,No,11.00,18.00,80.00,north,350,CR
+25,north Pacific right whale,Eubalaena japonica,Mysticeti,Balaenidae,No,11.00,18.00,80.00,north,1256,EN
+26,northern bottlenose whale,Hyperoodon ampullatus,Odontoceti,Ziphiidae,Yes,7.00,9.00,7.50,north,10000,NT
+27,northern right whale dolphin,Lissodelphis borealis,Odontoceti,Delphinidae,No,2.00,3.00,0.100,north,400000,LC
+28,Orca,Orcinus orca,Odontoceti,Delphinidae,Yes,6.00,9.80,8.00,both,100000,Data Deficient
+29,Pacific white-sided dolphin,Lagenorhynchus obliquidens,Odontoceti,Delphinidae,Yes,1.70,2.40,0.150,north,1000000,LC
+30,Pantropical spotted dolphin,Stenella attenuata,Odontoceti,Delphinidae,Yes,1.70,2.40,0.115,both,3000000,LC
+31,Perrin’s beaked whale,Mesoplodon perrini,Odontoceti,Ziphiidae,Yes,4.00,4.50,2.00,north,832,EN
+32,Rough-toothed dolphin,Steno bredanensis,Odontoceti,Delphinidae,Yes,2.10,2.60,0.150,both,150000,LC
+33,Sei whale,Balaenoptera borealis,Mysticeti,Balaenopteridae,Yes,12.00,16.00,30.00,both,80000,EN
+34,south Asian river dolphin,Platanista gangetica,Odontoceti,Platanistidae,No,1.50,2.50,0.090,north,3500,EN
+35,southern bottlenose whale,Hyperoodon planifrons,Odontoceti,Ziphiidae,Yes,6.00,7.50,8.00,south,500000,LC
+36,southern right whale,Eubalaena australis,Mysticeti,Balaenidae,No,11.00,18.00,80.00,south,13600,LC
+37,Sperm whale,Physeteracrocephalus,Odontoceti,Physeteridae,No,11.00,18.00,50.00,both,1100000,VU
+38,Striped dolphin,Stenella coeruleoalba,Odontoceti,Delphinidae,Yes,1.80,2.50,0.150,both,2000000,LC
+39,Vaquita,Phocoena sinus,Odontoceti,Phocoenidae,Yes,1.20,1.50,0.055,north,12,Critically endangered
+40,White-beaked dolphin,Lagenorhynchus albirostris,Odontoceti,Delphinidae,Yes,2.50,2.80,0.275,north,100000,LC

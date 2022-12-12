@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cetacean species | D3.js in Action</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/visualization.css">
+</head>
+<body>
+	<div class="container">
+
+		<h1>Cetacean species</h1>
+		<div class="intro">This visualization shows a collection of cetacean species. Each circle represents a cetacean, and its position on the scatterplot reveals its size and estimated population. The area of the circles is proportional to the weight of each cetacean, and their color represents their conservation status, according to the <a href="https://www.iucn.org/">International Union for Conservation of Nature (IUCN)</a>.</div>
+		<div class="legend-container">
+			<h2>How to read this visualization</h2>
+			<div class="legend-sections">
+				<div class="legend-section legend-conservation-status">
+					<h3>Color: Conservation statuses</h3>
+				</div>
+				<div class="legend-section legend-weight">
+					<h3>Area of the circle: Weight of the cetaceans</h3>
+				</div>
+			</div>
+		</div>
+		<div class="filters-container">
+			<h2>Select a group of cetaceans</h2>
+			<div id="filters"></div>
+		</div>
+		<div class="responsive-svg-container">
+			<div id="scatterplot"></div>
+		</div>
+		
+		<div class="sources">
+			<h2>Data sources</h2>
+			<ul>
+				<li><a href="https://www.cwazores.com/cetacean-species-database">CWAzores</a></li>
+				<li><a href="https://en.wikipedia.org/wiki/List_of_cetaceans">Wikipedia</a></li>
+			</ul>
+		</div>
+		<div class="methodology">
+			<h2>Methodology</h2>
+			<p>The population estimate of some cetaceans was provided as a range. In these cases, the average value is shown on the visualization.</p>
+		</div>
+	</div>
+
+	<!-- Load your scripts here -->
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="js/shared-constants.js"></script>
+	<script src="js/scatterplot.js"></script>
+	<script src="js/legend.js"></script>
+	<script src="js/interactions.js"></script>
+	<script src="js/load-data.js"></script>
+</body>
+</html>
