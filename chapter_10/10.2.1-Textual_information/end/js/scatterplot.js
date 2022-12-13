@@ -67,13 +67,11 @@ const drawScatterplot = (data) => {
       .attr("class", "axis-label axis-label-bottom")
       .text("Estimated population")
       .attr("text-anchor", "end")
-      .attr("x", margin.left + innerWidth + 20)
-      .style("font-size", "18px");
+      .attr("x", margin.left + innerWidth + 20);
   svg
     .append("text")
       .attr("class", "axis-label axis-label-left")
-      .text("Max size (m)")
-      .style("font-size", "18px");
+      .text("Max size (m)");
 
 
   /******************************/
