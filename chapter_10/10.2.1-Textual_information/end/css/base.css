@@ -24,6 +24,7 @@ body {
   padding-left: 30px;
   width: 100%;
   max-width: 1200px;
+  overflow: hidden;
 }
 
 /* Type */

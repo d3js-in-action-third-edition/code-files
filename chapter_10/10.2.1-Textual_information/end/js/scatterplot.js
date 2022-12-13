@@ -64,16 +64,15 @@ const drawScatterplot = (data) => {
   // Add label to the axes
   svg
     .append("text")
+      .attr("class", "axis-label axis-label-bottom")
       .text("Estimated population")
       .attr("text-anchor", "end")
       .attr("x", margin.left + innerWidth + 20)
-      .attr("y", height - 3)
       .style("font-size", "18px");
   svg
     .append("text")
+      .attr("class", "axis-label axis-label-left")
       .text("Max size (m)")
-      .attr("dominant-baseline", "hanging")
-      .attr("y", 15)
       .style("font-size", "18px");
 
 
@@ -94,5 +93,9 @@ const drawScatterplot = (data) => {
       .attr("stroke-width", 2)
       .on("mouseenter", showTooltip)
       .on("mouseleave", hideTooltip);
+
+
+  // Make adjustments based on screen width
+  resizeChart();
 
 };

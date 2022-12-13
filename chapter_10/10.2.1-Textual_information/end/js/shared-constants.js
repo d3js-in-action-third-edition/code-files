@@ -1,7 +1,7 @@
 // Chart
-const margin = {top: 50, right: 50, bottom: 50, left: 30};
+const margin = {top: 110, right: 50, bottom: 130, left: 70};
 const width = 1200;
-const height = 550;
+const height = 650;
 const innerWidth = width - margin.left - margin.right;
 const innerHeight = height - margin.top - margin.bottom;
 let innerChart;
@@ -28,3 +28,11 @@ let yScale;
 let colorScale;
 let xScale;
 let rScale;
+const fontSizeScale = d3.scaleLinear()
+  .domain([315, 1200])
+  .range([53, 15])
+  .clamp(true);
+const axisLabelsScale = d3.scaleLinear()
+  .domain([315, 1200])
+  .range([60, 18])
+  .clamp(true);
