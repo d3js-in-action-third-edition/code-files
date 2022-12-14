@@ -48,11 +48,11 @@ const handleClickOnFilter = (data) => {
           .join(
             enter => enter
               .append("circle")
-                .attr("class", "cetacean")
+                .attr("class", d => `cetacean cetacean-${d.status}`)
                 .attr("cx", d => xScale(d.global_population_estimate))
                 .attr("cy", d => -50)
                 .attr("r", 0)
-                .attr("fill", d => colorScale(d.status))
+                .attr("fill", d => getPattern(d.status))
                 .attr('fill-opacity', 0.6)
                 .attr("stroke", d => colorScale(d.status))
                 .attr("stroke-width", 2)
