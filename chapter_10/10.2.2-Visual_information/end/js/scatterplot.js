@@ -81,7 +81,7 @@ const drawScatterplot = (data) => {
     .selectAll(".cetacean")
     .data(data)
     .join("circle")
-      .attr("class", "cetacean")
+      .attr("class", d => `cetacean cetacean-${d.status}`)
       .attr("cx", d => xScale(d.global_population_estimate))
       .attr("cy", d => yScale(d.max_size_m))
       .attr("r", d => rScale(d.max_weight_t))
@@ -93,9 +93,9 @@ const drawScatterplot = (data) => {
       .on("mouseleave", hideTooltip);
 
 
-  /*******************************/
-  /*   Add patterns on circles   */
-  /*******************************/
+  /************************/
+  /*     Add patterns     */
+  /************************/
   // Declare patterns
   const defs = d3.select("#scatterplot svg")
     .append("defs");
@@ -117,11 +117,10 @@ const drawScatterplot = (data) => {
   horizontalLinesPattern
     .append("line")
       .attr("x1", 0)
-      .attr("y1", 3)
+      .attr("y1", 2)
       .attr("x2", 4)
-      .attr("y2", 3)
-      .attr("stroke", colorScale("NT"))
-      .attr("stroke-width", 2);
+      .attr("y2", 2)
+      .attr("stroke", colorScale("NT"));
 
   // Vertical lines pattern
   const verticalLinesPattern = defs
@@ -143,8 +142,7 @@ const drawScatterplot = (data) => {
       .attr("y1", 0)
       .attr("x2", 3)
       .attr("y2", 4)
-      .attr("stroke", colorScale("VU"))
-      .attr("stroke-width", 2);
+      .attr("stroke", colorScale("VU"));
 
   // Cross pattern
   const crossPattern = defs

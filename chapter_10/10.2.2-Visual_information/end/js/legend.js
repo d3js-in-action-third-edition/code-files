@@ -17,10 +17,10 @@ const populateLegend = (data) => {
       .attr("cy", 16)
       .attr("r", 15)
       // .attr("fill", d => d.color)
+      .attr("fill", d => getPattern(d.id))
       .attr('fill-opacity', 0.6)
       .attr("stroke", d => d.color)
-      .attr("stroke-width", 2)
-      .attr("fill", d => getPattern(d.id));
+      .attr("stroke-width", 2);
 
   statuses
     .append("span")
