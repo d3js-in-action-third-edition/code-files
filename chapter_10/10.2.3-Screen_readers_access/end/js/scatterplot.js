@@ -252,8 +252,6 @@ const drawScatterplot = (data) => {
   // Make adjustments based on screen width
   resizeChart();
 
-  createDataTable(data);
-
 };
 
 const getPattern = (status) => {

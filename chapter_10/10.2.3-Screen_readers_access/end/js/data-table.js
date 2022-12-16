@@ -8,9 +8,8 @@ const createDataTable = (data) => {
       .text("Cetacean species data")
     .append("a")
       .attr("href", "./data/data.csv")
-      .attr("title", "Download the data in CSV format")
       .attr("download", "cetaceans_data")
-      .text("download");
+      .text("Download the data in CSV format");
 
   // Table header
   const tableHeader = table 
