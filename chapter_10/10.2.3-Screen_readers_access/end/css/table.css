@@ -1,0 +1,39 @@
+.data-table-container {
+  max-width: 100%;
+  overflow-x: auto;
+  margin-top: 30px;
+}
+table caption {
+  margin: 1rem 0;
+  font-size: 2rem;
+  text-align: left;
+  font-weight: bold;
+}
+table caption a {
+  display: inline-block;
+  margin-left: 10px;
+  width: 30px;
+  height: 28px;
+  text-indent: 9000rem;
+  background-image: url("../assets/download.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+  box-shadow: none;
+}
+table caption a:hover,
+table caption a:focus {
+  box-shadow: none;
+}
+th,
+td {
+  padding: 7px 10px;
+}
+th {
+  color: #fff;
+  text-align: left;
+  background-color: #192e4d;
+}
+td {
+  border: 1px solid #192e4d;
+}

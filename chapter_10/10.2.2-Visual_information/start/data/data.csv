@@ -36,5 +36,5 @@ uid,common_name,scientific_name,suborder,family,dorsal_fin,min_size_m,max_size_m
 36,southern right whale,Eubalaena australis,Mysticeti,Balaenidae,No,11.00,18.00,80.00,south,13600,LC
 37,Sperm whale,Physeteracrocephalus,Odontoceti,Physeteridae,No,11.00,18.00,50.00,both,1100000,VU
 38,Striped dolphin,Stenella coeruleoalba,Odontoceti,Delphinidae,Yes,1.80,2.50,0.150,both,2000000,LC
-39,Vaquita,Phocoena sinus,Odontoceti,Phocoenidae,Yes,1.20,1.50,0.055,north,12,Critically endangered
+39,Vaquita,Phocoena sinus,Odontoceti,Phocoenidae,Yes,1.20,1.50,0.055,north,12,CR
 40,White-beaked dolphin,Lagenorhynchus albirostris,Odontoceti,Delphinidae,Yes,2.50,2.80,0.275,north,100000,LC
