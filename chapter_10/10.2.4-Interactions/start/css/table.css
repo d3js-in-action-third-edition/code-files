@@ -1,0 +1,75 @@
+.data-table-container {
+  max-width: 100%;
+  overflow-x: auto;
+  margin-top: 30px;
+}
+table caption {
+  margin: 1rem 0;
+  font-size: 2rem;
+  text-align: left;
+  font-weight: bold;
+}
+table caption a {
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  margin-left: 10px;
+  width: 30px;
+  height: 28px;
+  background-image: url("../assets/download.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 0;
+  box-shadow: none;
+  text-indent: 9000rem;
+  overflow: hidden;
+}
+table caption a:hover,
+table caption a:focus {
+  box-shadow: none;
+}
+th,
+td {
+  padding: 7px 10px;
+}
+th {
+  color: #fff;
+  text-align: left;
+  background-color: #192e4d;
+}
+td {
+  border: 1px solid #192e4d;
+}
+
+/* Mode selectors */
+.mode-selector {
+  margin-top: 30px;
+}
+.toggle {
+  margin-right: 15px;
+  padding: 10px 20px 10px 40px;
+  font-family: inherit;
+  font-size: 1.8rem;
+  color: #fff;
+  background-color: rgba(25, 46, 77, 0.65);
+  border-radius: 4px;
+  border: none;
+  background-repeat: no-repeat;
+  background-size: auto 18px;
+  background-position: 15px 13px;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+.toggle-chart {
+  background-image: url("../assets/chart.svg");
+}
+.toggle-table {
+  background-image: url("../assets/table.svg");
+}
+.toggle.active,
+.toggle:hover {
+  background-color: rgba(25, 46, 77, 1);
+}
+.toggle.active {
+  cursor: default;
+}
