@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cetacean species | D3.js in Action</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/visualization.css">
+	<link rel="stylesheet" type="text/css" href="css/table.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Cetacean species</h1>
+			<div class="intro">This visualization shows a collection of cetacean species. Each circle represents a cetacean. The circles' position on the scatterplot reveals their size and estimated population. The area of the circles is proportional to the weight of each cetacean. Their color represents the conservation status of each species.</div>
+		</header>
+		<main>
+			<div class="mode-selector">
+				<button type="button" aria-pressed="true" class="toggle toggle-chart active">Display Chart</button>
+				<button type="button" aria-pressed="false" class="toggle toggle-table">Display Data table</button>
+			</div>
+			<div class="chart-container">
+				<section>
+					<div class="legend-container">
+						<h2>How to read this visualization</h2>
+						<div class="legend-sections">
+							<div class="legend-section legend-conservation-status">
+								<h3>Color: Conservation statuses</h3>
+							</div>
+							<div class="legend-section legend-weight">
+								<h3>Area of the circle: Weight of the cetaceans</h3>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<div class="filters-container">
+						<h2>Select a group of cetaceans</h2>
+						<div id="filters"></div>
+					</div>
+					<div class="instructions">Pass your mouse over the circles or access them with the tab key to discover the cetacean they represent.</div>
+					<div class="responsive-svg-container">
+						<div id="scatterplot"></div>
+					</div>
+				</section>
+			</div>
+			<section>
+				<div class="data-table-container"></div>
+			</section>
+		</main>
+		<footer>
+			<div class="sources">
+				<h2>Data sources</h2>
+				<ul>
+					<li><a href="https://www.cwazores.com/cetacean-species-database">CWAzores</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/List_of_cetaceans">Wikipedia</a></li>
+				</ul>
+			</div>
+			<div class="methodology">
+				<h2>Method</h2>
+				<p>The population estimate of some cetaceans was provided as a range. In these cases, the average value is shown on the visualization.</p>
+				<p>The conservation statuses are defined by IUCN (<a href="https://www.iucn.org/">International Union for Conservation of Nature</a>).</p>
+			</div>
+		</footer>
+	</div>
+
+	<!-- Load your scripts here -->
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="js/shared-constants.js"></script>
+	<script src="js/resize.js"></script>
+	<script src="js/data-table.js"></script>
+	<script src="js/scatterplot.js"></script>
+	<script src="js/legend.js"></script>
+	<script src="js/interactions.js"></script>
+	<script src="js/load-data.js"></script>
+</body>
+</html>

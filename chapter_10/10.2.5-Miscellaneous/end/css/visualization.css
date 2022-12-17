@@ -1,0 +1,80 @@
+/* Responsive container of the svg element */
+.responsive-svg-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+}
+.responsive-svg-container.small {
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+/* Axis and labels styles */
+.tick text {
+  font-family: 'Open Sans', sans-serif;
+}
+#scatterplot text {
+  fill: #192e4d;
+}
+#scatterplot line,
+#scatterplot path {
+  stroke-width: 2;
+}
+
+/* Filters */
+#filters ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.filter {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  padding: 10px 20px 10px 15px;
+  font-family: inherit;
+  background-color: rgba(25, 46, 77, 0.65);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+.filter-icon,
+.filter-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+.filter-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.filter-text {
+  font-size: 1.8rem;
+  color: #f5f9ff;
+}
+.filter:hover,
+.filter.active {
+  background-color: rgba(25, 46, 77, 1);
+}
+.filter.active {
+  cursor: default;
+}
+
+/* Legend */
+.legend-conservation-status ul {
+  margin: 0;
+  padding-left: 5px;
+  list-style: none;
+}
+.legend-conservation-status li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.legend-conservation-status svg {
+  margin-right: 10px;
+}
