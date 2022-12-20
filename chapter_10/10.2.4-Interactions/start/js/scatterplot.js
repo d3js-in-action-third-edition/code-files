@@ -18,7 +18,7 @@ const drawScatterplot = (data) => {
 
   const generateDescription = () => {
     const desc = [];
-    desc.push("This scatterplot provides information about 39 cetacean species. The bigest cetacean is the blue whale, with a length of 33 meters and a weight of 173 tons. The Pantropical Spotted dolphin has the largest population, with 3 million individuals. The Baiji dolphin, the North Atlantic Right whale and the Atlantic Humpback dolphin are in danger of extinction.");
+    desc.push("This scatterplot provides information about 39 cetacean species. The biggest cetacean is the blue whale, with a length of 33 meters and a weight of 173 tons. The Pantropical Spotted dolphin has the largest population, with 3 million individuals. The Baiji dolphin, the North Atlantic Right whale and the Atlantic Humpback dolphin are in danger of extinction.");
     desc.push("Cetacean species:");
     data.forEach(d => {
       const cetacean = `
