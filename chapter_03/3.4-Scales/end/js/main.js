@@ -42,13 +42,13 @@ const createViz = (data) => {
     .paddingInner(0.2);
 
   // Use data-binding to append rectangles
-  const bar = svg
+  const barAndLabel = svg
     .selectAll("g")
     .data(data)
     .join("g")
       .attr("transform", d => `translate(0, ${yScale(d.technology)})`);
       
-  bar
+  barAndLabel
     .append("rect")
       .attr("width", d => xScale(d.count))
       .attr("height", yScale.bandwidth())
@@ -57,7 +57,7 @@ const createViz = (data) => {
       .attr("fill", d => d.technology === "D3.js" ? "yellowgreen" : "skyblue");
 
   // Append technology labels
-  bar
+  barAndLabel
     .append("text")
       .text(d => d.technology)
       .attr("x", 96)
@@ -67,7 +67,7 @@ const createViz = (data) => {
       .style("font-size", "11px");
 
     // Append count labels
-    bar
+    barAndLabel
       .append("text")
         .text(d => d.count)
         .attr("x", d => 100 + xScale(d.count) + 4)
