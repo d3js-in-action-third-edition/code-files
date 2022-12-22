@@ -55,7 +55,7 @@ const drawDonutCharts = (data) => {
 
     // Append the arcs
     const arcs = donutContainer
-      .selectAll(`path.arc-${year}`)
+      .selectAll(`.arc-${year}`)
       .data(annotatedData)
       // .join("path")
       //   .attr("class", `arc-${year}`)
