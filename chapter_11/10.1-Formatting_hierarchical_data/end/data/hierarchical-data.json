@@ -460,7 +460,7 @@
                     ]
                 },
                 {
-                    "name": "LI (c)",
+                    "name": "Language Isolate C",
                     "children": [
                         {
                             "name": "Khmer",
@@ -475,7 +475,7 @@
             "name": "Japanic",
             "children": [
                 {
-                    "name": "LI (a)",
+                    "name": "Language Isolate A",
                     "children": [
                         {
                             "name": "Japanese",
@@ -645,7 +645,7 @@
             "name": "Koreanic",
             "children": [
                 {
-                    "name": "LI (b)",
+                    "name": "Language Isolate B",
                     "children": [
                         {
                             "name": "Korean",

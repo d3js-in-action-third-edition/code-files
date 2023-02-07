@@ -18,12 +18,12 @@ Romance,Indo-European,,
 Semitic,Afro-Asiatic,,
 Balto-Slavic,Indo-European,,
 Malayo-Polynesian,Austronesian,,
-LI (a),Japanic,,
+Language Isolate A,Japanic,,
 Bantu,Niger-Congo,,
 South-Central,Dravidian,,
 Southern,Dravidian,,
 Oghuz,Turkic,,
-LI (b),Koreanic,,
+Language Isolate B,Koreanic,,
 Vietic,Austronesian,,
 Chadic,Afro-Asiatic,,
 Zhuang–Tai,Kra-Dai,,
@@ -38,7 +38,7 @@ Mande,Niger-Congo,,
 Hellenic,Indo-European,,
 Kipchak,Turkic,,
 Ugric,Uralic,,
-LI (c),Austronesian,,
+Language Isolate C,Austronesian,,
 English,Germanic,1132366680,379007140
 Mandarin Chinese,Sinitic,1116596640,917868640
 Hindi,Indo-Aryan,615475540,341208640
@@ -51,7 +51,7 @@ Portuguese,Romance,234168620,220762620
 Indonesian,Malayo-Polynesian,198733600,43364600
 Urdu,Indo-Aryan,170208780,68622980
 Standard German,Germanic,132176520,76090520
-Japanese,LI (a),128350830,128229330
+Japanese,Language Isolate A,128350830,128229330
 Swahili,Bantu,98327740,16027740
 Marathi,Indo-Aryan,95312800,83112800
 Telugu,South-Central,93040340,82040340
@@ -59,7 +59,7 @@ Western Punjabi,Indo-Aryan,92725700,92725700
 Wu Chinese,Sinitic,81501290,81437890
 Tamil,Southern,80989130,75039130
 Turkish,Oghuz,79779360,79399060
-Korean,LI (b),77264890,77264890
+Korean,Language Isolate B,77264890,77264890
 Vietnamese,Vietic,76950770,75950770
 Yue Chinese,Sinitic,73538610,73136610
 Javanese,Malayo-Polynesian,68277600,68277600
@@ -106,7 +106,7 @@ Magahi,Indo-Aryan,20746400,20735600
 Saraiki,Indo-Aryan,20009000,20009000
 Xhosa,Atlantic–Congo,19183300,8183300
 Malay,Malayo-Polynesian,19092180,16092180
-Khmer,LI (c),17591230,16591230
+Khmer,Language Isolate C,17591230,16591230
 Afrikaans,Germanic,17534580,7234580
 Sinhala,Indo-Aryan,17287880,15287880
 Somali,Cushitic,16321530,16225930
