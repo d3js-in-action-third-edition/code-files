@@ -8,6 +8,7 @@
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
@@ -22,3 +23,6 @@ yarn-error.log*
 
 # VSCode settings
 .vscode/
+
+# Parcel cache
+.parcel-cache
