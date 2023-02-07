@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@parcel/config-default": "^2.8.3",
+    "d3-hierarchy": "^3.1.2",
+    "parcel-transformer-csv": "^0.0.3"
+  }
+}

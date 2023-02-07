@@ -16,10 +16,16 @@ or
 npm install -g parcel
 ```
 
-2. Start the project:
+2. Install the dependencies:
+
+```bash
+npm install
+```
+
+3. Start the project:
 
 ```bash
 parcel index.html
 ```
 
-3. The port at which your project is available will be displayed in the terminal window.
+4. The port at which your project is available will be displayed in the terminal window.
