@@ -1,0 +1,141 @@
+child,parent,total_speakers,native_speakers
+Languages,,,
+Indo-European,Languages,,
+Sino-Tibetan,Languages,,
+Afro-Asiatic,Languages,,
+Austronesian,Languages,,
+Japanic,Languages,,
+Niger-Congo,Languages,,
+Dravidian,Languages,,
+Turkic,Languages,,
+Koreanic,Languages,,
+Kra-Dai,Languages,,
+Uralic,Languages,,
+Germanic,Indo-European,,
+Sinitic,Sino-Tibetan,,
+Indo-Aryan,Indo-European,,
+Romance,Indo-European,,
+Semitic,Afro-Asiatic,,
+Balto-Slavic,Indo-European,,
+Malayo-Polynesian,Austronesian,,
+Language Isolate A,Japanic,,
+Bantu,Niger-Congo,,
+South-Central,Dravidian,,
+Southern,Dravidian,,
+Oghuz,Turkic,,
+Language Isolate B,Koreanic,,
+Vietic,Austronesian,,
+Chadic,Afro-Asiatic,,
+Zhuang–Tai,Kra-Dai,,
+Iranian,Indo-European,,
+Tibeto-Burman,Sino-Tibetan,,
+Atlantic–Congo,Niger-Congo,,
+Malayo-Sumbawan,Austronesian,,
+Karluk,Turkic,,
+Cushitic,Afro-Asiatic,,
+Tai,Kra-Dai,,
+Mande,Niger-Congo,,
+Hellenic,Indo-European,,
+Kipchak,Turkic,,
+Ugric,Uralic,,
+Language Isolate C,Austronesian,,
+English,Germanic,1132366680,379007140
+Mandarin Chinese,Sinitic,1116596640,917868640
+Hindi,Indo-Aryan,615475540,341208640
+Spanish,Romance,534335730,460093030
+French,Romance,279821930,77177210
+Modern Standard Arabic,Semitic,273989700,0
+Bengali,Indo-Aryan,265042480,228289600
+Russian,Balto-Slavic,258227760,153746530
+Portuguese,Romance,234168620,220762620
+Indonesian,Malayo-Polynesian,198733600,43364600
+Urdu,Indo-Aryan,170208780,68622980
+Standard German,Germanic,132176520,76090520
+Japanese,Language Isolate A,128350830,128229330
+Swahili,Bantu,98327740,16027740
+Marathi,Indo-Aryan,95312800,83112800
+Telugu,South-Central,93040340,82040340
+Western Punjabi,Indo-Aryan,92725700,92725700
+Wu Chinese,Sinitic,81501290,81437890
+Tamil,Southern,80989130,75039130
+Turkish,Oghuz,79779360,79399060
+Korean,Language Isolate B,77264890,77264890
+Vietnamese,Vietic,76950770,75950770
+Yue Chinese,Sinitic,73538610,73136610
+Javanese,Malayo-Polynesian,68277600,68277600
+Italian,Romance,67894920,64844820
+Egyptian Spoken Arabic,Semitic,64618100,64618100
+Hausa,Chadic,63428100,43928100
+Thai,Zhuang–Tai,60657660,20657660
+Gujarati,Indo-Aryan,60588970,56408970
+Kannada,Southern,56463310,43563310
+Iranian Persian,Iranian,52782160,52782160
+Bhojpuri,Indo-Aryan,52405300,52245300
+Southern Min Chinese,Sinitic,50462190,50075190
+Hakka Chinese,Sinitic,48467490,48467490
+Jin Chinese,Sinitic,46900000,46900000
+Filipino,Malayo-Polynesian,45000000,28000000
+Burmese,Tibeto-Burman,42912350,32912350
+Polish,Balto-Slavic,40378030,39713030
+Yoruba,Atlantic–Congo,39844260,37844260
+Odia,Indo-Aryan,38051547,34461520
+Malayalam,Southern,37829870,37134870
+Xiang Chinese,Sinitic,37300000,37300000
+Maithili,Indo-Aryan,34085000,33890000
+Ukrainian,Balto-Slavic,33082790,27282790
+Moroccan Spoken Arabic,Semitic,32608700,27488700
+Eastern Punjabi,Indo-Aryan,32601140,32600670
+Sunda,Malayo-Sumbawan,32400000,32400000
+Algerian Spoken Arabic,Semitic,32387600,29387600
+Sundanese Spoken Arabic,Semitic,31940300,31940300
+Nigerian Pidgin,Germanic,30000000,4700000
+Zulu,Atlantic–Congo,27779100,12079100
+Igbo,Atlantic–Congo,27014190,27014190
+Amharic,Semitic,25880630,21880630
+Northern Uzbek,Karluk,25164820,25164820
+Sindhi,Indo-Aryan,24615591,24615550
+North Levantine Spoken Arabic,Semitic,24587400,24587400
+Nepali,Indo-Aryan,24528840,15848840
+Romanian,Romance,24345750,24345750
+Tagalog,Malayo-Polynesian,23808890,23646890
+Dutch,Germanic,23069480,23069480
+Sa'idi Spoken Arabic,Semitic,22400000,22400000
+Gan Chinese,Sinitic,22100000,22100000
+Northern Pashto,Iranian,20850900,20850900
+Magahi,Indo-Aryan,20746400,20735600
+Saraiki,Indo-Aryan,20009000,20009000
+Xhosa,Atlantic–Congo,19183300,8183300
+Malay,Malayo-Polynesian,19092180,16092180
+Khmer,Language Isolate C,17591230,16591230
+Afrikaans,Germanic,17534580,7234580
+Sinhala,Indo-Aryan,17287880,15287880
+Somali,Cushitic,16321530,16225930
+Chhattisgarhi,Indo-Aryan,16300000,16300000
+Cebuano,Malayo-Polynesian,15942480,15942480
+Mesopotamian Spoken Arabic,Semitic,15655900,15655900
+Assamese,Indo-Aryan,15329040,15328790
+Northeastern Thai,Tai,15000000,15000000
+Northern Kurdish,Iranian,14605670,14605670
+Hijazi Spoken Arabic,Semitic,14524500,14524500
+Nigerian Fulfulde,Atlantic–Congo,14485000,14485000
+Bavarian,Germanic,14359000,14359000
+Bamanankan,Mande,14102320,4102320
+South Azerbaijani,Oghuz,13813750,13813750
+Northern Sotho,Atlantic–Congo,13731000,4631000
+Setswana,Atlantic–Congo,13664710,5814710
+Souther Sotho,Atlantic–Congo,13524520,5624520
+Czech,Balto-Slavic,13386850,10704850
+Greek,Hellenic,13170460,13111960
+Chittagonian,Indo-Aryan,13000000,13000000
+Kazakh,Kipchak,12934060,12934060
+Swedish,Germanic,12804900,9654900
+Deccan,Indo-Aryan,12800000,12800000
+Hungarian,Ugric,12574280,12574280
+Jula,Mande,12486000,2208000
+Sadri,Indo-Aryan,12131225,5131180
+Kinyarwanda,Atlantic–Congo,12120250,12120250
+Cameroonian Pidgin,Germanic,12000000,1466082
+Sylheti,Indo-Aryan,11800000,10300000
+South Levantine Spoken Arabic,Semitic,11601100,11601100
+Tunisian Spoken Arabic,Semitic,11571600,11571600
+Sanaani Spoken Arabic,Semitic,11350000,11350000
