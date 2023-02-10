@@ -25,7 +25,7 @@ npm install
 3. Start the project:
 
 ```bash
-parcel index.html
+parcel src/index.html
 ```
 
 4. The port at which your project is available will be displayed in the terminal window.
