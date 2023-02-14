@@ -1,9 +1,9 @@
 import { select } from "d3-selection";
 import { format } from "d3-format";
 import { languageFamilies } from "./helper";
-import { colorScale } from "./scales";
+import { colorScale, getRadius } from "./scales";
 
-export default createLegend = () => {
+export const createLegend = () => {
 
   const legendFamilies = select("#legend-families")
     .append("ul")
@@ -22,10 +22,13 @@ export default createLegend = () => {
   const speakersMax = 1000000000;
   const speakersMedium = 100000000;
   const speakersMin = 10000000;
+  const maxRadius = getRadius(speakersMax, speakersMax);
+  const mediumRadius = getRadius(speakersMax, speakersMedium);
+  const minRadius = getRadius(speakersMax, speakersMin);
   const legendSpeakers = select("#legend-speakers")
     .append("svg")
       .attr("width", 260)
-      .attr("height", 160)
+      .attr("height", 200)
     .append("g")
       .attr("transform", "translate(1, 10)");
   const legendCircles = legendSpeakers 
@@ -34,19 +37,19 @@ export default createLegend = () => {
       .attr("stroke", "#272626");
   legendCircles
     .append("circle")
-      .attr("cx", radialScale(speakersMax))
-      .attr("cy", radialScale(speakersMax))
-      .attr("r", radialScale(speakersMax));
+      .attr("cx", maxRadius)
+      .attr("cy", maxRadius)
+      .attr("r", maxRadius);
   legendCircles
     .append("circle")
-      .attr("cx", radialScale(speakersMax))
-      .attr("cy", 2*radialScale(speakersMax) - radialScale(speakersMedium))
-      .attr("r", radialScale(speakersMedium));
+      .attr("cx", maxRadius)
+      .attr("cy", 2*maxRadius - mediumRadius)
+      .attr("r", mediumRadius);
   legendCircles
     .append("circle")
-      .attr("cx", radialScale(speakersMax))
-      .attr("cy", 2*radialScale(speakersMax) - radialScale(speakersMin))
-      .attr("r", radialScale(speakersMin));
+      .attr("cx", maxRadius)
+      .attr("cy", 2*maxRadius - minRadius)
+      .attr("r", minRadius);
 
   const linesLength = 100;
   const legendLines = legendSpeakers
@@ -55,22 +58,22 @@ export default createLegend = () => {
       .attr("stroke-dasharray", "6 4");
   legendLines
     .append("line")
-      .attr("x1", radialScale(speakersMax))
+      .attr("x1", maxRadius)
       .attr("y1", 0)
-      .attr("x2", radialScale(speakersMax) + linesLength)
+      .attr("x2", maxRadius + linesLength)
       .attr("y2", 0);
   legendLines
     .append("line")
-      .attr("x1", radialScale(speakersMax))
-      .attr("y1", 2*radialScale(speakersMax) - 2*radialScale(speakersMedium))
-      .attr("x2", radialScale(speakersMax) + linesLength)
-      .attr("y2", 2*radialScale(speakersMax) - 2*radialScale(speakersMedium));
+      .attr("x1", maxRadius)
+      .attr("y1", 2*maxRadius - 2*mediumRadius)
+      .attr("x2", maxRadius + linesLength)
+      .attr("y2", 2*maxRadius - 2*mediumRadius);
   legendLines
     .append("line")
-      .attr("x1", radialScale(speakersMax))
-      .attr("y1", 2*radialScale(speakersMax) - 2*radialScale(speakersMin))
-      .attr("x2", radialScale(speakersMax) + linesLength)
-      .attr("y2", 2*radialScale(speakersMax) - 2*radialScale(speakersMin));
+      .attr("x1", maxRadius)
+      .attr("y1", 2*maxRadius - 2*minRadius)
+      .attr("x2", maxRadius + linesLength)
+      .attr("y2", 2*maxRadius - 2*minRadius);
 
   const labels = legendSpeakers
     .append("g")
@@ -78,18 +81,18 @@ export default createLegend = () => {
       .attr("dominant-baseline", "middle");
   labels
     .append("text")
-      .attr("x", radialScale(speakersMax) + linesLength + 5)
+      .attr("x", maxRadius + linesLength + 5)
       .attr("y", 0)
       .text(format(".1s")(speakersMax));
   labels
     .append("text")
-      .attr("x", radialScale(speakersMax) + linesLength + 5)
-      .attr("y", 2*radialScale(speakersMax) - 2*radialScale(speakersMedium))
+      .attr("x", maxRadius + linesLength + 5)
+      .attr("y", 2*maxRadius - 2*mediumRadius)
       .text(format(".1s")(speakersMedium));
   labels
     .append("text")
-      .attr("x", radialScale(speakersMax) + linesLength + 5)
-      .attr("y", 2*radialScale(speakersMax) - 2*radialScale(speakersMin))
+      .attr("x", maxRadius + linesLength + 5)
+      .attr("y", 2*maxRadius - 2*minRadius)
       .text(format(".1s")(speakersMin));
 
 };
