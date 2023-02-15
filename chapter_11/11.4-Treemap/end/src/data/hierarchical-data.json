@@ -1,0 +1,700 @@
+{
+    "name": "Languages",
+    "children": [
+        {
+            "name": "Indo-European",
+            "children": [
+                {
+                    "name": "Germanic",
+                    "children": [
+                        {
+                            "name": "English",
+                            "total_speakers": 1132366680,
+                            "native_speakers": 379007140
+                        },
+                        {
+                            "name": "Standard German",
+                            "total_speakers": 132176520,
+                            "native_speakers": 76090520
+                        },
+                        {
+                            "name": "Nigerian Pidgin",
+                            "total_speakers": 30000000,
+                            "native_speakers": 4700000
+                        },
+                        {
+                            "name": "Dutch",
+                            "total_speakers": 23069480,
+                            "native_speakers": 23069480
+                        },
+                        {
+                            "name": "Afrikaans",
+                            "total_speakers": 17534580,
+                            "native_speakers": 7234580
+                        },
+                        {
+                            "name": "Bavarian",
+                            "total_speakers": 14359000,
+                            "native_speakers": 14359000
+                        },
+                        {
+                            "name": "Swedish",
+                            "total_speakers": 12804900,
+                            "native_speakers": 9654900
+                        },
+                        {
+                            "name": "Cameroonian Pidgin",
+                            "total_speakers": 12000000,
+                            "native_speakers": 1466082
+                        }
+                    ]
+                },
+                {
+                    "name": "Indo-Aryan",
+                    "children": [
+                        {
+                            "name": "Hindi",
+                            "total_speakers": 615475540,
+                            "native_speakers": 341208640
+                        },
+                        {
+                            "name": "Bengali",
+                            "total_speakers": 265042480,
+                            "native_speakers": 228289600
+                        },
+                        {
+                            "name": "Urdu",
+                            "total_speakers": 170208780,
+                            "native_speakers": 68622980
+                        },
+                        {
+                            "name": "Marathi",
+                            "total_speakers": 95312800,
+                            "native_speakers": 83112800
+                        },
+                        {
+                            "name": "Western Punjabi",
+                            "total_speakers": 92725700,
+                            "native_speakers": 92725700
+                        },
+                        {
+                            "name": "Gujarati",
+                            "total_speakers": 60588970,
+                            "native_speakers": 56408970
+                        },
+                        {
+                            "name": "Bhojpuri",
+                            "total_speakers": 52405300,
+                            "native_speakers": 52245300
+                        },
+                        {
+                            "name": "Odia",
+                            "total_speakers": 38051547,
+                            "native_speakers": 34461520
+                        },
+                        {
+                            "name": "Maithili",
+                            "total_speakers": 34085000,
+                            "native_speakers": 33890000
+                        },
+                        {
+                            "name": "Eastern Punjabi",
+                            "total_speakers": 32601140,
+                            "native_speakers": 32600670
+                        },
+                        {
+                            "name": "Sindhi",
+                            "total_speakers": 24615591,
+                            "native_speakers": 24615550
+                        },
+                        {
+                            "name": "Nepali",
+                            "total_speakers": 24528840,
+                            "native_speakers": 15848840
+                        },
+                        {
+                            "name": "Magahi",
+                            "total_speakers": 20746400,
+                            "native_speakers": 20735600
+                        },
+                        {
+                            "name": "Saraiki",
+                            "total_speakers": 20009000,
+                            "native_speakers": 20009000
+                        },
+                        {
+                            "name": "Sinhala",
+                            "total_speakers": 17287880,
+                            "native_speakers": 15287880
+                        },
+                        {
+                            "name": "Chhattisgarhi",
+                            "total_speakers": 16300000,
+                            "native_speakers": 16300000
+                        },
+                        {
+                            "name": "Assamese",
+                            "total_speakers": 15329040,
+                            "native_speakers": 15328790
+                        },
+                        {
+                            "name": "Chittagonian",
+                            "total_speakers": 13000000,
+                            "native_speakers": 13000000
+                        },
+                        {
+                            "name": "Deccan",
+                            "total_speakers": 12800000,
+                            "native_speakers": 12800000
+                        },
+                        {
+                            "name": "Sadri",
+                            "total_speakers": 12131225,
+                            "native_speakers": 5131180
+                        },
+                        {
+                            "name": "Sylheti",
+                            "total_speakers": 11800000,
+                            "native_speakers": 10300000
+                        }
+                    ]
+                },
+                {
+                    "name": "Romance",
+                    "children": [
+                        {
+                            "name": "Spanish",
+                            "total_speakers": 534335730,
+                            "native_speakers": 460093030
+                        },
+                        {
+                            "name": "French",
+                            "total_speakers": 279821930,
+                            "native_speakers": 77177210
+                        },
+                        {
+                            "name": "Portuguese",
+                            "total_speakers": 234168620,
+                            "native_speakers": 220762620
+                        },
+                        {
+                            "name": "Italian",
+                            "total_speakers": 67894920,
+                            "native_speakers": 64844820
+                        },
+                        {
+                            "name": "Romanian",
+                            "total_speakers": 24345750,
+                            "native_speakers": 24345750
+                        }
+                    ]
+                },
+                {
+                    "name": "Balto-Slavic",
+                    "children": [
+                        {
+                            "name": "Russian",
+                            "total_speakers": 258227760,
+                            "native_speakers": 153746530
+                        },
+                        {
+                            "name": "Polish",
+                            "total_speakers": 40378030,
+                            "native_speakers": 39713030
+                        },
+                        {
+                            "name": "Ukrainian",
+                            "total_speakers": 33082790,
+                            "native_speakers": 27282790
+                        },
+                        {
+                            "name": "Czech",
+                            "total_speakers": 13386850,
+                            "native_speakers": 10704850
+                        }
+                    ]
+                },
+                {
+                    "name": "Iranian",
+                    "children": [
+                        {
+                            "name": "Iranian Persian",
+                            "total_speakers": 52782160,
+                            "native_speakers": 52782160
+                        },
+                        {
+                            "name": "Northern Pashto",
+                            "total_speakers": 20850900,
+                            "native_speakers": 20850900
+                        },
+                        {
+                            "name": "Northern Kurdish",
+                            "total_speakers": 14605670,
+                            "native_speakers": 14605670
+                        }
+                    ]
+                },
+                {
+                    "name": "Hellenic",
+                    "children": [
+                        {
+                            "name": "Greek",
+                            "total_speakers": 13170460,
+                            "native_speakers": 13111960
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Sino-Tibetan",
+            "children": [
+                {
+                    "name": "Sinitic",
+                    "children": [
+                        {
+                            "name": "Mandarin Chinese",
+                            "total_speakers": 1116596640,
+                            "native_speakers": 917868640
+                        },
+                        {
+                            "name": "Wu Chinese",
+                            "total_speakers": 81501290,
+                            "native_speakers": 81437890
+                        },
+                        {
+                            "name": "Yue Chinese",
+                            "total_speakers": 73538610,
+                            "native_speakers": 73136610
+                        },
+                        {
+                            "name": "Southern Min Chinese",
+                            "total_speakers": 50462190,
+                            "native_speakers": 50075190
+                        },
+                        {
+                            "name": "Hakka Chinese",
+                            "total_speakers": 48467490,
+                            "native_speakers": 48467490
+                        },
+                        {
+                            "name": "Jin Chinese",
+                            "total_speakers": 46900000,
+                            "native_speakers": 46900000
+                        },
+                        {
+                            "name": "Xiang Chinese",
+                            "total_speakers": 37300000,
+                            "native_speakers": 37300000
+                        },
+                        {
+                            "name": "Gan Chinese",
+                            "total_speakers": 22100000,
+                            "native_speakers": 22100000
+                        }
+                    ]
+                },
+                {
+                    "name": "Tibeto-Burman",
+                    "children": [
+                        {
+                            "name": "Burmese",
+                            "total_speakers": 42912350,
+                            "native_speakers": 32912350
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Afro-Asiatic",
+            "children": [
+                {
+                    "name": "Semitic",
+                    "children": [
+                        {
+                            "name": "Modern Standard Arabic",
+                            "total_speakers": 273989700,
+                            "native_speakers": 0
+                        },
+                        {
+                            "name": "Egyptian Spoken Arabic",
+                            "total_speakers": 64618100,
+                            "native_speakers": 64618100
+                        },
+                        {
+                            "name": "Moroccan Spoken Arabic",
+                            "total_speakers": 32608700,
+                            "native_speakers": 27488700
+                        },
+                        {
+                            "name": "Algerian Spoken Arabic",
+                            "total_speakers": 32387600,
+                            "native_speakers": 29387600
+                        },
+                        {
+                            "name": "Sundanese Spoken Arabic",
+                            "total_speakers": 31940300,
+                            "native_speakers": 31940300
+                        },
+                        {
+                            "name": "Amharic",
+                            "total_speakers": 25880630,
+                            "native_speakers": 21880630
+                        },
+                        {
+                            "name": "North Levantine Spoken Arabic",
+                            "total_speakers": 24587400,
+                            "native_speakers": 24587400
+                        },
+                        {
+                            "name": "Sa'idi Spoken Arabic",
+                            "total_speakers": 22400000,
+                            "native_speakers": 22400000
+                        },
+                        {
+                            "name": "Mesopotamian Spoken Arabic",
+                            "total_speakers": 15655900,
+                            "native_speakers": 15655900
+                        },
+                        {
+                            "name": "Hijazi Spoken Arabic",
+                            "total_speakers": 14524500,
+                            "native_speakers": 14524500
+                        },
+                        {
+                            "name": "South Levantine Spoken Arabic",
+                            "total_speakers": 11601100,
+                            "native_speakers": 11601100
+                        },
+                        {
+                            "name": "Tunisian Spoken Arabic",
+                            "total_speakers": 11571600,
+                            "native_speakers": 11571600
+                        },
+                        {
+                            "name": "Sanaani Spoken Arabic",
+                            "total_speakers": 11350000,
+                            "native_speakers": 11350000
+                        }
+                    ]
+                },
+                {
+                    "name": "Chadic",
+                    "children": [
+                        {
+                            "name": "Hausa",
+                            "total_speakers": 63428100,
+                            "native_speakers": 43928100
+                        }
+                    ]
+                },
+                {
+                    "name": "Cushitic",
+                    "children": [
+                        {
+                            "name": "Somali",
+                            "total_speakers": 16321530,
+                            "native_speakers": 16225930
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Austronesian",
+            "children": [
+                {
+                    "name": "Malayo-Polynesian",
+                    "children": [
+                        {
+                            "name": "Indonesian",
+                            "total_speakers": 198733600,
+                            "native_speakers": 43364600
+                        },
+                        {
+                            "name": "Javanese",
+                            "total_speakers": 68277600,
+                            "native_speakers": 68277600
+                        },
+                        {
+                            "name": "Filipino",
+                            "total_speakers": 45000000,
+                            "native_speakers": 28000000
+                        },
+                        {
+                            "name": "Tagalog",
+                            "total_speakers": 23808890,
+                            "native_speakers": 23646890
+                        },
+                        {
+                            "name": "Malay",
+                            "total_speakers": 19092180,
+                            "native_speakers": 16092180
+                        },
+                        {
+                            "name": "Cebuano",
+                            "total_speakers": 15942480,
+                            "native_speakers": 15942480
+                        }
+                    ]
+                },
+                {
+                    "name": "Vietic",
+                    "children": [
+                        {
+                            "name": "Vietnamese",
+                            "total_speakers": 76950770,
+                            "native_speakers": 75950770
+                        }
+                    ]
+                },
+                {
+                    "name": "Malayo-Sumbawan",
+                    "children": [
+                        {
+                            "name": "Sunda",
+                            "total_speakers": 32400000,
+                            "native_speakers": 32400000
+                        }
+                    ]
+                },
+                {
+                    "name": "Language Isolate C",
+                    "children": [
+                        {
+                            "name": "Khmer",
+                            "total_speakers": 17591230,
+                            "native_speakers": 16591230
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Japanic",
+            "children": [
+                {
+                    "name": "Language Isolate A",
+                    "children": [
+                        {
+                            "name": "Japanese",
+                            "total_speakers": 128350830,
+                            "native_speakers": 128229330
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Niger-Congo",
+            "children": [
+                {
+                    "name": "Bantu",
+                    "children": [
+                        {
+                            "name": "Swahili",
+                            "total_speakers": 98327740,
+                            "native_speakers": 16027740
+                        }
+                    ]
+                },
+                {
+                    "name": "Atlantic–Congo",
+                    "children": [
+                        {
+                            "name": "Yoruba",
+                            "total_speakers": 39844260,
+                            "native_speakers": 37844260
+                        },
+                        {
+                            "name": "Zulu",
+                            "total_speakers": 27779100,
+                            "native_speakers": 12079100
+                        },
+                        {
+                            "name": "Igbo",
+                            "total_speakers": 27014190,
+                            "native_speakers": 27014190
+                        },
+                        {
+                            "name": "Xhosa",
+                            "total_speakers": 19183300,
+                            "native_speakers": 8183300
+                        },
+                        {
+                            "name": "Nigerian Fulfulde",
+                            "total_speakers": 14485000,
+                            "native_speakers": 14485000
+                        },
+                        {
+                            "name": "Northern Sotho",
+                            "total_speakers": 13731000,
+                            "native_speakers": 4631000
+                        },
+                        {
+                            "name": "Setswana",
+                            "total_speakers": 13664710,
+                            "native_speakers": 5814710
+                        },
+                        {
+                            "name": "Souther Sotho",
+                            "total_speakers": 13524520,
+                            "native_speakers": 5624520
+                        },
+                        {
+                            "name": "Kinyarwanda",
+                            "total_speakers": 12120250,
+                            "native_speakers": 12120250
+                        }
+                    ]
+                },
+                {
+                    "name": "Mande",
+                    "children": [
+                        {
+                            "name": "Bamanankan",
+                            "total_speakers": 14102320,
+                            "native_speakers": 4102320
+                        },
+                        {
+                            "name": "Jula",
+                            "total_speakers": 12486000,
+                            "native_speakers": 2208000
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Dravidian",
+            "children": [
+                {
+                    "name": "South-Central",
+                    "children": [
+                        {
+                            "name": "Telugu",
+                            "total_speakers": 93040340,
+                            "native_speakers": 82040340
+                        }
+                    ]
+                },
+                {
+                    "name": "Southern",
+                    "children": [
+                        {
+                            "name": "Tamil",
+                            "total_speakers": 80989130,
+                            "native_speakers": 75039130
+                        },
+                        {
+                            "name": "Kannada",
+                            "total_speakers": 56463310,
+                            "native_speakers": 43563310
+                        },
+                        {
+                            "name": "Malayalam",
+                            "total_speakers": 37829870,
+                            "native_speakers": 37134870
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Turkic",
+            "children": [
+                {
+                    "name": "Oghuz",
+                    "children": [
+                        {
+                            "name": "Turkish",
+                            "total_speakers": 79779360,
+                            "native_speakers": 79399060
+                        },
+                        {
+                            "name": "South Azerbaijani",
+                            "total_speakers": 13813750,
+                            "native_speakers": 13813750
+                        }
+                    ]
+                },
+                {
+                    "name": "Karluk",
+                    "children": [
+                        {
+                            "name": "Northern Uzbek",
+                            "total_speakers": 25164820,
+                            "native_speakers": 25164820
+                        }
+                    ]
+                },
+                {
+                    "name": "Kipchak",
+                    "children": [
+                        {
+                            "name": "Kazakh",
+                            "total_speakers": 12934060,
+                            "native_speakers": 12934060
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Koreanic",
+            "children": [
+                {
+                    "name": "Language Isolate B",
+                    "children": [
+                        {
+                            "name": "Korean",
+                            "total_speakers": 77264890,
+                            "native_speakers": 77264890
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Kra-Dai",
+            "children": [
+                {
+                    "name": "Zhuang–Tai",
+                    "children": [
+                        {
+                            "name": "Thai",
+                            "total_speakers": 60657660,
+                            "native_speakers": 20657660
+                        }
+                    ]
+                },
+                {
+                    "name": "Tai",
+                    "children": [
+                        {
+                            "name": "Northeastern Thai",
+                            "total_speakers": 15000000,
+                            "native_speakers": 15000000
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Uralic",
+            "children": [
+                {
+                    "name": "Ugric",
+                    "children": [
+                        {
+                            "name": "Hungarian",
+                            "total_speakers": 12574280,
+                            "native_speakers": 12574280
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

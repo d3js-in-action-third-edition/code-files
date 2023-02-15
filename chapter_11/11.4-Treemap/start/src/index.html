@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>100 Most Spoken Languages | D3.js in Action</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/visualization.css">
+</head>
+<body>
+	<div class="container">
+
+		<h1>100 Most Spoken Languages</h1>
+		<div class="intro">
+			<div class="row">
+				<div class="col col-9">
+					<p>More than 7,000 languages are used in the world today, contributing to making planet Earth a beautifully diverse place. In this project, we visualize the 100 most spoken languages. Each language belongs to a language family, like the Indo-European or the Sino-Tibetan families. These families can be subdivided into smaller groups called branches, like Germanic, Romance, Sinitic, and Indo-Aryan.</p>
+					<p>In these visualizations, languages that do not belong to a particular branch are called Language Isolates.</p>
+				</div>
+			</div>
+		</div>
+		<section>
+			<h2>Circle Pack Chart</h2>
+			<div class="legend">
+				<div class="row">
+					<div class="col col-6">
+						<h3>Language families</h3>
+						<div id="legend-families"></div>
+					</div>
+					<div class="col col-4">
+						<h3>Total number of speakers</h3>
+						<div id="legend-speakers"></div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="row">
+					<div class="col col-9">
+						<div id="circle-pack"></div>
+					</div>
+					<div class="col col-3">
+						<div id="info-container">
+							<div id="instructions">Pass your mouse over a language to reveal additional information.</div>
+							<div id="info" class="hidden">
+								<div class="info-language"></div>
+								<div class="info-branch">
+									<span class="label">Branch: </span>
+									<span class="information"></span>
+								</div>
+								<div class="info-family">
+									<span class="label">Family: </span>
+									<span class="information"></span>
+								</div>
+								<div class="info-total-speakers">
+									<span class="label">Total speakers: </span>
+									<span class="information"></span>
+								</div>
+								<div class="info-native-speakers">
+									<span class="label">Native speakers: </span>
+									<span class="information"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<h2>Tree Chart</h2>
+			<div id="tree"></div>
+		</section>
+		
+
+		<div class="source">
+			<h3>Data sources</h3>
+			<ul>
+				<li><a href="https://www.kaggle.com/datasets/narmelan/100-most-spoken-languages-around-the-world">Kaggle dataset: The Most Spoken Languages Around the World</a></li>
+				<li><a href="https://www.visualcapitalist.com/100-most-spoken-languages/">The 100 Most Spoken Languages Around the World</a></li>
+				<li><a href="https://en.wikipedia.org/">Wikipedia.org</a></li>
+			</ul>	
+	</div>
+
+	<script type="module" src="./js/main.js"></script>
+</body>
+</html>
