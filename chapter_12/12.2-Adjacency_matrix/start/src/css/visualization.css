@@ -1,0 +1,83 @@
+/* Color Legend */
+.legend-container {
+  display: flex;
+  height: 100%;
+}
+.legend {
+  align-self: flex-end;
+  bottom: 10rem;
+  position: -webkit-sticky;
+  position: sticky;
+}
+.legend-houses ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.legend-houses li {
+  margin: 3px 0;
+}
+.legend-houses span {
+  display: inline-block;
+}
+.legend-house-color {
+  position: relative;
+  top: 1px;
+  width: 15px;
+  height: 15px;
+  margin-right: 7px;
+  border-radius: 50%;
+}
+.legend-radius {
+  max-width: 260px;
+}
+@media screen and (max-width: 768px) {
+  .legend-radius svg {
+    width: 100px;
+  }
+}
+
+/* Interactive legends */
+.matrix-sidebar,
+.network-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding-left: 15px;
+  opacity: 1;
+  transition: opacity 250ms ease;
+}
+.matrix-tooltip.hidden,
+.network-sidebar.hidden {
+  opacity: 0;
+}
+.matrix-legend ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+}
+.matrix-legend li {
+  margin-right: 10px;
+  text-align: center;
+}
+.matrix-legend .legend-color-circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+.matrix-legend .legend-color-label {
+  margin-top: 3px;
+  font-size: 1.6rem;
+}
+.matrix-tooltip {
+  margin-top: 20px;
+  font-size: 2rem;
+}
+.matrix-tooltip-charA,
+.matrix-tooltip-charB,
+.matrix-tooltip-scenes,
+.network-character {
+  font-weight: 700;
+}

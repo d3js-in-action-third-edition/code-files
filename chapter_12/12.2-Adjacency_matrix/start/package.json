@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "start": "parcel src/index.html",
+    "predeploy": "rm -rf dist && parcel build src/index.html --public-url 'https://d3js-in-action-third-edition.github.io/romeo-and-juliet/'",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "d3-array": "^3.2.2",
+    "d3-force": "^3.0.0",
+    "d3-random": "^3.0.1",
+    "d3-scale": "^4.0.2",
+    "d3-selection": "^3.0.0",
+    "d3-shape": "^3.2.0",
+    "d3-transition": "^3.0.1",
+    "gh-pages": "^5.0.0"
+  }
+}

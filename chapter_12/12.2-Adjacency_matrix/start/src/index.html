@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Romeo and Juliet | D3.js in Action</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/visualization.css">
+</head>
+<body>
+	<div class="container">
+
+		<section>
+			<div class="row">
+				<div class="col col-9 offset-3">
+					<h1>Romeo and Juliet</h1>
+					<div class="intro">Romeo and Juliet is a play written by William Shakespeare about the tragic romance between two Italian teenagers from enemy families. In this project, we investigate how the characters share scenes during the play. Throughout these network visualizations, the characters are the nodes, and we use the number of scenes they share to create the edges or links between them.</div>
+					<h2>Adjacency Matrix</h2>
+					<div class="intro">In an adjacency matrix, the nodes are positioned along the x-axis and once again along the y-axis. If a node from the x-axis is connected to a node from the y-axis, the corresponding grid square is filled. Otherwise, it is left blank. We also use the opacity of the grid squares to indicate how many scenes two characters share.</div>
+					<div class="row">
+						<div class="col col-9">
+							<div id="matrix"></div>
+						</div>
+						<div class="col col-3">
+							<div class="matrix-sidebar">
+								<h3>Number of shared scenes</h3>
+								<div class="matrix-legend"></div>
+								<div class="matrix-tooltip hidden">
+									<span class="matrix-tooltip-charA"></span>
+									and
+									<span class="matrix-tooltip-charB"></span>
+									appear together in
+									<span class="matrix-tooltip-scenes"></span>
+									scenes
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="row">
+			<div class="col col-3">
+				<div class="legend-container">
+					<div class="legend">
+						<h2>Characters Legend</h2>
+						<div class="legend-section">
+							<h3>Houses</h3>
+							<div class="legend-houses"></div>
+						</div>
+						<div class="legend-section">
+							<h3>Number of lines in the play</h3>
+							<div class="legend-radius"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col col-9">
+				<section>
+					<h2>Arc Diagram</h2>
+					<div class="intro">Another way to graphically represent networks is by using an arc diagram. An arc diagram arranges the nodes along a line and draws the links as arcs above and/or below that line. The width of a link can also represent the strength of a connection.</div>
+					<div id="arc"></div>
+				</section>
+				<section>
+					<h2>Force-directed Layout</h2>
+					<h3>Beeswarm</h3>
+					<p class="intro">A beeswarm is a form of network visualization where we present the nodes as a cluster and omit the links. The position of the nodes sometimes visualizes a specific value, making them especially useful for distributions.</p>
+					<div id="beeswarm"></div>
+					<h3>Network</h3>
+					<div class="intro">In this network visualization, each character is represented by a circle. The size of the circles is proportional to the number of lines the character has in the play. When two characters share at least one scene, we draw a link between them. The stronger the link, the closer the nodes are.</div>
+					<div class="row">
+						<div class="col col-9">
+							<div id="network"></div>
+						</div>
+						<div class="col col-3">
+							<div class="network-sidebar hidden">
+								<div class="network-character"></div>
+								<div class="network-description"></div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<div class="source">
+			<h3>Data sources</h3>
+			<ul>
+				<li><a href="https://www.kaggle.com/datasets/kingburrito666/shakespeare-plays">Kaggle dataset: Shakespeare plays</a></li>
+				<li><a href="https://www.opensourceshakespeare.org/">Open Source Shakespeare</a></li>
+				<li><a href="https://en.wikipedia.org/wiki/Romeo_and_Juliet">Wikipedia</a></li>
+			</ul>	
+	</div>
+
+	<script type="module" src="./js/main.js"></script>
+</body>
+</html>

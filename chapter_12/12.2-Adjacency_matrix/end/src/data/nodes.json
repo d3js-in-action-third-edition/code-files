@@ -1,0 +1,227 @@
+[
+    {
+        "id": "prince",
+        "name": "Prince Escalus",
+        "house": "Ruling house of Verona",
+        "description": "Ruling Prince of Verona",
+        "totalLinesNumber": 76
+    },
+    {
+        "id": "paris",
+        "name": "Count Paris",
+        "house": "Ruling house of Verona",
+        "description": "Kinsman of Escalus who wishes to marry Juliet.",
+        "totalLinesNumber": 70
+    },
+    {
+        "id": "mercutio",
+        "name": "Mercutio",
+        "house": "Ruling house of Verona",
+        "description": "Another kinsman of Escalus, a friend of Romeo.",
+        "totalLinesNumber": 261
+    },
+    {
+        "id": "page",
+        "name": "Page",
+        "house": "Ruling house of Verona",
+        "totalLinesNumber": 9
+    },
+    {
+        "id": "capulet",
+        "name": "Capulet",
+        "house": "House of Capulet",
+        "description": "Patriarch of the house of Capulet.",
+        "totalLinesNumber": 273
+    },
+    {
+        "id": "lady_capulet",
+        "name": "Lady Capulet",
+        "house": "House of Capulet",
+        "description": "Matriarch of the house of Capulet.",
+        "totalLinesNumber": 115
+    },
+    {
+        "id": "juliet",
+        "name": "Juliet Capulet",
+        "house": "House of Capulet",
+        "description": "13-year-old daughter of Capulet, the play's female protagonist.",
+        "totalLinesNumber": 544
+    },
+    {
+        "id": "tybalt",
+        "name": "Tybalt",
+        "house": "House of Capulet",
+        "description": "Cousin of Juliet, the nephew of Lady Capulet.",
+        "totalLinesNumber": 36
+    },
+    {
+        "id": "nurse",
+        "name": "The Nurse",
+        "house": "House of Capulet",
+        "description": "Juliet's personal attendant and confidante.",
+        "totalLinesNumber": 281
+    },
+    {
+        "id": "peter",
+        "name": "Peter",
+        "house": "House of Capulet",
+        "description": "Servant of the Capulet household.",
+        "totalLinesNumber": 33
+    },
+    {
+        "id": "sampson",
+        "name": "Sampson",
+        "house": "House of Capulet",
+        "description": "Servant of the Capulet household.",
+        "totalLinesNumber": 31
+    },
+    {
+        "id": "gregory",
+        "name": "Gregory",
+        "house": "House of Capulet",
+        "description": "Servant of the Capulet household.",
+        "totalLinesNumber": 20
+    },
+    {
+        "id": "second_capulet",
+        "name": "Second Capulet",
+        "house": "House of Capulet",
+        "totalLinesNumber": 3
+    },
+    {
+        "id": "musician",
+        "name": "Musician",
+        "house": "House of Capulet",
+        "totalLinesNumber": 1
+    },
+    {
+        "id": "first_musician",
+        "name": "First Musician",
+        "house": "House of Capulet",
+        "totalLinesNumber": 9
+    },
+    {
+        "id": "second_musician",
+        "name": "Second Musician",
+        "house": "House of Capulet",
+        "totalLinesNumber": 4
+    },
+    {
+        "id": "servant",
+        "name": "Servant",
+        "house": "House of Capulet",
+        "totalLinesNumber": 23
+    },
+    {
+        "id": "first_servant",
+        "name": "First Servant",
+        "house": "House of Capulet",
+        "totalLinesNumber": 10
+    },
+    {
+        "id": "second_servant",
+        "name": "Second Servant",
+        "house": "House of Capulet",
+        "totalLinesNumber": 12
+    },
+    {
+        "id": "montague",
+        "name": "Montague",
+        "house": "House of Montague",
+        "description": "Patriarch of the house of Montague.",
+        "totalLinesNumber": 41
+    },
+    {
+        "id": "lady_montague",
+        "name": "Lady Montague",
+        "house": "House of Montague",
+        "description": "Matriarch of the house of Montague.",
+        "totalLinesNumber": 3
+    },
+    {
+        "id": "romeo",
+        "name": "Romeo Montague",
+        "house": "House of Montague",
+        "description": "Son of Montague, is the play's male protagonist.",
+        "totalLinesNumber": 613
+    },
+    {
+        "id": "benvolio",
+        "name": "Benvolio",
+        "house": "House of Montague",
+        "description": "Romeo's cousin and best friend.",
+        "totalLinesNumber": 160
+    },
+    {
+        "id": "balthasar",
+        "name": "Balthasar",
+        "house": "House of Montague",
+        "description": "Servant of the Montague household.",
+        "totalLinesNumber": 32
+    },
+    {
+        "id": "abraham",
+        "name": "Abram",
+        "house": "House of Montague",
+        "description": "Servant of the Montague household.",
+        "totalLinesNumber": 5
+    },
+    {
+        "id": "friar_laurence",
+        "name": "Friar Laurence",
+        "house": "Others",
+        "description": "Franciscan friar and Romeo's confidant.",
+        "totalLinesNumber": 351
+    },
+    {
+        "id": "friar_john",
+        "name": "Friar John",
+        "house": "Others",
+        "description": "Sent to deliver Friar Laurence's letter to Romeo.",
+        "totalLinesNumber": 13
+    },
+    {
+        "id": "apothecary",
+        "name": "Apothecary",
+        "house": "Others",
+        "description": "Reluctantly sells Romeo poison.",
+        "totalLinesNumber": 7
+    },
+    {
+        "id": "chorus",
+        "name": "Chorus",
+        "house": "Others",
+        "description": "Reads a prologue to each of the first two acts.",
+        "totalLinesNumber": 29
+    },
+    {
+        "id": "first_citizen",
+        "name": "First Citizen",
+        "house": "Others",
+        "totalLinesNumber": 7
+    },
+    {
+        "id": "first_watchman",
+        "name": "First Watchman",
+        "house": "Others",
+        "totalLinesNumber": 19
+    },
+    {
+        "id": "second_watchman",
+        "name": "Second Watchman",
+        "house": "Others",
+        "totalLinesNumber": 1
+    },
+    {
+        "id": "third_watchman",
+        "name": "Third Watchman",
+        "house": "Others",
+        "totalLinesNumber": 3
+    },
+    {
+        "id": "third_musician",
+        "name": "Third Musician",
+        "house": "Others",
+        "totalLinesNumber": 1
+    }
+]
