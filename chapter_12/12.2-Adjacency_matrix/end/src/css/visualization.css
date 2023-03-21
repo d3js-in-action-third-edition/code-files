@@ -1,4 +1,4 @@
-/* Color Legend */
+/* Houses color Legend */
 .legend-container {
   display: flex;
   height: 100%;
@@ -54,7 +54,7 @@
 }
 .matrix-legend ul {
   margin: 0;
-  padding-left: 0;
+  padding-left: 2px;
   list-style: none;
   display: flex;
 }
@@ -62,10 +62,9 @@
   margin-right: 10px;
   text-align: center;
 }
-.matrix-legend .legend-color-circle {
+.matrix-legend .legend-color {
   width: 18px;
   height: 18px;
-  border-radius: 50%;
 }
 .matrix-legend .legend-color-label {
   margin-top: 3px;

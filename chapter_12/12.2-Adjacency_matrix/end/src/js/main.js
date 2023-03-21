@@ -11,7 +11,7 @@ createLegend();
 const [nodes, edges] = loadData();
 
 // Draw the adjacency matrix
-// drawMatrix(nodes, edges);
+drawMatrix(nodes, edges);
 
 // Draw the arc diagram
 // drawArcDiagram(nodes, edges);
