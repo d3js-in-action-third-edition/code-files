@@ -9,6 +9,6 @@ export const getRadius = (maxLines, lines) => {
   return radialScale(lines);
 };
 
-export const charColorScale = scaleOrdinal()
+export const colorScale = scaleOrdinal()
   .domain(houses.map(h => h.house))
   .range(houses.map(h => h.color));

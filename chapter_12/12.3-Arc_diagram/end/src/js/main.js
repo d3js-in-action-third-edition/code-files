@@ -14,7 +14,7 @@ const [nodes, edges] = loadData();
 drawMatrix(nodes, edges);
 
 // Draw the arc diagram
-// drawArcDiagram(nodes, edges);
+drawArcDiagram(nodes, edges);
 
 // Draw the beeswarm
 // drawBeeswarm(nodes);
