@@ -17,7 +17,7 @@ drawMatrix(nodes, edges);
 drawArcDiagram(nodes, edges);
 
 // Draw the beeswarm
-// drawBeeswarm(nodes);
+drawBeeswarm(nodes);
 
 // Draw the network
-// drawNetwork(nodes, edges);
+drawNetwork(nodes, edges);
