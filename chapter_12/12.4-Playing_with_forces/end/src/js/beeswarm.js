@@ -43,7 +43,7 @@ export const drawBeeswarm = (nodes) => {
 
 
   // Run the simulation
-  forceSimulation()
+  const simulation = forceSimulation()
     .force("y", forceY(0) )
     .force("collide", forceCollide().radius(d => d.radius + 2) )
     .nodes(nodes)
