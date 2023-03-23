@@ -10,6 +10,10 @@ export const drawBeeswarm = (nodes) => {
   const height = 400;
 
 
+  // Make a deep copy of the nodes array
+  const beeswarmNodes = JSON.parse(JSON.stringify(nodes));
+
+
   // Append a SVG container
   const svg = select("#beeswarm")
     .append("svg")
@@ -22,7 +26,7 @@ export const drawBeeswarm = (nodes) => {
   const maxLines = max(nodes, d => d.totalLinesNumber)
   svg
     .selectAll(".beeswarm-circle")
-    .data(nodes)
+    .data(beeswarmNodes)
     .join("circle")
       .attr("class", "beeswarm-circle")
       .attr("r", d => {
@@ -46,7 +50,7 @@ export const drawBeeswarm = (nodes) => {
   const simulation = forceSimulation()
     .force("y", forceY(0) )
     .force("collide", forceCollide().radius(d => d.radius + 2) )
-    .nodes(nodes)
+    .nodes(beeswarmNodes)
     .on("tick", updateNetwork);
 
 
