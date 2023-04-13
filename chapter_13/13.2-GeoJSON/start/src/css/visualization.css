@@ -31,6 +31,7 @@
 /* Map container */
 .map-container {
   position: relative;
+  border: 1px solid #09131b;
 }
 
 /* Filters */
