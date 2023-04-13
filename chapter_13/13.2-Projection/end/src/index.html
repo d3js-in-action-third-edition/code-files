@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Origin of the Nobel Prize laureates' | D3.js in Action</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/visualization.css">
+</head>
+<body>
+	<div class="container">
+		<h1>The Nobel Prize</h1>
+		<div class="tagline">Observations on the laureates' origins.</div>
+		<div class="intro">Since 1901, the Nobel Prize has been attributed to 989 laureates. But does where you are from influence your chances of winning a Nobel Prize?</div>
+
+		<!-- <div class="filters-container">
+			<div class="row">
+				<div class="col col-3">
+					<div class="map-filter-container">
+						<h2>Select a map</h2>
+						<div>
+							<div>
+								<input type="radio" id="countries" value="countries" name="map-type" checked>
+								<label for="countries">Laureates' countries</label>
+							</div>
+							<div>
+								<input type="radio" id="cities" value="cities" name="map-type">
+								<label for="cities">Laureates' cities</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col col-9">
+					<div class="year-range-container">
+						<h2>Select a year range</h2>
+						<div class="instructions">Press the ctrl key (cmd on mac) and drag your mouse to select a year range, then hold down your mouse to translate the selected range.</div>
+						<div id="years-selector"></div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+
+		<div class="row">
+			<div class="col col-1">
+				<!-- <div class="legend-container">
+					<h3>Number of laureates</h3>
+					<div class="legend-countries">
+						<div class="legend-countries-colors"></div>
+						<div class="legend-countries-labels">
+							<span>1</span>
+							<span>100+</span>
+						</div>
+					</div>
+					<div class="legend-cities"></div>
+				</div> -->
+			</div>
+			<div class="col col-10">
+				<div class="map-container">
+					<div id="map"></div>
+					<div id="map-tooltip"></div>
+					<!-- <button id="map-reset" type="button">Reset zoom</button> -->
+				</div>
+			</div>
+		</div>
+
+		<h2>A closer look at France</h2>
+		<div class="map-france-container">
+			<div id="map-france"></div>
+		</div>
+
+		<div class="notes">
+			<h2>Notes</h2>
+			<ul>
+				<li>International organizations are not accounted for on the map.</li>
+				<li>The birth country of The 14th Dalai Lama, laureate of the 1989 Peace Nobel, is Tibet. But current maps do not recognize Tibet as an independent country. Hence on this visualization, the birth country of the Dalai Lama is part of China.</li>
+			</ul>
+		</div>
+
+		<div class="source">
+			<h2>Data sources</h2>
+			<ul>
+				<li><a href="https://data.world/sya/nobel-prize-winners">data.world</a></li>
+				<li><a href="https://www.nobelprize.org/prizes/lists/all-nobel-prizes/">nobelprize.org</a></li>
+			</ul>	
+	</div>
+
+	<script type="module" src="./js/main.js"></script>
+</body>
+</html>
