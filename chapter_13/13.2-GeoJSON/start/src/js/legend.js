@@ -3,7 +3,7 @@ import { getCityRadius } from "./scales";
 
 export const drawLegend = (laureatesMax) => {
 
-  const laureatesMedium = 20;
+  const laureatesMedium = 50;
   const laureatesMin = 5;
   const maxRadius = getCityRadius(laureatesMax, laureatesMax);
   const mediumRadius = getCityRadius(laureatesMedium, laureatesMax);
