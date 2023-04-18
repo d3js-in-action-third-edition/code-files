@@ -92,6 +92,10 @@
   fill-opacity: 0.3;
   stroke: none;
 }
+.handle {
+  fill: #09131b;
+  fill-opacity: 0.3;
+}
 
 .map-france-container {
   max-width: 800px;

@@ -32,6 +32,7 @@
 .map-container {
   position: relative;
   border: 1px solid #09131b;
+  overflow: hidden;
 }
 
 /* Filters */
@@ -90,6 +91,10 @@
   fill: #35a7c2;
   fill-opacity: 0.3;
   stroke: none;
+}
+.handle {
+  fill: #09131b;
+  fill-opacity: 0.3;
 }
 
 .map-france-container {

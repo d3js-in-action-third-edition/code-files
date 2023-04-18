@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;600&display=swap');
+
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  background-color: #f8fcff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #09131b;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+  width: 100%;
+  max-width: 1400px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.col {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+.col-1 {
+  flex: 0 0 8.33%;
+  max-width: 8.33%;
+}
+.col-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.col-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+.col-11 {
+  flex: 0 0 91.66%;
+  max-width: 91.66%;
+}
+@media screen and (max-width: 768px) {
+  .col {
+    margin-bottom: 30px;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Type */
+h1, h2, h3 {
+  font-family: 'Raleway', serif;
+  line-height: 1.2;
+}
+h1 {
+  margin: 15rem 0 0;
+  font-size: 6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #E3B505;
+}
+h2 {
+  margin: 10rem 0 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+h3 {
+  margin: 0 0 7px;
+  font-size: 1.6rem;
+}
+p {
+  margin: 1.2rem 0;
+}
+a {
+  color: #222323;
+  text-decoration: none;
+  box-shadow: inset 0 -5px 0 0 rgba(54, 70, 82, 0.3);
+  transition: box-shadow 0.2s ease-out;
+}
+a:hover, a:focus {
+  box-shadow: inset 0 -18px 0 0 rgba(54, 70, 82, 0.3);
+  transition-timing-function: ease-in;
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1.6rem;
+  }
+  h1 {
+    margin-top: 6rem;
+    font-size: 4rem;
+  }
+  h2 {
+    margin-top: 4rem;
+    font-size: 3rem;
+  }
+}
+
+.tagline {
+  margin: 0 0 50px;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+}
+.intro {
+  max-width: 900px;
+}
+.instructions {
+  max-width: 600px;
+  margin-bottom: 10px;
+  padding-left: 23px;
+  font-size: 1.6rem;
+  background-image: url("../assets/bulb.svg");
+  background-repeat: no-repeat;
+  background-size: auto 18px;
+  background-position: 0 3px;
+}
+
+/* Sources */
+.source {
+  padding: 50px 0 30px;
+  font-size: 1.6rem;
+}
+.source ul {
+  margin: 0;
+  padding-left: 25px;
+  list-style: circle;
+}
+.source li {
+  margin: 5px 0;
+}
