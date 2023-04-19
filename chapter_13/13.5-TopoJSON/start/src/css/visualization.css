@@ -1,0 +1,103 @@
+/* Legend */
+.legend-countries {
+  display: flex;
+}
+.legend-countries-colors {
+  width: 40px;
+  height: 500px;
+  background: linear-gradient(180deg, rgba(255,255,217,1) 0%, rgba(76,183,193,1) 50%, rgba(9,30,90,1) 100%);
+  border-radius: 3px;
+}
+.legend-countries-labels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 5px;
+}
+@media screen and (max-width: 768px) {
+  .legend-countries {
+    flex-direction: column;
+  }
+  .legend-countries-colors {
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(90deg, rgba(255,255,217,1) 0%, rgba(76,183,193,1) 50%, rgba(9,30,90,1) 100%);
+  }
+  .legend-countries-labels {
+    flex-direction: row;
+  }
+}
+
+/* Map container */
+.map-container {
+  position: relative;
+  border: 1px solid #09131b;
+  overflow: hidden;
+}
+
+/* Filters */
+.filters-container {
+  margin-bottom: 30px;
+}
+
+/* Tooltip */
+#map-tooltip {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+/* Map reset */
+#map-reset {
+  position: absolute;
+  top: 50;
+  right: 15px;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #f8fcff;
+  background-color: #35a7c2;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 250ms ease, opacity 250ms ease;
+}
+#map-reset.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+#map-reset:hover,
+#map-reset:focus {
+  background-color: #207ab5;
+}
+@media screen and (max-width: 768px) {
+  #map-reset {
+    top: 0;
+    right: 0;
+    padding: 0 10px;
+  }
+}
+
+/* Years selector */
+.axis-x text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+}
+/* Brush selection */
+.selection {
+  fill: #35a7c2;
+  fill-opacity: 0.3;
+  stroke: none;
+}
+.handle {
+  fill: #09131b;
+  fill-opacity: 0.3;
+}
+
+.map-france-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
