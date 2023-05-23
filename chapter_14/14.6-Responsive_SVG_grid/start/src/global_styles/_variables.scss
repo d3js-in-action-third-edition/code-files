@@ -1,0 +1,27 @@
+// Grid
+$xl: 1400px;
+$lg: 1025px;
+$md: 768px;
+$sm: 576px;
+$gutter: 30px;
+$container: $xl;
+
+// Colors
+$white: #FFFAFC;
+$text: #160E13;
+
+$secondary: #4D243D;
+$secondaryPale: #BC5D9A;
+
+// Other
+$radius: 3px;
+
+// Transitions
+@mixin easeSineIn {
+  transition-duration: 100ms;
+  transition-timing-function: cubic-bezier(0.12, 0, 0.39, 0);
+}
+@mixin easeSineOut {
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.61, 1, 0.88, 1);
+}
