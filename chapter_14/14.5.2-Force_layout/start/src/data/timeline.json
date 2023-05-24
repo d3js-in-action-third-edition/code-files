@@ -1,0 +1,56 @@
+[
+ {
+   "id": 1,
+   "start_month": 4,
+   "start_year": 1881,
+   "end_month": 10,
+   "end_year": 1883,
+   "city": "Etten, Drenthe and The Hague",
+   "country": "Netherlands"
+ },
+ {
+   "id": 2,
+   "start_month": 11,
+   "start_year": 1883,
+   "end_month": 1,
+   "end_year": 1886,
+   "city": "Nuenen and Antwerp",
+   "country": "Netherlands"
+ },
+ {
+   "id": 3,
+   "start_month": 2,
+   "start_year": 1886,
+   "end_month": 0,
+   "end_year": 1888,
+   "city": "Paris",
+   "country": "France"
+ },
+ {
+   "id": 4,
+   "start_month": 1,
+   "start_year": 1888,
+   "end_month": 3,
+   "end_year": 1889,
+   "city": "Arles",
+   "country": "France"
+ },
+ {
+   "id": 5,
+   "start_month": 4,
+   "start_year": 1889,
+   "end_month": 4,
+   "end_year": 1890,
+   "city": "Saint-Rémy",
+   "country": "France"
+ },
+ {
+   "id": 6,
+   "start_month": 5,
+   "start_year": 1890,
+   "end_month": 6,
+   "end_year": 1890,
+   "city": "Auvers-sur-Oise",
+   "country": "France"
+ }
+]

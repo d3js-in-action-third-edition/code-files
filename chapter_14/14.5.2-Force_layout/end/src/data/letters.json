@@ -1,0 +1,602 @@
+[
+ {
+   "year": 1881,
+   "month": "January",
+   "number_of_letters": 1
+ },
+ {
+   "year": 1881,
+   "month": "February",
+   "number_of_letters": 1
+ },
+ {
+   "year": 1881,
+   "month": "March",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1881,
+   "month": "April",
+   "number_of_letters": 3
+ },
+ {
+   "year": 1881,
+   "month": "May",
+   "number_of_letters": 1
+ },
+ {
+   "year": 1881,
+   "month": "June",
+   "number_of_letters": 1
+ },
+ {
+   "year": 1881,
+   "month": "July",
+   "number_of_letters": 1
+ },
+ {
+   "year": 1881,
+   "month": "August",
+   "number_of_letters": 2
+ },
+ {
+   "year": 1881,
+   "month": "September",
+   "number_of_letters": 1
+ },
+ {
+   "year": 1881,
+   "month": "October",
+   "number_of_letters": 5
+ },
+ {
+   "year": 1881,
+   "month": "November",
+   "number_of_letters": 13
+ },
+ {
+   "year": 1881,
+   "month": "December",
+   "number_of_letters": 5
+ },
+ {
+   "year": 1882,
+   "month": "January",
+   "number_of_letters": 8
+ },
+ {
+   "year": 1882,
+   "month": "February",
+   "number_of_letters": 3
+ },
+ {
+   "year": 1882,
+   "month": "March",
+   "number_of_letters": 7
+ },
+ {
+   "year": 1882,
+   "month": "April",
+   "number_of_letters": 8
+ },
+ {
+   "year": 1882,
+   "month": "May",
+   "number_of_letters": 12
+ },
+ {
+   "year": 1882,
+   "month": "June",
+   "number_of_letters": 7
+ },
+ {
+   "year": 1882,
+   "month": "July",
+   "number_of_letters": 12
+ },
+ {
+   "year": 1882,
+   "month": "August",
+   "number_of_letters": 7
+ },
+ {
+   "year": 1882,
+   "month": "September",
+   "number_of_letters": 10
+ },
+ {
+   "year": 1882,
+   "month": "October",
+   "number_of_letters": 8
+ },
+ {
+   "year": 1882,
+   "month": "November",
+   "number_of_letters": 11
+ },
+ {
+   "year": 1882,
+   "month": "December",
+   "number_of_letters": 8
+ },
+ {
+   "year": 1883,
+   "month": "January",
+   "number_of_letters": 9
+ },
+ {
+   "year": 1883,
+   "month": "February",
+   "number_of_letters": 16
+ },
+ {
+   "year": 1883,
+   "month": "March",
+   "number_of_letters": 12
+ },
+ {
+   "year": 1883,
+   "month": "April",
+   "number_of_letters": 5
+ },
+ {
+   "year": 1883,
+   "month": "May",
+   "number_of_letters": 9
+ },
+ {
+   "year": 1883,
+   "month": "June",
+   "number_of_letters": 10
+ },
+ {
+   "year": 1883,
+   "month": "July",
+   "number_of_letters": 12
+ },
+ {
+   "year": 1883,
+   "month": "August",
+   "number_of_letters": 10
+ },
+ {
+   "year": 1883,
+   "month": "September",
+   "number_of_letters": 12
+ },
+ {
+   "year": 1883,
+   "month": "October",
+   "number_of_letters": 10
+ },
+ {
+   "year": 1883,
+   "month": "November",
+   "number_of_letters": 6
+ },
+ {
+   "year": 1883,
+   "month": "December",
+   "number_of_letters": 11
+ },
+ {
+   "year": 1884,
+   "month": "January",
+   "number_of_letters": 9
+ },
+ {
+   "year": 1884,
+   "month": "February",
+   "number_of_letters": 4
+ },
+ {
+   "year": 1884,
+   "month": "March",
+   "number_of_letters": 12
+ },
+ {
+   "year": 1884,
+   "month": "April",
+   "number_of_letters": 2
+ },
+ {
+   "year": 1884,
+   "month": "May",
+   "number_of_letters": 3
+ },
+ {
+   "year": 1884,
+   "month": "June",
+   "number_of_letters": 2
+ },
+ {
+   "year": 1884,
+   "month": "July",
+   "number_of_letters": 2
+ },
+ {
+   "year": 1884,
+   "month": "August",
+   "number_of_letters": 3
+ },
+ {
+   "year": 1884,
+   "month": "September",
+   "number_of_letters": 8
+ },
+ {
+   "year": 1884,
+   "month": "October",
+   "number_of_letters": 4
+ },
+ {
+   "year": 1884,
+   "month": "November",
+   "number_of_letters": 5
+ },
+ {
+   "year": 1884,
+   "month": "December",
+   "number_of_letters": 5
+ },
+ {
+   "year": 1885,
+   "month": "January",
+   "number_of_letters": 4
+ },
+ {
+   "year": 1885,
+   "month": "February",
+   "number_of_letters": 2
+ },
+ {
+   "year": 1885,
+   "month": "March",
+   "number_of_letters": 5
+ },
+ {
+   "year": 1885,
+   "month": "April",
+   "number_of_letters": 9
+ },
+ {
+   "year": 1885,
+   "month": "May",
+   "number_of_letters": 8
+ },
+ {
+   "year": 1885,
+   "month": "June",
+   "number_of_letters": 5
+ },
+ {
+   "year": 1885,
+   "month": "July",
+   "number_of_letters": 12
+ },
+ {
+   "year": 1885,
+   "month": "August",
+   "number_of_letters": 8
+ },
+ {
+   "year": 1885,
+   "month": "September",
+   "number_of_letters": 2
+ },
+ {
+   "year": 1885,
+   "month": "October",
+   "number_of_letters": 5
+ },
+ {
+   "year": 1885,
+   "month": "November",
+   "number_of_letters": 8
+ },
+ {
+   "year": 1885,
+   "month": "December",
+   "number_of_letters": 5
+ },
+ {
+   "year": 1886,
+   "month": "January",
+   "number_of_letters": 6
+ },
+ {
+   "year": 1886,
+   "month": "February",
+   "number_of_letters": 11
+ },
+ {
+   "year": 1886,
+   "month": "March",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1886,
+   "month": "April",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1886,
+   "month": "May",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1886,
+   "month": "June",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1886,
+   "month": "July",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1886,
+   "month": "August",
+   "number_of_letters": 1
+ },
+ {
+   "year": 1886,
+   "month": "September",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1886,
+   "month": "October",
+   "number_of_letters": 2
+ },
+ {
+   "year": 1886,
+   "month": "November",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1886,
+   "month": "December",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1887,
+   "month": "January",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1887,
+   "month": "February",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1887,
+   "month": "March",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1887,
+   "month": "April",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1887,
+   "month": "May",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1887,
+   "month": "June",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1887,
+   "month": "July",
+   "number_of_letters": 1
+ },
+ {
+   "year": 1887,
+   "month": "August",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1887,
+   "month": "September",
+   "number_of_letters": 1
+ },
+ {
+   "year": 1887,
+   "month": "October",
+   "number_of_letters": 1
+ },
+ {
+   "year": 1887,
+   "month": "November",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1887,
+   "month": "December",
+   "number_of_letters": 1
+ },
+ {
+   "year": 1888,
+   "month": "January",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1888,
+   "month": "February",
+   "number_of_letters": 4
+ },
+ {
+   "year": 1888,
+   "month": "March",
+   "number_of_letters": 8
+ },
+ {
+   "year": 1888,
+   "month": "April",
+   "number_of_letters": 11
+ },
+ {
+   "year": 1888,
+   "month": "May",
+   "number_of_letters": 17
+ },
+ {
+   "year": 1888,
+   "month": "June",
+   "number_of_letters": 16
+ },
+ {
+   "year": 1888,
+   "month": "July",
+   "number_of_letters": 18
+ },
+ {
+   "year": 1888,
+   "month": "August",
+   "number_of_letters": 18
+ },
+ {
+   "year": 1888,
+   "month": "September",
+   "number_of_letters": 19
+ },
+ {
+   "year": 1888,
+   "month": "October",
+   "number_of_letters": 22
+ },
+ {
+   "year": 1888,
+   "month": "November",
+   "number_of_letters": 7
+ },
+ {
+   "year": 1888,
+   "month": "December",
+   "number_of_letters": 4
+ },
+ {
+   "year": 1889,
+   "month": "January",
+   "number_of_letters": 13
+ },
+ {
+   "year": 1889,
+   "month": "February",
+   "number_of_letters": 3
+ },
+ {
+   "year": 1889,
+   "month": "March",
+   "number_of_letters": 4
+ },
+ {
+   "year": 1889,
+   "month": "April",
+   "number_of_letters": 8
+ },
+ {
+   "year": 1889,
+   "month": "May",
+   "number_of_letters": 5
+ },
+ {
+   "year": 1889,
+   "month": "June",
+   "number_of_letters": 4
+ },
+ {
+   "year": 1889,
+   "month": "July",
+   "number_of_letters": 6
+ },
+ {
+   "year": 1889,
+   "month": "August",
+   "number_of_letters": 1
+ },
+ {
+   "year": 1889,
+   "month": "September",
+   "number_of_letters": 7
+ },
+ {
+   "year": 1889,
+   "month": "October",
+   "number_of_letters": 6
+ },
+ {
+   "year": 1889,
+   "month": "November",
+   "number_of_letters": 4
+ },
+ {
+   "year": 1889,
+   "month": "December",
+   "number_of_letters": 6
+ },
+ {
+   "year": 1890,
+   "month": "January",
+   "number_of_letters": 8
+ },
+ {
+   "year": 1890,
+   "month": "February",
+   "number_of_letters": 7
+ },
+ {
+   "year": 1890,
+   "month": "March",
+   "number_of_letters": 1
+ },
+ {
+   "year": 1890,
+   "month": "April",
+   "number_of_letters": 2
+ },
+ {
+   "year": 1890,
+   "month": "May",
+   "number_of_letters": 6
+ },
+ {
+   "year": 1890,
+   "month": "June",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1890,
+   "month": "July",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1890,
+   "month": "August",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1890,
+   "month": "September",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1890,
+   "month": "October",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1890,
+   "month": "November",
+   "number_of_letters": 0
+ },
+ {
+   "year": 1890,
+   "month": "December",
+   "number_of_letters": 0
+ }
+]
