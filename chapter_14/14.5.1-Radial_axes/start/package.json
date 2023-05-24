@@ -1,0 +1,29 @@
+{
+  "name": "van_gogh_work",
+  "private": true,
+  "version": "0.0.0",
+  "homepage": "d3js-in-action-third-edition.github.io/van_gogh_work/",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "npx gh-pages -d dist",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.0.3",
+    "gh-pages": "^5.0.0",
+    "sass": "^1.60.0",
+    "svelte": "^3.55.1",
+    "vite": "^4.2.0"
+  },
+  "dependencies": {
+    "d3-array": "^3.2.3",
+    "d3-force": "^3.0.0",
+    "d3-scale": "^4.0.2",
+    "d3-shape": "^3.2.0",
+    "d3-time-format": "^4.1.0",
+    "node-sass": "^8.0.0",
+    "svelte-preprocess": "^5.0.3"
+  }
+}
