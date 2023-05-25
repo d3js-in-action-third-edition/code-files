@@ -86,7 +86,7 @@
           {(i % numColumns) * smWidth},
           {Math.floor(i / numColumns) * smHeight})"
       >
-        <rect x={0} y={0} width={smWidth} height={smHeight} />
+        <!-- <rect x={0} y={0} width={smWidth} height={smHeight} /> -->
         <GridItem
           {smWidth}
           {smHeight}
@@ -104,11 +104,11 @@
 {/if}
 
 <style>
-  svg {
+  /* svg {
     border: 1px solid magenta;
-  }
-  rect {
+  } */
+  /* rect {
     fill: none;
     stroke: cyan;
-  }
+  } */
 </style>

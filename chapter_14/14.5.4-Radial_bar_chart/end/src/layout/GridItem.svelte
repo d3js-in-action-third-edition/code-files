@@ -30,7 +30,7 @@
 
 <g transform="translate({smWidth / 2}, 0)">
   <g transform="translate(0, {padding + radius})">
-    <circle cx={0} cy={0} r={radius} />
+    <!-- <circle cx={0} cy={0} r={radius} /> -->
     {#each months as month}
       <line
         x1="0"
@@ -67,10 +67,10 @@
 </g>
 
 <style lang="scss">
-  circle {
-    fill: none;
-    stroke: $text;
-  }
+  // circle {
+  //   fill: none;
+  //   stroke: $text;
+  // }
   line {
     stroke: $text;
     stroke-opacity: 0.2;
