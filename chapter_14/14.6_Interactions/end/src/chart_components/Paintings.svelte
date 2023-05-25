@@ -10,6 +10,8 @@
   export let radius;
   export let isTooltipVisible = false;
   export let tooltipMeta = {};
+  export let isPeriodSelected;
+  export let selectedPeriod;
 
   let simulation = forceSimulation(paintings);
   let nodes = [];
@@ -75,6 +77,7 @@
   <circle
     class:watercolor={node.medium === "watercolor"}
     class:print={node.medium === "print"}
+    class:lessen={isPeriodSelected && node.period !== selectedPeriod}
     cx={node.x}
     cy={node.y}
     r={node.area_cm2
@@ -97,6 +100,10 @@
     }
     &.print {
       stroke: $secondaryPale;
+    }
+    &.lessen {
+      fill-opacity: 0.1;
+      stroke-opacity: 0.1;
     }
   }
 </style>

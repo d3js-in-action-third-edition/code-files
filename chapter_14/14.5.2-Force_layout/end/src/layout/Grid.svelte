@@ -45,7 +45,7 @@
   const maxPaintingArea = max(paintings, (d) => d.area_cm2);
 
   // Set the scale for the area of the paintings
-  const maxPaintingRadius = 8;
+  const maxPaintingRadius = 10;
   const paintingDefaultRadius = 3; // For the paintings whose dimensions are unknown
   const paintingAreaScale = scaleLinear()
     .domain([0, maxPaintingArea])

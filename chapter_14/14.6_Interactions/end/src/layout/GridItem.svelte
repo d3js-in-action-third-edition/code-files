@@ -5,6 +5,7 @@
   import Paintings from "../chart_components/Paintings.svelte";
   import Drawings from "../chart_components/Drawings.svelte";
   import Letters from "../chart_components/Letters.svelte";
+  import { isMonthIncluded, isYearIncluded } from "../utils/helpers";
 
   export let smWidth;
   export let smHeight;
@@ -17,6 +18,8 @@
   export let letters;
   export let isTooltipVisible = false;
   export let tooltipMeta = {};
+  export let isPeriodSelected;
+  export let selectedPeriod;
 
   const padding = 60;
   $: radius = (smWidth - 2 * padding) / 2;
@@ -50,6 +53,12 @@
     />
     {#each months as month}
       <line
+        class:lessen={isPeriodSelected &&
+          !isMonthIncluded(
+            selectedPeriod,
+            months.findIndex((m) => m === month),
+            year
+          )}
         x1="0"
         y1="0"
         x2={radius * Math.sin(monthScale(month))}
@@ -58,6 +67,12 @@
       />
       <text
         class="month-label"
+        class:lessen={isPeriodSelected &&
+          !isMonthIncluded(
+            selectedPeriod,
+            months.findIndex((m) => m === month),
+            year
+          )}
         transform="translate({(radius + 30) *
           Math.sin(monthScale(month))}, {-1 *
           (radius + 30) *
@@ -96,11 +111,32 @@
       {radius}
       bind:isTooltipVisible
       bind:tooltipMeta
+      {isPeriodSelected}
+      {selectedPeriod}
     />
-    <Drawings {drawings} {monthScale} {radialScale} />
-    <Letters {letters} {monthScale} {radialScale} />
+    <Drawings
+      {drawings}
+      {monthScale}
+      {radialScale}
+      {isPeriodSelected}
+      {selectedPeriod}
+      {year}
+    />
+    <Letters
+      {letters}
+      {monthScale}
+      {radialScale}
+      {isPeriodSelected}
+      {selectedPeriod}
+      {year}
+    />
   </g>
-  <text x={0} y={smHeight - 5} text-anchor="middle">{year}</text>
+  <text
+    class:lessen={isPeriodSelected && !isYearIncluded(selectedPeriod, year)}
+    x={0}
+    y={smHeight - 5}
+    text-anchor="middle">{year}</text
+  >
 </g>
 
 <style lang="scss">
@@ -111,6 +147,9 @@
   line {
     stroke: $text;
     stroke-opacity: 0.2;
+    &.lessen {
+      opacity: 0;
+    }
   }
   .month-label,
   .work-tooltip {

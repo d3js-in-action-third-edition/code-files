@@ -8,6 +8,9 @@
   import letters from "../data/letters.json";
   import Tooltip from "../UI/Tooltip.svelte";
 
+  export let isPeriodSelected;
+  export let selectedPeriod;
+
   let windowWidth;
   const gridContainer = 1400;
   const padding = 30;
@@ -49,7 +52,7 @@
   const maxPaintingArea = max(paintings, (d) => d.area_cm2);
 
   // Set the scale for the area of the paintings
-  const maxPaintingRadius = 8;
+  const maxPaintingRadius = 10;
   const paintingDefaultRadius = 3; // For the paintings whose dimensions are unknown
   const paintingAreaScale = scaleLinear()
     .domain([0, maxPaintingArea])
@@ -91,6 +94,21 @@
     width: 0,
     height: 0,
   };
+
+  // Add timeline information to the paintings
+  import timeline from "../data/timeline.json";
+  timeline.forEach((t) => {
+    t["startDate"] = new Date(t.start_year, t.start_month, 1);
+    t["endDate"] = new Date(t.end_year, t.end_month, 0);
+  });
+  paintings.forEach((p) => {
+    const date = new Date(p.year, p.monthIndex, 0);
+    timeline.forEach((t) => {
+      if (date >= t.startDate && date <= t.endDate) {
+        p["period"] = t.id;
+      }
+    });
+  });
 </script>
 
 <svelte:window bind:innerWidth={windowWidth} bind:innerHeight={windowHeight} />
@@ -117,6 +135,8 @@
             letters={letters.filter((letter) => letter.year === year)}
             bind:isTooltipVisible
             bind:tooltipMeta
+            {isPeriodSelected}
+            {selectedPeriod}
           />
         </g>
       {/each}

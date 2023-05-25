@@ -3,6 +3,9 @@
   import { timeFormat } from "d3-time-format";
   import timeline from "../data/timeline.json";
 
+  export let isPeriodSelected = false;
+  export let selectedPeriod;
+
   let height;
 
   const startDate = new Date(
@@ -16,6 +19,15 @@
     0
   );
   $: timeScale = scaleTime().domain([startDate, endDate]).range([0, height]);
+
+  const handlePeriodSelection = (period) => {
+    if (!isPeriodSelected || selectedPeriod !== period.id) {
+      isPeriodSelected = true;
+      selectedPeriod = period.id;
+    } else {
+      isPeriodSelected = false;
+    }
+  };
 </script>
 
 <div class="timeline-container" bind:clientHeight={height}>
@@ -27,6 +39,7 @@
       )}px; height: {timeScale(
         new Date(period.end_year, period.end_month, 25)
       ) - timeScale(new Date(period.start_year, period.start_month, 0))}px;"
+      on:click={() => handlePeriodSelection(period)}
     >
       <div class="dates-container">
         <div class="start-date">
