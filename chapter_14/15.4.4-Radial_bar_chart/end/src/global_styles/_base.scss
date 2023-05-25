@@ -1,0 +1,30 @@
+/**
+ * Base Styles
+ */
+
+ html {
+	font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+body{
+  margin: 0;
+  font-family: $fontPrimary;
+  font-size: $fontSize;
+  line-height: 1.4;
+  font-weight: 300;
+  color: $text;
+  fill: $text;
+  background: $white;
+}
+section {
+  margin: 6rem 0;
+}
+
+.lessen {
+  opacity: 0.1;
+}
