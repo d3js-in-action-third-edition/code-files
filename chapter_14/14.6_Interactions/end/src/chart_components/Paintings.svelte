@@ -14,12 +14,10 @@
   let simulation = forceSimulation(paintings);
   let nodes = [];
   simulation.on("tick", () => {
-    console.log("tick");
     nodes = simulation.nodes();
   });
 
   $: {
-    console.log("run the simulation");
     simulation
       .force(
         "x",
@@ -75,6 +73,8 @@
 
 {#each nodes as node}
   <circle
+    class:watercolor={node.medium === "watercolor"}
+    class:print={node.medium === "print"}
     cx={node.x}
     cy={node.y}
     r={node.area_cm2
@@ -86,3 +86,17 @@
     on:mouseleave={() => handleMouseLeave()}
   />
 {/each}
+
+<style lang="scss">
+  circle {
+    cursor: pointer;
+    stroke: $white;
+    transition: opacity 100ms ease;
+    &.watercolor {
+      stroke: $text;
+    }
+    &.print {
+      stroke: $secondaryPale;
+    }
+  }
+</style>

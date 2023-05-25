@@ -28,11 +28,26 @@
   $: radialScale = scaleLinear()
     .domain([0, maxDrawings])
     .range([0, 2 * radius]);
+
+  let isWorkTooltipVisible = false;
+  const handleMouseEnter = () => {
+    isWorkTooltipVisible = true;
+  };
+  const handleMouseLeave = () => {
+    isWorkTooltipVisible = false;
+  };
 </script>
 
 <g transform="translate({smWidth / 2}, 0)">
   <g transform="translate(0, {padding + radius})">
-    <!-- <circle cx={0} cy={0} r={radius} /> -->
+    <circle
+      cx="0"
+      cy="0"
+      r={radius}
+      fill="transparent"
+      on:mouseenter={() => handleMouseEnter()}
+      on:mouseleave={() => handleMouseLeave()}
+    />
     {#each months as month}
       <line
         x1="0"
@@ -54,6 +69,24 @@
         text-anchor="middle"
         dominant-baseline="middle">{month.slice(0, 3)}</text
       >
+      <text
+        class="work-tooltip"
+        class:visible={isWorkTooltipVisible}
+        transform="translate({(radius + 48) *
+          Math.sin(monthScale(month))}, {-1 *
+          (radius + 48) *
+          Math.cos(monthScale(month))}) rotate({monthScale(month) <=
+          Math.PI / 2 || monthScale(month) >= (3 * Math.PI) / 2
+          ? radiansToDegrees(monthScale(month))
+          : radiansToDegrees(monthScale(month)) - 180})"
+        text-anchor="middle"
+        dominant-baseline="middle"
+      >
+        {paintings.filter((p) => p.month === month && p.year === year).length}p,
+        {drawings.find((d) => d.month === month).drawings.length}d,
+        {letters.find((l) => l.month === month && l.year === year)
+          .number_of_letters}l
+      </text>
     {/each}
     <Paintings
       {paintingAreaScale}
@@ -79,7 +112,18 @@
     stroke: $text;
     stroke-opacity: 0.2;
   }
-  .month-label {
+  .month-label,
+  .work-tooltip {
     font-size: 1.4rem;
+  }
+  .work-tooltip {
+    opacity: 0;
+    transition: opacity 200ms ease;
+    &.visible {
+      opacity: 1;
+    }
+  }
+  text {
+    pointer-events: none;
   }
 </style>
