@@ -34,6 +34,7 @@
   {#each timeline as period}
     <div
       class="period-container"
+      class:lessen={isPeriodSelected && selectedPeriod !== period.id}
       style="top: {timeScale(
         new Date(period.start_year, period.start_month, 1)
       )}px; height: {timeScale(
