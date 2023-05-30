@@ -10,6 +10,7 @@
 
   export let isPeriodSelected;
   export let selectedPeriod;
+  export let radialScale;
 
   let windowWidth;
   const gridContainer = 1400;
@@ -137,6 +138,7 @@
             bind:tooltipMeta
             {isPeriodSelected}
             {selectedPeriod}
+            bind:radialScale
           />
         </g>
       {/each}

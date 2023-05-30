@@ -40,7 +40,7 @@
           <Timeline bind:isPeriodSelected bind:selectedPeriod />
         </div>
         <div class="col-12 col-md-10">
-          <Grid {isPeriodSelected} {selectedPeriod} />
+          <Grid {isPeriodSelected} {selectedPeriod} bind:radialScale />
         </div>
       </div>
     </section>

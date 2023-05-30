@@ -20,6 +20,7 @@
   export let tooltipMeta = {};
   export let isPeriodSelected;
   export let selectedPeriod;
+  export let radialScale;
 
   const padding = 60;
   $: radius = (smWidth - 2 * padding) / 2;
