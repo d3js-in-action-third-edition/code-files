@@ -29,7 +29,7 @@ context.stroke();
 // Circle
 context.beginPath(); // Reset
 context.arc(200, 200, 100, 0, 2 * Math.PI);
-context.fillStyle = "#E28A97";
+context.fillStyle = "plum";
 context.fill();
 
 // Diagonal lines
