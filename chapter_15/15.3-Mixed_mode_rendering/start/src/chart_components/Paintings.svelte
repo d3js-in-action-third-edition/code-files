@@ -9,8 +9,6 @@
   export let radius;
   export let isTooltipVisible = false;
   export let tooltipMeta = {};
-  // export let isPeriodSelected;
-  // export let selectedPeriod;
 
   export let width;
   export let height;
@@ -65,6 +63,3 @@
       .alphaDecay(0.1);
   }
 </script>
-
-<style lang="scss">
-</style>

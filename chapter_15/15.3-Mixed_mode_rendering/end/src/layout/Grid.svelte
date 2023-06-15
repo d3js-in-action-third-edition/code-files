@@ -133,6 +133,7 @@
       });
     });
   }
+  $: console.log("yearsTranslations", yearsTranslations);
 </script>
 
 <svelte:window bind:innerWidth={windowWidth} bind:innerHeight={windowHeight} />
