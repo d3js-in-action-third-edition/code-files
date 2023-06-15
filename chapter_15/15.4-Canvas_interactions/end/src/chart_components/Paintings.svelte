@@ -118,7 +118,13 @@
     const mouseX = event.layerX;
     const mouseY = event.layerY;
 
-    const imageData = hiddenContext.getImageData(mouseX, mouseY, 1, 1).data;
+    const imageData = hiddenContext.getImageData(
+      mouseX * window.devicePixelRatio,
+      mouseY * window.devicePixelRatio,
+      1,
+      1
+    ).data;
+    console.log("imageData", imageData);
     const colorRGB = `rgb(${imageData[0]},${imageData[1]},${imageData[2]})`;
     if (colorRGB !== currentColor) {
       if (colorRGB !== "rgb(0,0,0)") {
