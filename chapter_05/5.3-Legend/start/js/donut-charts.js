@@ -82,7 +82,7 @@ const drawDonutCharts = (data) => {
         })
         .attr("y", d => d.centroid[1])
         .attr("text-anchor", "middle")
-        .attr("alignment-baseline", "middle")
+        .attr("dominant-baseline", "middle")
         .attr("fill", "#f6fafc")
         .attr("fill-opacity", d => d.percentage < 0.05 ? 0 : 1)
         .style("font-size", "16px")
