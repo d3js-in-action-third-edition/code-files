@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import * as d3 from "d3";
+import * as d3 from 'd3';
 
 const Curve = props => {
   const lineGenerator = d3.line()
@@ -16,15 +16,15 @@ const Curve = props => {
       .transition()
       .duration(400)
       .ease(d3.easeCubicOut)
-        .attr("d", lineGenerator(props.data));
+      .attr("d", lineGenerator(props.data));
   }, [props.data, lineGenerator]);
 
   return (
     <path
-      ref={pathRef} 
+      ref={pathRef}
       // Remove the d attribute!
-      fill="none" 
-      stroke={props.stroke} 
+      fill="none"
+      stroke={props.stroke}
       strokeWidth={props.strokeWidth}
     />
   );

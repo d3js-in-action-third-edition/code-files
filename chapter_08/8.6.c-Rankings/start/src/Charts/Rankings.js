@@ -18,7 +18,7 @@ const Rankings = props => {
   const height = 542;
   const marginRight = 150;
   const marginLeft = 110;
-  const innerWidth = width - props.marginLeft - props.marginRight;
+  const innerWidth = width - marginLeft - marginRight;
   const innerHeight = height - props.margin.top - props.margin.bottom;
 
   return (
@@ -31,9 +31,9 @@ const Rankings = props => {
       <ChartContainer
         width={width}
         height={height}
-        margin={props.margin}
+        margin={{ top: props.margin.top, right: marginRight, bottom: props.margin.bottom, left: marginLeft }}
       >
-      </ChartContainer> 
+      </ChartContainer>
     </Card>
   )
 };

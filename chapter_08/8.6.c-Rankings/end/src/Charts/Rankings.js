@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import * as d3 from "d3";
+import * as d3 from 'd3';
 
 import RankingFilters from '../Interactions/RankingFilters';
 import Card from '../UI/Card';
@@ -41,15 +41,15 @@ const Rankings = props => {
       <ChartContainer
         width={width}
         height={height}
-        margin={{top: props.margin.top, right: marginRight, bottom: props.margin.bottom, left: marginLeft}}
+        margin={{ top: props.margin.top, right: marginRight, bottom: props.margin.bottom, left: marginLeft }}
       >
         {props.data.years.map(year => (
-          <g 
+          <g
             key={`line-year-${year}`}
             className="axis"
             transform={`translate(${xScale(year)}, 0)`}
           >
-            <line 
+            <line
               x1={0}
               y1={innerHeight}
               x2={0}
@@ -94,7 +94,7 @@ const Rankings = props => {
             />
           </g>
         ))}
-      </ChartContainer> 
+      </ChartContainer>
     </Card>
   )
 };

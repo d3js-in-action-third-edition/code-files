@@ -1,4 +1,4 @@
-import * as d3 from "d3";
+import * as d3 from 'd3';
 
 const Curve = props => {
   const lineGenerator = d3.line()
@@ -10,8 +10,8 @@ const Curve = props => {
   return (
     <path
       d={lineGenerator(props.data)}
-      fill="none" 
-      stroke={props.stroke} 
+      fill="none"
+      stroke={props.stroke}
       strokeWidth={props.strokeWidth}
     />
   );
