@@ -50,10 +50,10 @@ const drawStackedBars = (data) => {
   /*******************************/
   /*    Append the rectangles    */
   /*******************************/
-  annotatedData.forEach(serie => {
+  annotatedData.forEach(series => {
     innerChart
       .selectAll(`.bar-${series.key}`)
-      .data(serie)
+      .data(series)
       .join("rect")
         .attr("class", d => `bar-${series.key}`)
         .attr("x", d => xScale(d.data.year))
