@@ -82,3 +82,5 @@ const drawStackedBars = (data) => {
       .call(leftAxis);
   
 };
+
+
