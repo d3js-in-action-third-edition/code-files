@@ -48,7 +48,7 @@ export const drawCirclePack = (root, descendants, leaves) => {
             return "white";
         };
       })
-      .attr("stroke", d => d.depth === 0 ? "grey" : "none");
+      .attr("stroke", d => d.depth === 0 ? "gray" : "none");
 
   // Append labels
   const minRadius = 22;

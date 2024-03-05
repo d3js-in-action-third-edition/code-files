@@ -36,7 +36,7 @@ export const drawTree = (root, descendants, leaves) => {
       .attr("class", "tree-link")
         .attr("d", d => linkGenerator(d))
         .attr("fill", "none")
-        .attr("stroke", "grey")
+        .attr("stroke", "gray")
         .attr("stroke-opacity", 0.6);
 
   // Append the nodes
@@ -57,7 +57,7 @@ export const drawTree = (root, descendants, leaves) => {
                       : "white"
       )
       .attr("fill-opacity", d => d.depth === 3 ? 0.3 : 1)
-      .attr("stroke", d => d.depth === 3 ? "none" : "grey");
+      .attr("stroke", d => d.depth === 3 ? "none" : "gray");
 
   // Append labels
   svg
