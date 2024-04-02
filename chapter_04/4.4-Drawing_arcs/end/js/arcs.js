@@ -25,12 +25,12 @@ const drawArc = (data) => {
   /***************************/
   /*      Draw the arcs      */
   /***************************/
-  // Get the % of days with precipitations
+  // Get the % of Days with precipitation
   const numberOfDays = data.length;
   const numberOfDaysWithPrecipitations = data.filter(d => d.total_precip_in > 0).length;
   const percentageDaysWithPrecipitations = Math.round(numberOfDaysWithPrecipitations / numberOfDays * 100);
   
-  // Calculate the angle for the days with precipitations
+  // Calculate the angle for the Days with precipitation
   const angleDaysWithPrecipitations_deg = percentageDaysWithPrecipitations * 360 / 100;
   const angleDaysWithPrecipitations_rad = angleDaysWithPrecipitations_deg * Math.PI / 180;
 
