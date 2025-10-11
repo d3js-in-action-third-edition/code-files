@@ -71,7 +71,10 @@ const handleClickOnFilter = (data) => {
                 .style('opacity', 0)
                 .remove())
           )
-
+        // Re-draw tooltip
+        d3.select('.tooltip')
+          .remove();
+        appendTooltip();
       }
     });
 
